@@ -1,0 +1,111 @@
+<h1>{{page.title}}</h1> <article class="bcls-article"> <summary>{{page.description}}</summary> <section class="bcls-section">
+    <h2 id="Introduction">Présentation</h2>
+    <p>Brightcove Server-Side Ad Insertion (SSAI) intègre des publicités à votre flux de contenu pendant sa diffusion. Comme l'assemblage de publicités se fait côté serveur, SSAI fonctionne avec n'importe quelle plateforme. Pour plus d'informations sur SSAI, consultez le<a href="https://ssai.support.brightcove.com/getting-started/video-cloud-ssai-overview.html"> document</a> Video Cloud SSAI Overview.</p>
+    <p>Les analyses de performance SSAI sont prises en charge avec les éléments suivants:</p>
+    <ul>
+      <li>VOD et diffusions en direct</li> 
+      <li>Le lecteur Web de Brightcove, les SDK natifs et les applications Beacon</li>
+      <li>Video Cloud et ressources distantes</li>
+    </ul>
+    <p>Dans {{site.product_short}} Studio, dans le<strong> module</strong> Analytics, la<strong> section</strong> SSAI Performance vous permet de surveiller l'efficacité de vos fournisseurs de publicités et de leurs configurations publicitaires. Vous pouvez y suivre les performances et les erreurs associées à votre publicité côté serveur. </p>
+    {% if site.product_short == Cloud vidéo-fr/ %} <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Présentation des performances SSAI" src="/assets/images/s-analytics-img/ssai/performance-overview.png" /> <figcaption class="bcls-caption--image">Présentation des performances SSAI</figcaption> </figure> {% endif %}<aside class="bcls-aside bcls-aside--information"> Il peut y avoir une certaine latence de 30 à 60 minutes avant que vous ne voyiez les données dans l'interface utilisateur de Studio. Dans certains cas, l'affichage des données SSAI Performance peut prendre jusqu'à une journée.</aside>
+    
+    <!-- <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="2346841845001">&nbsp;</div>
+      <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script> -->  </section><section class="bcls-section">
+    <h2 id="Setup">Configuration</h2>
+    <p>Cette fonctionnalité est disponible pour tous les clients qui ont activé SSAI pour leur compte. Contactez votre responsable de compte pour les informations suivantes:</p>
+    <ul>
+      <li>Assurez-vous que votre compte est activé pour Brightcove Server-Side Ad Insertion (SSAI).</li>
+      <li>Activez votre compte pour les analyses de performance SSAI.</li>
+    </ul>  </section><section class="bcls-section">
+    <h2 id="Work_flow">Flux de travail</h2>
+    <p>Suivez ce flux de travail pour commencer à voir les données d'analyse associées à SSAI:</p>
+    <ol class="bcls-tasklist">
+      <li>
+        <p>Créez une configuration publicitaire (<code translate="No">AdConfig</code>) avec le suivi activé. Pour ce faire, vous allez inclure le<code translate="No"> paramètre</code> ad_tracking_sample_percentage dans la configuration.</p>
+        <ul>
+          <li>Pour la VOD, consultez le<a href="https://apis.support.brightcove.com/ssai/getting-started/video-cloud-ssai-ad-config-api.html#Manage_ad_configurations"> document de l'API SSAI</a> Video Cloud.</li>
+          <li>Pour les diffusions en direct, consultez la<a href="https://apis.support.brightcove.com/live-api/references/reference.html#operation/CreateAdConfiguration"> référence</a> Créer une configuration publicitaire.</li>
+        </ul> <aside class="bcls-aside bcls-aside--information"> si vous créez un nouvel<code translate="No"> AdConfig</code>, vous devrez activer le suivi.</aside>
+      </li>
+      <li>Associez la configuration de la publicité à votre lecteur.
+        <ul>
+          <li>Pour le lecteur Web Brightcove, consultez le<a href="https://player.support.brightcove.com/plugins/implementing-server-side-ads-brightcove-player.html#Implementing_SSAI_using_Studio"> document</a> Implementing Server-Side Ads with Brightcove Player.</li>
+          <li>Pour les SDK natifs, consultez le<a href="https://sdks.support.brightcove.com/features/implementing-server-side-ads-native-player-sdks.html"> document</a> Implémentation des publicités côté serveur avec les SDK natifs.</li>
+          <li>Pour les applications Brightcove Beacon, consultez les rubriques relatives aux<a href="https://beacon-help.support.brightcove.com/monetization/ssai/index.html"> SSAI</a>.</li>
+        </ul>
+      </li>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="SSAI_Performance">Performances SSAI</h2>
+    <p>La page Performances SSAI fournit un résumé des demandes d'annonces, à la fois des réussites et des erreurs.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Performances SSAI" src="/assets/images/s-analytics-img/ssai/performance.png" /> <figcaption class="bcls-caption--image">Performances SSAI</figcaption> </figure>
+    <h3>Plage de dates</h3>
+    <P>Utilisez le menu déroulant pour sélectionner une plage de dates prédéfinie ou entrez une date ou une plage de dates personnalisée.</P> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Plage de dates" src="/assets/images/s-analytics-img/ssai/date-range.png" /> <figcaption class="bcls-caption--image">Plage de dates</figcaption> </figure>
+    <h3>Vues des données</h3>
+    <p>Les données de cette page indiquent les codes de réponse de chaque demande envoyée à votre serveur publicitaire. Il existe deux points de communication avec le serveur publicitaire:</p>
+    <ul>
+      <li><strong>Ad</strong> Request: lorsque le lecteur
+ fait une demande d'annonce</li>
+      <li><strong>Ad Tracker</strong>: lorsque des événements de suivi publicitaire sont déclenchés à partir du serveur SSAI de Brightcove&nbsp;; il peut s'agir des éléments suivants:
+        <ul>
+          <li><code translate="No">AdStart</code></li>
+          <li><code translate="No">Annonce complète</code></li>
+          <li><code translate="No">Premier quartile de l'annonce</code></li>
+          <li><code translate="No">Point d'admission</code></li>
+          <li><code translate="No">Troisième quartile</code></li>
+          <li><code translate="No">Vue créative d'AD</code></li>
+        </ul>
+      </li>
+    </ul>
+    <p>La page est divisée en cinq sections de données:</p>
+    <ul>
+      <li><strong>Codes de demande SSAI</strong>: tous les codes de réponse de chaque demande envoyée à votre serveur publicitaire, y compris les codes de réussite et d'erreur</li>
+      <li><strong>Erreurs de demande d'annonce par fournisseur d'annonces</strong>: liste des erreurs de demande triées par fournisseur d'annonces</li>
+      <li><strong>Erreurs de demande d'annonce par configuration publicitaire</strong>: liste des erreurs de demande triées par configuration publicitaire</li>
+      <li><strong>Erreurs de suivi par fournisseur d'annonces</strong>: liste des erreurs de suivi triées par fournisseur d'annonces</li>
+      <li><strong>Erreurs de suivi par configuration publicitaire</strong>: liste des erreurs de suivi triées par configuration publicitaire</li>
+    </ul>
+    <p>Cliquez sur<strong> Afficher plus</strong> pour plus de détails.</p>  </section><section class="bcls-section">
+    <h2 id="Ad_Error_Codes">Codes d'erreur publicitaires</h2>
+    <p>La page Performances SSAI fournit un résumé des demandes d'annonces, à la fois des réussites et des erreurs.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Codes d'erreur publicitaires" src="/assets/images/s-analytics-img/ssai/ad-error-codes.png" /> <figcaption class="bcls-caption--image">Codes d'erreur publicitaires</figcaption> </figure>
+    <h3>Les fournisseurs de publicités</h3>
+    <P>Utilisez le menu déroulant pour filtrer les résultats d'un fournisseur de publicité spécifique ou afficher les données de<strong> tous les fournisseurs de publicité</strong>.</P> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Les fournisseurs de publicités" src="/assets/images/s-analytics-img/ssai/ad-providers.png" /> <figcaption class="bcls-caption--image">Les fournisseurs de publicités</figcaption> </figure>
+    <h3>Configurations publicitaires</h3>
+    <P>Utilisez le menu déroulant pour filtrer les résultats pour une configuration publicitaire spécifique ou afficher les données pour<strong> toutes les configurations d'annonces</strong>.</P> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Configurations publicitaires" src="/assets/images/s-analytics-img/ssai/ad-configurations.png" /> <figcaption class="bcls-caption--image">Configurations publicitaires</figcaption> </figure>
+    <h3>Erreurs SSAI</h3>
+    <P>Utilisez le menu déroulant pour filtrer les résultats en fonction des erreurs de demande <strong></strong>publicitaire<strong>, des erreurs d'impression Ad Tracker ou d'afficher les données pour</strong> toutes les erreurs SSAI<strong>.</strong></P> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Erreurs SSAI" src="/assets/images/s-analytics-img/ssai/ssai-errors.png" /> <figcaption class="bcls-caption--image">Erreurs SSAI</figcaption> </figure>
+    <h3>Affichage des données</h3>
+    <p>Le graphique montre le nombre d'erreurs publicitaires SSAI par date. Les détails s'affichent sous le graphique:</p>
+    <ul>
+      <li><strong></strong>Code de demande: code d'erreur renvoyé par le fournisseur de publicité</li>
+      <li><strong>Nombre de demandes</strong>: nombre de demandes associées au code d'erreur</li>
+    </ul>  </section><section class="bcls-section">
+    <h2 id="Ad_Provider_Performance">Performance des fournisseurs de publicités</h2>
+    <p>La page Performances des fournisseurs publicitaires indique le nombre de demandes publicitaires réussies et le nombre d'erreurs associées à chaque fournisseur de publicité. Cela vous permet de voir rapidement le pourcentage d'erreurs publicitaires pour chaque fournisseur.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Performance des fournisseurs de publicités" src="/assets/images/s-analytics-img/ssai/ad-provider-performance.png" /> <figcaption class="bcls-caption--image">Performance des fournisseurs de publicités</figcaption> </figure>
+    <h3>Configurations publicitaires</h3>
+    <P>Utilisez le menu déroulant pour filtrer les résultats pour une configuration publicitaire spécifique ou afficher les données pour<strong> toutes les configurations d'annonces</strong>.</P> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Configurations publicitaires" src="/assets/images/s-analytics-img/ssai/ad-configurations.png" /> <figcaption class="bcls-caption--image">Configurations publicitaires</figcaption> </figure>
+    <h3>Tous les appels</h3>
+    <P>Utilisez le menu déroulant pour filtrer les résultats pour<strong> toutes les impressions du Tracker</strong>,<strong> Toutes les demandes</strong> d'annonces ou afficher les données pour<strong> tous les appels</strong>.</P> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Tous les appels" src="/assets/images/s-analytics-img/ssai/all-calls.png" /> <figcaption class="bcls-caption--image">Tous les appels</figcaption> </figure>
+    <h3>Affichage des données</h3>
+    <p>Voici le détail des données affichées sur cette page:</p>
+    <ul>
+      <li><strong>Ad provider</strong> - Votre fournisseur d'annonces</li>
+      <li><strong>Nombre total d'appels</strong>: nombre total d'appels de demande d'annonce</li>
+      <li><strong>Errors</strong>: nombre d'erreurs de demande d'annonce associées au fournisseur de publicité</li>
+      <li><strong>Succès</strong>: nombre d'appels de demande d'annonce réussis au fournisseur de publicité</li>
+      <li><strong>Pourcentage du total des erreurs</strong>: rapport entre le nombre total d'erreurs et le nombre total de demandes d'annonces</li>
+    </ul>  </section><section class="bcls-section">
+    <h2 id="Ad_Config_Performance">Performances des configurations</h2>
+    <p>La page Ad Config Performance affiche le nombre de demandes publicitaires réussies et le nombre d'erreurs associées à chaque configuration publicitaire. Cela vous permet de voir rapidement le pourcentage d'erreurs publicitaires pour chaque configuration.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Performances des configurations" src="/assets/images/s-analytics-img/ssai/ad-config-performance.png" /> <figcaption class="bcls-caption--image">Performances des configurations</figcaption> </figure>
+    <h3>Les fournisseurs de publicités</h3>
+    <P>Utilisez le menu déroulant pour filtrer les résultats d'un fournisseur de publicité spécifique ou afficher les données de<strong> tous les fournisseurs de publicité</strong>.</P> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Les fournisseurs de publicités" src="/assets/images/s-analytics-img/ssai/ad-providers.png" /> <figcaption class="bcls-caption--image">Les fournisseurs de publicités</figcaption> </figure>
+    <h3>Tous les appels</h3>
+    <P>Utilisez le menu déroulant pour filtrer les résultats pour<strong> toutes les impressions du Tracker</strong>,<strong> Toutes les demandes</strong> d'annonces ou afficher les données pour<strong> tous les appels</strong>.</P> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Tous les appels" src="/assets/images/s-analytics-img/ssai/all-calls.png" /> <figcaption class="bcls-caption--image">Tous les appels</figcaption> </figure>
+    <h3>Affichage des données</h3>
+    <p>Voici le détail des données affichées sur cette page:</p>
+    <ul>
+      <li><strong>Configurations publicitaires</strong>: liste des configurations publicitaires utilisées</li>
+      <li><strong>Nombre total d'appels</strong>: nombre total d'appels de demande d'annonce</li>
+      <li><strong>Errors</strong>: nombre d'erreurs de demande d'annonce associées à la configuration de l'annonce</li>
+      <li><strong>Success</strong>: nombre d'appels de demande d'annonce réussis associés à la configuration de l'annonce</li>
+      <li><strong>Pourcentage du total des erreurs</strong>: rapport entre le nombre total d'erreurs et le nombre total de demandes d'annonces</li>
+    </ul>   </section></article>

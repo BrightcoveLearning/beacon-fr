@@ -1,112 +1,83 @@
 ---
-title: Offline Playback with Brightcove Beacon Apps
-description: In this topic, you will learn how to enable and use Offline Playback with your Brightcove Beacon apps.
-parent: Managing Media
----
+title: la lecteur hors ligne avec Brightcove Beacon Apps
+description: Dans cette rubrique, vous apprendrez comment activer et utiliser la lecteur hors connexion avec vos applications Brightcove Beacon. 
+parent: Gestion des médias ---
 
-<h1>{{ page.title }}</h1>
-<article class="bcls-article">
-  <summary>{{ page.description }}</summary>
+<h1>{{page.title}}</h1> <article class="bcls-article"> <summary>{{page.description}}</summary> <section class="bcls-section">
+    <h2 id="Introduction">Présentation</h2>
+    <p>La lecteur hors ligne permet aux utilisateurs de télécharger du contenu vidéo sur leur appareil mobile et de le regarder plus tard lorsqu'ils ne sont pas connectés. Il se peut que certaines vidéos ne soient pas disponibles pour une lecteur hors ligne. Si un bouton de téléchargement apparaît pour le contenu, les utilisateurs peuvent télécharger des épisodes et des films pour les regarder plus tard. </p>
 
-  <section class="bcls-section">
-    <h2 id="Introduction">Introduction</h2>
-    <p>Offline Playback allows users to download video content on their mobile device and watch it later when they are not connected. Not all videos may be available for offline playback. If a download button appears for the content, then users can download Episodes and Movies to watch later. </p>
+    <p>À partir de l'application Brightcove Beacon, vous pouvez accéder à la liste de tous vos contenus téléchargés. Ici, vous pouvez lire et supprimer les vidéos que vous avez téléchargées. Lorsque vous êtes en ligne, vous pouvez renouveler un actif expiré.</p> <figure class="bcls-figure">
+      <img         class="bcls-image--no-border"         alt="Télécharger le film"         src="/assets/images/media/offline-playback/download-content.png"       /> </figure>
 
-    <p>From the Brightcove Beacon app, you can access a list of all of your downloaded content. Here, you can play and delete your downloaded videos. When you are online, you can renew an expired asset.</p>
-
-    <figure class="bcls-figure">
-      <img
-        class="bcls-image--no-border"
-        alt="Download movie"
-        src="/assets/images/media/offline-playback/download-content.png"
-      />
-    </figure>
-
-    <h3>Features</h3>
-    <h4>Users</h4>
+    <h3>Caractéristiques</h3>
+    <h4>Utilisateurs</h4>
     <ul>
-      <li>Content configured for Offline Playback will have a button for download</li>
-      <li>Download videos on iOS and Android apps for mobile devices and tablets</li>
+      <li>Le contenu configuré pour la lecteur hors ligne sera doté d'un bouton de téléchargement</li>
+      <li>Téléchargez des vidéos sur les applications iOS et Android pour appareils mobiles et tablettes</li>
       <li>
-        Download both DRM-protected and clear (non-encrypted) videos and watch it when not connected
+        Téléchargez des vidéos protégées par DRM et des vidéos claires (non cryptées) et regardez-les lorsque vous n'êtes pas connecté
         <ul>
-          <li>Content will play on the device if the viewer travels to another region that is not supported by the rights settings until they reconnect on the mobile or wifi network</li>
+          <li>Le contenu sera lu sur l'appareil si le spectateur se déplace vers une autre région qui n'est pas prise en charge par les paramètres de droits jusqu'à ce qu'il se reconnecte au réseau mobile ou Wi-Fi</li>
         </ul>
       </li>
-      <li>Ability to cancel, pause or delete a download</li>
-      <li>When download is complete, the network can be disconnected or unavailable and videos play from the device</li>
-      <li>Audio and subtitles should be available when the video is downloaded</li>
-      <li>Option to delete or renew an asset when it is expired</li>
-      <li>If the viewer's subscription becomes invalid for any reason, playback will be blocked when they reconnect to the network</li>
-      <li>If the user logs out their account in the device, downloaded videos will be deleted from the user device </li>
+      <li>Possibilité d'annuler, de suspendre ou de supprimer un téléchargement</li>
+      <li>Une fois le téléchargement terminé, le réseau peut être déconnecté ou indisponible et les vidéos peuvent être lues à partir de l'appareil</li>
+      <li>L'audio et les sous-titres doivent être disponibles lorsque la vidéo est téléchargée</li>
+      <li>Possibilité de supprimer ou de renouveler un actif lorsqu'il arrive à expiration</li>
+      <li>Si l'abonnement du spectateur devient invalide pour une raison quelconque, la lecteur sera bloquée lorsqu'il se reconnectera au réseau</li>
+      <li>Si l'utilisateur déconnecte son compte sur l'appareil, les vidéos téléchargées seront supprimées de la machine de l'utilisateur </li>
     </ul>
-    <h4>Customers</h4>
+    <h4>Clients</h4>
     <ul>
-      <li>You can select which individual videos are downloadable in Video Cloud, but they need to be part of a subscription/package that has download enabled.</li>
+      <li>Vous pouvez sélectionner les vidéos individuelles qui peuvent être téléchargées dans Video Cloud, mais elles doivent faire partie d'un abonnement/package dont le téléchargement est activé.</li>
       <!-- <li>You can set the duration of an asset availability in the Beacon CMS; it is automatically deleted from the device at the end of the window</li> -->
-      <li>Server-Side Ads (SSAI) ads are not delivered for content playing from the device</li>
-    </ul>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Requirements">Requirements</h2>
-    <h3>Enable your account</h3>
-    <p>For Offline Playback do the following:</p>
+      <li>Les publicités côté serveur (SSAI) ne sont pas diffusées pour le contenu lu à partir de l'appareil</li>
+    </ul>  </section><section class="bcls-section">
+    <h2 id="Requirements">Exigences</h2>
+    <h3>Activez votre compte</h3>
+    <p>Pour la lecteur hors ligne, procédez comme suit:</p>
     <ul>
-      <li>Contact your Brightcove account manager to enable your Video Cloud Studio account for Offline Playback. Note that Offline Playback is a paid add-on.</li>
+      <li>Contactez votre responsable de compte Brightcove pour activer la lecteur hors ligne de votre compte Video Cloud Studio. Notez que la lecteur hors ligne est un module complémentaire payant.</li>
       <li>
-        The onboarding team will enable your Brightcove Beacon account for Offline Playback
+        L'équipe d'accueil activera votre compte Brightcove Beacon pour la lecteur hors ligne
         <ul>
-          <li>Apps can be configured to offer Offline Playback as a premium feature, available through a subscription</li>
+          <li>Les applications peuvent être configurées pour offrir la lecteur hors ligne en tant que fonctionnalité premium, disponible via un abonnement</li>
         </ul>
       </li>
     </ul>
-    <h3>Manage your content</h3>
-    <p>Make sure your content is available for Offline Playback:</p>
+    <h3>Gérez votre contenu</h3>
+    <p>Assurez-vous que votre contenu est disponible pour une lecteur hors ligne:</p>
     <ul>
       <li>
-        <p>In Video Cloud Studio, ingest videos using an ingest profile that produces a downloadable asset (see steps below)</p>
-        <aside class="bcls-aside bcls-aside--information">Ingesting content with a downloadable asset will increase customer storage cost.</aside>
+        <p>Dans Video Cloud Studio, ingérez des vidéos à l'aide d'un profil d'acquisition qui produit une ressource téléchargeable (voir les étapes ci-dessous)</p> <aside class="bcls-aside bcls-aside--information">L'ingestion de contenu avec une ressource téléchargeable augmentera les coûts de stockage des clients.</aside>
       </li>
-      <li>In Video Cloud Studio, set videos to enable Offline Playback (see steps below)</li>
-      <li>In Beacon CMS, set which assets will be available for Offline Playback (see steps below)</li>
-    </ul>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Setup_in_Video_Cloud_Studio">Setup in Video Cloud Studio</h2>
-    <p>Follow these steps to enable video assets for Offline Playback in Video Cloud Studio:</p>
+      <li>Dans Video Cloud Studio, définissez les vidéos pour activer la lecteur hors ligne (voir les étapes ci-dessous)</li>
+      <li>Dans Beacon CMS, définissez les ressources qui seront disponibles pour la lecteur hors ligne (voir les étapes ci-dessous)</li>
+    </ul>  </section><section class="bcls-section">
+    <h2 id="Setup_in_Video_Cloud_Studio">Configuration dans Video Cloud Studio</h2>
+    <p>Suivez ces étapes pour activer les ressources vidéo pour la lecteur hors ligne dans Video Cloud Studio:</p>
     <ol class="bcls-tasklist">
       <li>
-       <p>When you upload or retranscode a video, make sure that you use an ingest profile that includes a downloadable asset (MP4).</p>
-        <aside class="bcls-aside bcls-aside--information">Ingesting content with a downloadable asset will increase customer storage cost.</aside>
-        <p>For example, your profile may be similar to this:</p>
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/media/offline-playback/ingest-profile.png" alt="Ingest profile">
-        </figure>
+       <p>Lorsque vous mettez en ligne ou retranscodez une vidéo, assurez-vous d'utiliser un profil d'acquisition qui inclut une ressource téléchargeable (MP4).</p> <aside class="bcls-aside bcls-aside--information">L'ingestion de contenu avec une ressource téléchargeable augmentera les coûts de stockage des clients.</aside>
+        <p>Par exemple, votre profil peut être similaire à celui-ci:</p> <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/media/offline-playback/ingest-profile.png" alt="Profil d'ingestion"> </figure>
       </li>
       <li>
-        <p>In the <strong>Media</strong> module, select a video asset that you want to enable for Offline Playback.</p>
+        <p>Dans le<strong> module</strong> Médias, sélectionnez une ressource vidéo que vous souhaitez activer pour la lecteur hors ligne.</p>
        </li>
        <li>
-        <p>In the<strong> Video Information</strong> section, select <span class="button-blue-text"><i class="button-icon" data-feather="edit-3"></i>Edit</span>.</p>
-         <figure class="bcls-figure">
-           <img class="bcls-image" src="/assets/images/media/offline-playback/edit-video-info.png" alt="Edit video info">
-         </figure>
+        <p>Dans la<strong> section Informations sur la</strong> vidéo, sélectionnez<span class="button-blue-text"> Modifier</span>.</p> <figure class="bcls-figure">
+           <img class="bcls-image" src="/assets/images/media/offline-playback/edit-video-info.png" alt="Modifier les informations vidéo"> </figure>
        </li>
        <li>
-        <p>Select <strong>Enable offline playback</strong>. You will do this for all downloadable assets.</p>
-         <figure class="bcls-figure">
-           <img class="bcls-image" src="/assets/images/media/offline-playback/enable-offline-box.png" alt="Enable offline checkbox">
-         </figure>
+        <p>Sélectionnez<strong> Activer la lecteur hors ligne</strong>. Vous procéderez ainsi pour toutes les ressources téléchargeables.</p> <figure class="bcls-figure">
+           <img class="bcls-image" src="/assets/images/media/offline-playback/enable-offline-box.png" alt="Case à cocher Activer hors connexion"> </figure>
        </li>
-       <li>Click <span class="button-blue">Save</span>.</li>
-    </ol>
-  </section>
-  
-  <section class="bcls-section">
-    <h2 id="Setup_in_Beacon_CMS">Setup in Beacon CMS</h2>
-    <p>Offline playback can be set in Beacon to support your business objectives.</p>
+       <li>Cliquez sur<span class="button-blue"> Enregistrer</span>.</li>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="Setup_in_Beacon_CMS">Configuration dans Beacon CMS</h2>
+    <p>La lecteur hors ligne peut être définie dans Beacon pour répondre à vos objectifs commerciaux.</p>
     <!-- <p>Offline playback can be set in Beacon at several levels to support the business objectives of the content owner.</p> -->
 
     <!-- <h3>Entire Account</h3>
@@ -132,28 +103,24 @@ parent: Managing Media
        <li>Click <strong>Save Setting</strong>.</li>
     </ol> -->
 
-    <h3>Subscriptions</h3>
-    <p>You can offer Offline Playback as a premium feature to subscribers by enabling Offline Playback on subscription plan settings. Offline Playback will be available only to subscribers of that plan.</p>
+    <h3>Abonnements</h3>
+    <p>Vous pouvez proposer la lecteur hors ligne en tant que fonctionnalité premium aux abonnés en activant la lecteur hors ligne dans les paramètres du plan d'abonnement. La lecteur hors ligne ne sera disponible que pour les abonnés de ce forfait.</p>
     <ol class="bcls-tasklist-restart">
-      <li>In Brightcove Beacon CMS, click <strong>Commerce</strong>.</li>
+      <li>Dans Brightcove Beacon CMS, cliquez sur<strong> Commerce</strong>.</li>
       <li>
-       <p>Select <strong>SVOD/AuthVOD Plans</strong> and click on your package name.</p>
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/media/offline-playback/beacon-cms-svod-plans.png" alt="SVOD/AuthVOD Plans">
-        </figure>
+       <p>Sélectionnez<strong> SVOD/AuthVOD Plans</strong> et cliquez sur le nom de votre package.</p> <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/media/offline-playback/beacon-cms-svod-plans.png" alt="Forfaits SVOD/AuthVOD"> </figure>
       </li>
        <li>
-        <p>For <strong>Allow Downloads?</strong>, select <strong>Yes</strong>.</p>
-         <figure class="bcls-figure">
-           <img class="bcls-image" src="/assets/images/media/offline-playback/beacon-cms-edit-pkg.png" alt="Edit package">
-         </figure>
+        <p>Pour<strong> Autoriser les téléchargements&nbsp;? </strong>, sélectionnez<strong> Oui</strong>.</p> <figure class="bcls-figure">
+           <img class="bcls-image" src="/assets/images/media/offline-playback/beacon-cms-edit-pkg.png" alt="Modifier le package"> </figure>
        </li>
-       <li>Click <strong>Edit Package</strong>.</li> 
+       <li>Cliquez sur<strong> Modifier le package</strong>.</li> 
        <li>
-         For details about monetization plans, review the following:
+         Pour plus d'informations sur les plans de monétisation, consultez ce qui suit:
          <ul>
-           <li><a href="/monetization/general/creating-svod-plan.html">Creating an SVOD Plan</a></li>
-           <li><a href="/monetization/general/implementing-authvod.html">Implementing AuthVOD</a></li>
+           <li><a href="/monetization/general/creating-svod-plan.html">Création d'un plan SVOD</a></li>
+           <li><a href="/monetization/general/implementing-authvod.html">Implémentation d'AuthVOD</a></li>
          </ul>
        </li>
     </ol>
@@ -212,26 +179,16 @@ parent: Managing Media
      <li>Click <strong>Update Series</strong>.</li> 
      <li>In the left navigation, select <strong>Seasons</strong> and enable <strong>Allow Downloads</strong> for any seasons that you want enabled.</li>
      <li>In the left navigation, select <strong>Episodes</strong> and enable <strong>Allow Downloads</strong> for any episodes that you want enabled.</li>
-  </ol> -->
-</section>
-
-<section class="bcls-section">
-  <h2 id="Sync_and_clearing_cache">Sync and clear cache</h2>
-  <h3>Sync videos</h3>
-  <p>Your asset changes in Video Cloud Studio will be automatically synced with Beacon CMS.</p>
+  </ol> -->  </section><section class="bcls-section">
+  <h2 id="Sync_and_clearing_cache">Synchronisation et nettoyage du cache</h2>
+  <h3>Sync vidéos</h3>
+  <p>Les modifications apportées à vos actifs dans Video Cloud Studio seront automatiquement synchronisées avec Beacon CMS.</p>
   
-  <h3>Clear cache</h3>
-  <p>To see your changes right away in your Beacon app, refresh your app cache.</p>
-  <p>For details, see the <a href="https://beacon.support.brightcove.com/using-brightcove-beacon/tools.html">Using the Tools</a> document.</p>
-</section> 
-
-<section class="bcls-section">
-  <h2 id="Known_issues_and_limitations">Known issues and limitations</h2> 
-  <p>The following notes and limitations apply to the Offline Playback feature:</p>
+  <h3>Vider le cache</h3>
+  <p>Pour voir immédiatement vos modifications dans votre application Beacon, actualisez le cache de votre application.</p>
+  <p>Pour plus de détails, consultez le<a href="https://beacon.support.brightcove.com/using-brightcove-beacon/tools.html"> document</a> Utilisation des outils.</p>  </section><section class="bcls-section">
+  <h2 id="Known_issues_and_limitations">Problèmes connus et limites</h2> 
+  <p>Les remarques et restrictions suivantes s'appliquent à la fonctionnalité de lecteur hors ligne:</p>
   <ul>
-    <li><a href="https://sdks.support.brightcove.com/features/offline-playback-native-player-sdks.html#Known_issues">Offline Playback with the Native Player SDKs</a></li>
-  </ul>
- 
-</section> 
-
-</article>
+    <li><a href="https://sdks.support.brightcove.com/features/offline-playback-native-player-sdks.html#Known_issues">Lecture hors ligne avec les SDK Native Player</a></li>
+  </ul>   </section></article>

@@ -1,29 +1,20 @@
 ---
 title: Beacon Web Store
-description: The Beacon Web Store is a service that enables Beacon licensees to implement subscriptions in Bring Your Own (BYO) web stores.
-parent: home
+description: "Le Beacon Web Store est un service qui permet aux titulaires de licence Beacon de mettre en œuvre des abonnements dans les boutiques en ligne BYO (Bring Your Own). "
+parent: home 
 ---
 
-<h1>{{ page.title }}</h1>
-<article class="landing-page-wrapper">
-  <summary>{{ page.description }}</summary>
-  <section>
-    <h2 id="Topics_in_this_section">Topics</h2>
+<h1>{{page.title}}</h1> <article class="landing-page-wrapper"> <summary>{{page.description}}</summary> <section>
+    <h2 id="Topics_in_this_section">Sujets</h2>
     <ul>
-      {% for item in site.data.navigation %}
-      {% if item.name == page.title %}
-      {% for entry in item.docs %}
-      <li><a href="{{ entry.url }}">{{ entry.name }}</a> {% if entry.docs %}
+      {% for item in site.data.navigation %} {% if item.name == page.title %} {% for entry in item.docs %}
+      <li><a href="{{ entry.url }}">{{entry.name}}</a> {% if entry.docs %}
         <ul>
           {% for subentry in entry.docs %}
-          <li><a href="{{ subentry.url }}">{{ subentry.name }}</a></li>
+          <li><a href="{{ subentry.url }}">{{subentry.name}}</a></li>
           {% endfor %}
         </ul>
         {% endif %}
       </li>
-      {% endfor %}
-      {% endif %}
-      {% endfor %}
-    </ul>
-  </section>
-</article>
+      {% endfor %} {% endif %} {% endfor %}
+    </ul>  </section></article>

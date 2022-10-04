@@ -112,7 +112,7 @@ components:
   schemas:
     BeaconRequestBody:
       properties:
-        package_name:
+        package_nom :
           description: Package name for subscriptions (SVOD), or the product SKU for TVOD (buy/rent)
           type: string
           example: "GOLD_PACKAGE"
@@ -201,7 +201,7 @@ components:
       type: object
   parameters:
     ContentType:
-      name: Content-Type
+      name: Type de contenu
       in: header
       description: 'Content-Type: application/json'
       required: true
@@ -212,7 +212,7 @@ components:
         default: application/json
       example: application/json
     auth-token:
-      name: auth-token
+      name: jeton d'authentification
       in: header
       description: '{Webhook_Api_Key}'
       required: true

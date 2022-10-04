@@ -1,99 +1,55 @@
 ---
-title: Exporting Registered User Data
-description: In this topic, you will learn how to export registered user data into a CSV file.
-parent: Registered Users
----
+title: l'exportation des données des utilisateurs enregistrés
+description: Dans cette rubrique, vous apprendrez comment exporter les données des utilisateurs enregistrés dans un fichier CSV. 
+parent: Utilisateurs enregistrés ---
 
-<h1>{{ page.title }}</h1>
-<article class="bcls-article">
-  <summary>{{ page.description }}</summary>
+<h1>{{page.title}}</h1> <article class="bcls-article"> <summary>{{page.description}}</summary> <section class="bcls-section">
+    <h2 id="Introduction">Présentation</h2>
+    <p>Un utilisateur enregistré est une personne qui a créé un compte avec votre application Brightcove Beacon. Il peut s'agir d'un compte gratuit ou d'un abonnement payant.</p>
+   <p>Vous pouvez exporter des données détaillées sur vos utilisateurs enregistrés. Ces données peuvent être utilisées pour vous aider à gérer les campagnes de marketing par e-mail et les programmes de relation client.</p>  </section><section class="bcls-section">
+    <h2 id="Export">Exporter</h2>
+    <p>Pour votre commodité, vous pouvez exporter des données détaillées sur vos utilisateurs enregistrés sous forme de fichier CSV. Vous pouvez ensuite ouvrir ce fichier dans un tableur pour gérer les campagnes de marketing par e-mail et les programmes de relation client.</p>
 
-  <section class="bcls-section">
-    <h2 id="Introduction">Introduction</h2>
-    <p>A registered user is someone who has created an account with your Brightcove Beacon app. This can be a free account or a paid subscription.</p>
-   <p>You can export detailed data about your registered users. This data can be used to help you manage email marketing campaigns, and customer relationship programs.</p>
-
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Export">Export</h2>
-    <p>For your convenience, you can export detailed data about your registered users as a CSV file. You can then open this file in a spreadsheet program to manage email marketing campaigns, and customer relationship programs.</p>
-
-    <h3>Steps</h3>
+    <h3>Étapes</h3>
     <ol class="bcls-tasklist">
       <li>
-        <p>In Video Cloud Studio, navigate to the <strong>Registered Users</strong> module.</p>
-        <figure class="bcls-figure">
-          <img
-            class="bcls-image--no-border"
-            alt="Registered Users module"
-            src="/assets/images/registered-users/export/registered-users.png"
-          />
-        </figure>
+        <p>Dans Video Cloud Studio, accédez au<strong> module Utilisateurs</strong> enregistrés.</p> <figure class="bcls-figure">
+          <img             class="bcls-image--no-border"             alt="Module Utilisateurs enregistrés"             src="/assets/images/registered-users/export/registered-users.png"           /> </figure>
       </li>
       <li>
-        <p>Click <strong>Export</strong>.</p>
-        <figure class="bcls-figure">
-          <img
-            class="bcls-image--no-border"
-            alt="Export tab"
-            src="/assets/images/registered-users/export/export-tab.png"
-          />
-        </figure>
+        <p>Cliquez sur<strong> Exporter</strong>.</p> <figure class="bcls-figure">
+          <img             class="bcls-image--no-border"             alt="onglet Exporter"             src="/assets/images/registered-users/export/export-tab.png"           /> </figure>
       </li>
       <li>
-        <p>Select <strong>Export</strong> for one of the following: (You will be prompted to filter the data that you want to include)</p>
+        <p>Sélectionnez<strong> Exporter</strong> pour l'un des éléments suivants: (Vous serez invité à filtrer les données que vous souhaitez inclure)</p>
         <ul>
-          <li><strong>All registered users</strong> - Export data for all registered users</li>
-          <li><strong>New Users</strong> - Export data for new registered users within the past month</li>
-        </ul>
-        <figure class="bcls-figure">
-          <img
-            class="bcls-image--no-border"
-            alt="Export user data"
-            src="/assets/images/registered-users/export/export-user-data.png"
-          />
-        </figure>
+          <li><strong>Tous les utilisateurs enregistrés</strong> - Exporter les données de tous les utilisateurs enregistrés</li>
+          <li><strong>Nouveaux utilisateurs</strong> - Exportez les données des nouveaux utilisateurs enregistrés au cours du dernier mois</li>
+        </ul> <figure class="bcls-figure">
+          <img             class="bcls-image--no-border"             alt="Exporter les données utilisateur"             src="/assets/images/registered-users/export/export-user-data.png"           /> </figure>
       </li>
       <li>
-        <p>Choose the data that you want to include in your export file.</p>
-        
-        <figure class="bcls-figure">
-          <img
-            class="bcls-image--no-border"
-            alt="Choose data to include"
-            src="/assets/images/registered-users/export/select-data.png"
-          />
-        </figure>
-        <h3>Data range</h3>
+        <p>Choisissez les données que vous souhaitez inclure dans votre fichier d'exportation.</p> <figure class="bcls-figure">
+          <img             class="bcls-image--no-border"             alt="Choisissez les données à inclure"             src="/assets/images/registered-users/export/select-data.png"           /> </figure>
+        <h3>Plage de données</h3>
         <ul>
           <li>
-            <p><strong>Data range</strong> - Select a timeframe for the exported data</p>
-            <figure class="bcls-figure">
-              <img
-                class="bcls-image--no-border"
-                alt="Select date range"
-                src="/assets/images/registered-users/export/data-range.png"
-              />
-            </figure>
+            <p><strong>Plage de données</strong>: sélectionnez une période pour les données exportées</p> <figure class="bcls-figure">
+              <img                 class="bcls-image--no-border"                 alt="Sélectionnez la plage de dates"                 src="/assets/images/registered-users/export/data-range.png"               /> </figure>
           </li>
         </ul>
-        <h3>Data</h3>
+        <h3>Les données</h3>
         <ul>
-          <li><strong>Email</strong> - User email address</li>
-          <li><strong>Name</strong> - User name</li>
-          <li><strong>User external ID</strong> - A unique user ID that connects the OIDC-authenticated app user to a Beacon app user</li>
-          <li><strong>User token</strong> - A unique system-generated user ID to specify the Beacon app user</li>
-          <li><strong>Date joined</strong> - The date when the user signed up for your app</li>
-          <li><strong>Last login</strong> - The date of the user's last login to your app</li>
-          <li><strong>Subscription details</strong> - Includes subscription name, start/end dates, status, payment gateway, and transaction ID</li>
+          <li><strong>E-mail</strong>: adresse e-mail de l'utilisateur</li>
+          <li><strong>Nom</strong>: nom d'utilisateur</li>
+          <li><strong>ID externe de l'utilisateur</strong>: ID utilisateur unique qui connecte l'utilisateur de l'application authentifié OIDC à un utilisateur de l'application Beacon</li>
+          <li><strong>Jeton utilisateur</strong>: ID utilisateur unique généré par le système pour spécifier l'utilisateur de l'application Beacon</li>
+          <li><strong>Date d'adhésion</strong>: date à laquelle l'utilisateur s'est inscrit à votre application</li>
+          <li><strong>Dernière connexion</strong>: date de la dernière connexion de l'utilisateur à votre application</li>
+          <li><strong>Détails de l'abonnement</strong> - Inclut le nom de l'abonnement, les dates de début/fin, le statut, la passerelle de paiement et l'ID</li>
         </ul>
         <br/>
       </li>
-      <li>Click <span class="button-blue">Export Data</span>.</li>
+      <li>Cliquez sur<span class="button-blue"> Exporter les données</span>.</li>
         
-    </ol>
-    
-  </section> 
-
-</article>
+    </ol>   </section></article>

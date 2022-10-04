@@ -1,0 +1,135 @@
+<article class="bcls-article">
+  <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section">
+    <p>Les droits de lecteur sont utilisés pour restreindre la lecteur des vidéos. Une fois les droits de lecteur créés, ils peuvent être attribués aux vidéos à l'aide du module Médias.</p>
+    <p>Pour accéder à la page d'administration des droits de lecteur, ouvrez le<strong> module</strong> Admin, puis Droits de<strong> lecteur</strong>. Une liste des droits de lecteur s'affiche.</p>
+    <p> <aside class="bcls-aside bcls-aside--information">Remarque: Pour accéder à la page Droits de lecteur, vous devez être un utilisateur {{site.product}} avec le rôle d'administrateur.</aside> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/playback-rights-list.png" /></figure> Les droits de lecteur sont attribués aux vidéos dans la<strong> section Restrictions de</strong> lecteur de la page des propriétés de la vidéo du module Médias. </p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/playback-rights-assign.png" /></figure>
+    <p>Les droits de lecteur dont<strong> l'</strong>état est<strong> Inactif</strong> ne peuvent pas être attribués aux vidéos dans le module Médias.</p>  </section><section class="bcls-section">
+    <h2 id="create">Création de droits de lecteur</h2>
+    <p>Pour créer des droits de lecteur, procédez comme suit.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Connectez-vous à {{site.product}} en tant qu'administrateur.</li>
+      <li>Ouvrez le<strong> module</strong> Admin, puis les droits<strong> de lecteur</strong>. Notez que vous devez être administrateur de compte pour accéder au menu ADMIN.</li>
+      <li>Cliquez sur<strong> Nouveaux droits de lecteur</strong>.</li>
+      <li>Saisissez un nom<strong> de droits de lecteur</strong>.</li>
+      <li>Si<strong> vous cochez Autoriser la lecteur droite sans jeton</strong>, les demandes de lecteur peuvent être effectuées sans jeton Web JSON (JWT). <aside class="bcls-aside bcls-aside--information">Remarque: Désélectionner cette option n'affectera pas les restrictions définies pour ce droit de lecteur, cependant, la demande de lecteur nécessitera un JWT valide qui sera défini par programme au niveau du lecteur. Pour plus d'informations, consultez le document du développeur<a href="https://apis.support.brightcove.com/playback-authorization/guides/using-pas-with-bcp.html"> Using Playback Authorization DRM with the Brightcove Player</a>.</aside>
+      </li>
+      <li>Cochez<strong> Utiliser par défaut</strong> pour que ce soit le droit de lecteur par défaut. Cela appliquera les restrictions de droits de lecteur configurées aux vidéos mises en ligne. <aside class="bcls-aside bcls-aside--information">Remarque: Le droit de lecteur par défaut n'est pas attribué si une vidéo est retranscodée.</aside>
+      </li>
+      <li>Cliquez sur<span class="button-blue"> Enregistrer</span>. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/playback-rights-create.png" /></figure>
+      </li>
+    </ol> <aside class="bcls-aside bcls-aside--information">Remarque: Le nombre maximum de droits de lecteur que vous pouvez avoir sur un compte est de 100. Si vous devez augmenter la limite, contactez le support<a href="https://supportportal.brightcove.com"> Brightcove</a>.</aside>
+    <p>Cliquez sur un lien de restriction dans le menu de navigation de gauche pour ajouter des restrictions à une lecteur à droite:</p>
+    <ul>
+      <li><a href="#geo">Geographic</a></li>
+      <li><a href="#domain">Domaine</a></li>
+      <li><a href="#proxy">Proxy</a></li>
+      <li><a href="#date">Heure</a></li>
+    </ul>  </section><section class="bcls-section">
+    <h2 id="edit">Modification des droits de lecteur</h2>
+    <p>Pour modifier les droits de lecteur, procédez comme suit:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Cliquez sur une lecteur à droite.</li>
+      <li>Apportez les modifications requises et cliquez sur<span class="button-blue"> Enregistrer</span>.</li>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="duplicate">Duplication des droits de lecteur</h2>
+    <p>Pour dupliquer un droit de lecteur, procédez comme suit:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Cliquez sur une lecteur à droite.</li>
+      <li>Cliquez sur <strong></strong>Dupliquer</li>
+      <li>Apportez les modifications requises et cliquez sur<span class="button-blue"> Enregistrer</span>.</li>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="activate">Activation/désactivation des droits de lecteur</h2>
+    <p>Les droits de lecteur ne peuvent pas être supprimés, mais ils peuvent être désactivés afin qu'ils ne puissent pas être attribués aux vidéos dans le module Médias. Pour activer/désactiver les droits de lecteur, procédez comme suit:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Cliquez sur une lecteur à droite.</li>
+      <li>Cliquez sur<strong> Activer</strong> pour activer un droit de lecteur ou sur <strong></strong>Désactiver pour désactiver un droit de lecteur. Les droits de lecteur désactivés ne peuvent pas être attribués aux vidéos du module Médias.</li>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="geo">Attribution de restrictions géographiques</h2>
+    <p>Les restrictions géographiques vous permettent de limiter la lecteur des vidéos en fonction du pays, du code postal, des adresses IP et de la zone de marché désignée. Pour attribuer des restrictions géographiques à un droit de lecteur, procédez comme suit:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Cliquez sur une lecteur à droite.</li>
+      <li>Dans la navigation de gauche, cliquez sur Restrictions<strong> géographiques</strong>.</li>
+    </ol>
+    <p>La règle<strong> globale</strong> peut être définie sur<strong> Autoriser tout</strong> ou Tout<strong> bloquer</strong>.</p>
+    <ul>
+      <li><strong>Autoriser tout</strong>
+        <ul>
+          <li>Utilisé lorsque vous souhaitez mettre sur liste noire un petit nombre de groupes qui n'auront pas accès</li>
+          <li>Sélectionnez cette option pour autoriser l'affichage pour tous, puis ajoutez une liste de pays sur liste noire, de codes postaux, d'adresses IP et de DMA qui ne peuvent pas être consultés</li>
+        </ul>
+      </li>
+      <li><strong>Bloquer tout</strong>
+        <ul>
+          <li>Utilisé lorsque vous souhaitez mettre sur liste blanche un petit nombre de groupes qui auront accès</li>
+          <li>Sélectionnez cette option pour bloquer l'affichage pour tous, puis ajoutez une liste de pays, de codes postaux, d'adresses IP ou de DMA sur liste blanche qui sont autorisés à être affichés</li>
+        </ul>
+      </li>
+    </ul>
+    <p>Des restrictions géographiques peuvent être ajoutées pour autoriser/empêcher le visionnage en fonction des éléments suivants:</p>
+    <ul>
+      <li><a href="#countries">Pays</a></li>
+      <li><a href="#zip">Codes postaux</a></li>
+      <li><a href="#ip">Restrictions IP</a></li>
+      <li><a href="#dma">Zone de marché désignée (DMA)</a></li>
+    </ul>
+    <h3 id="countries">Restreindre l'accès aux pays</h3>
+    <p>Les droits de lecteur par pays peuvent être utilisés pour limiter le visionnage à des pays spécifiques.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Sélectionnez les pays dont l'affichage sera interdit (liste noire) ou autorisé (liste blanche). Au fur et à mesure que vous tapez, la liste de sélection sera filtrée. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/playback-rights-countries.png" /></figure>
+      </li>
+      <li>Cliquez sur<span class="button-blue"> Enregistrer</span>.</li>
+    </ol>
+    <h3 id="zip">Restreindre l'accès aux codes postaux</h3>
+    <p>Les droits de lecteur du code postal peuvent être utilisés pour limiter l'affichage à des codes postaux spécifiques.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Entrez une liste de codes postaux dont l'affichage ne sera pas autorisé (sur liste noire) ou autorisé (sur liste blanche). Les codes postaux doivent être précédés d'un code pays à deux lettres majuscules et d'un tiret, par exemple<strong> US-90045</strong>. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/playback-rights-zip.png" /></figure>
+      </li>
+    </ol>
+    <p>Il est également possible de télécharger un fichier .csv contenant des codes postaux. Cliquez sur<strong> Upload CSV</strong> pour parcourir et sélectionner un fichier à télécharger.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/playback-rights-upload-csv.png" /></figure> <aside class="bcls-aside bcls-aside--information"> Remarques: 
+      <ul>
+        <li>Jusqu'à 5 000 codes postaux sont pris en charge.</li>
+        <li>Le chargement d'un fichier .csv remplacera le contenu du<strong> champ des</strong> codes postaux.</li>
+      </ul> </aside>
+    <h3 id="ip">Restreindre l'accès aux adresses IP</h3>
+    <p>Les droits de lecteur IP peuvent être utilisés pour limiter l'affichage à une plage d'adresses IP.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Entrez une plage d'adresses IP dont l'affichage sera interdit (sur liste noire) ou autorisé (sur liste blanche). <a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">La notation par bloc CIDR</a> est également prise en charge. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/playback-rights-ip.png" /></figure>
+      </li>
+      <li>Cliquez sur<span class="button-blue"> Enregistrer</span>.</li>
+    </ol>
+    <h3 id="dma">Restreindre l'accès aux DMA</h3>
+    <p>Une zone de marché désignée (DMA), également appelée marché des médias, est une région des États-Unis utilisée pour définir les marchés de la télévision et de la radio. Les droits de lecteur peuvent être utilisés pour limiter l'écoute en fonction des DMA.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Entrez une liste des DMA dont l'affichage sera interdit (sur liste noire) ou autorisé (sur liste blanche) <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/playback-rights-dma.png" /></figure>
+      </li>
+      <li>Cliquez sur<span class="button-blue"> Enregistrer</span>.</li>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="domain">Attribution de restrictions de domaine</h2>
+    <p>Les restrictions de domaine vous permettent de limiter la lecteur des vidéos en fonction du domaine. Pour attribuer des restrictions de domaine à un droit de lecteur, procédez comme suit:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Cliquez sur une lecteur à droite.</li>
+      <li>Dans la navigation de gauche, cliquez sur Restrictions de<strong> domaine</strong>.</li>
+      <li>Dans le<strong> champ Domaines sur</strong> liste noire, saisissez les domaines dont l'affichage ne sera pas possible. </li>
+      <li>Dans le<strong> champ Domaines sur</strong> liste blanche, saisissez les domaines qui seront autorisés à être affichés. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/playback-rights-domain.png" /></figure>
+      </li>
+      <li>Cliquez sur<span class="button-blue"> Enregistrer</span>.</li>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="proxy">Attribution de restrictions de proxy</h2>
+    <p>Les restrictions de proxy vous permettent de limiter la lecteur vidéo en fonction de certains types de connexions. Pour attribuer des restrictions de proxy à un droit de lecteur, procédez comme suit:</p> <aside class="bcls-aside bcls-aside--information">Remarque: Alors que les fournisseurs de VPN continuent d'améliorer leurs services, la résolution des adresses IP peut changer par rapport à ce que vous avez défini pour les adresses IP bloquées. Pour cette raison, le blocage du proxy n'est pas garanti à 100&nbsp;%.</aside>
+    <ol class="bcls-tasklist-restart">
+      <li>Cliquez sur une lecteur à droite.</li>
+      <li>Dans le volet de navigation de gauche, cliquez sur<strong> Restrictions</strong> du</li>
+      <li>Sélectionnez les types de proxy à bloquer. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/playback-rights-proxy.png" /></figure>
+      </li>
+      <li>Cliquez sur<span class="button-blue"> Enregistrer</span>.</li>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="date">Attribution de restrictions temporelles</h2>
+    <p>Les restrictions temporelles vous permettent de limiter la lecteur des vidéos en fonction d'une date de début spécifiée. Pour assigner des restrictions temporelles à un droit de lecteur, procédez comme suit:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Cliquez sur une lecteur à droite.</li>
+      <li>Dans le volet de navigation de gauche, cliquez sur<strong> Restrictions</strong> de</li>
+      <li>Cliquez sur le contrôle du calendrier pour sélectionner une date de<strong> début</strong>. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/playback-rights-date.png" /></figure>
+      </li>
+      <li>(Facultatif) Cliquez sur<strong> Ajouter une date</strong> de fin pour sélectionner une date de fin.</li>
+      <li>Cliquez sur<span class="button-blue"> Enregistrer</span>.</li>
+    </ol>   </section></article>

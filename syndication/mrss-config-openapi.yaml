@@ -784,7 +784,7 @@ components:
           type: string
           description: Id of this syndication
           readOnly: true
-        name:
+        nom :
           type: string
           description: Name of this syndication
         type:
@@ -839,7 +839,7 @@ components:
           type: string
           enum: ["yes", "no"]
           description: iTunes explicit content indicator, accepts "yes" or "no" values.
-        owner_name:
+        owner_nom :
           type: string
           description: iTunes owner name.
         owner_email:
@@ -874,7 +874,7 @@ components:
           type: string
           description: Id of this syndication
           readOnly: true
-        name:
+        nom :
           type: string
           description: Name of this syndication
         type:
@@ -897,7 +897,7 @@ components:
             ]
           }
           description: Specifies which OTT asset types to include in the generated feed.  If unspecified, all types will be included. Valid values are [movie, series, season, episode].
-        filename:
+        filenom :
           type: string
           description: The filename that should be used for the generated feed results for this syndication within zip results files.  Should be a flat filename (no paths) using valid zip filename characters.  Should not be the same as the filenames used for any other syndications that might have results included in the same zipped results.  If not specified, a unique filename will be generated.
         locator_prefix:
@@ -947,7 +947,7 @@ components:
           type: string
           description: Id of this job
           readOnly: true
-        name:
+        nom :
           type: string
           description: Name of this job
         state:

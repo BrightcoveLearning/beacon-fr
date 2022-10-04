@@ -1,0 +1,47 @@
+<article class="bcls-article">
+  <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section"> {% if site.product_short == Video Cloud-fr/ %}
+    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4703864538001">&nbsp;</div> <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js">
+</script> {% endif %}
+    <p>Le partage de médias permet aux éditeurs de télécharger des vidéos une seule fois, puis de les partager sur d'autres comptes. Il peut s'agir de vos propres comptes, de comptes d'entreprise ou de comptes d'autres éditeurs. Les vidéos partagées peuvent ensuite être utilisées indépendamment dans les autres comptes {{site.product_short}}. Les paramètres de partage multimédia sont utilisés pour gérer les relations de partage entre les comptes.</p> <aside class="bcls-aside bcls-aside--information">Remarque: Le partage de médias n'est disponible que pour les clients {{site.product_short}} Enterprise. Si vous souhaitez mettre à niveau votre compte {{site.product_short}}, veuillez contacter Brightcove pour plus d'informations.</aside>
+    <p>Le partage de médias peut également être implémenté par programmation à l'aide de l'API CMS. Pour plus d'informations, consultez la section Partage de<a href="https://apis.support.brightcove.com/cms/managing-videos/media-sharing-cms-api.html"> médias avec l'API CMS</a>.</p>
+    <p>Cette rubrique utilisera la terminologie suivante:</p>
+    <ul>
+      <li><strong>Master</strong> - Le compte qui a créé la vidéo originale. Le Master est propriétaire du contenu et est responsable de la configuration, de la gestion et de la fourniture du contenu aux affiliés.</li>
+      <li><strong>Affilié</strong> - Le compte qui reçoit la vidéo. L'Affilié peut accepter le contenu qui lui est partagé par un Master.</li>
+    </ul>  </section><section class="bcls-section">
+    <h2 id="enable">Activation du partage multimédia</h2>
+    <p>Pour activer le partage multimédia, contactez le support client de<a href="https://supportportal.brightcove.com"> Brightcove</a> et demandez-lui d'activer le partage multimédia pour votre compte.</p>  </section><section class="bcls-section">
+    <h2 id="add_affiliates">Ajout d'affiliés</h2>
+    <p>Pour partager des vidéos sur un autre compte {{site.product_short}}, un compte d'affilié doit être ajouté. Un affilié est un compte sur lequel vous souhaitez partager des vidéos. Pour ajouter un compte d'affilié, procédez comme suit:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Connectez-vous à {{site.product}} en tant qu'administrateur.</li>
+      <li>Ouvrez le<strong> module</strong> Admin, puis<strong> Media Sharing</strong>. Notez que vous devez être administrateur de compte pour accéder au menu ADMIN.</li>
+      <li>La<strong> section</strong> Gérer les affiliés - Comptes avec lesquels je partage des vidéos affiche la liste de tous les éditeurs affiliés avec lesquels vous avez établi une relation de partage de médias. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18459-manage-affiliates.png" /></figure>
+      </li>
+      <li>Pour ajouter un nouvel affilié, entrez son {{site.product_short}} ID de compte dans la<strong> zone de texte ID de</strong> compte, puis cliquez sur<strong> Ajouter un affilié</strong>.</li>
+    </ol>
+    <p>Le compte sera ajouté au tableau avec un statut<strong> de</strong> relation<strong> en attente</strong>. Le compte d'affilié recevra une notification de partage de médias et pourra<a href="#accept_reject"> accepter ou rejeter la relation</a>. Si l'affilié accepte la relation de partage de médias, le statut de la<strong> relation</strong> sera<strong> Accepté</strong>.</p>  </section><section class="bcls-section">
+    <h2 id="custom_fields">Mise en correspondance des champs</h2>
+    <p>Pour exiger que les comptes affiliés aient les mêmes champs personnalisés que le compte principal, cochez la case<strong> Appliquer la correspondance des champs personnalisés,</strong> puis cliquez sur<strong> Mettre à jour les règles</strong>. Lorsque l'option<strong> Appliquer la correspondance des champs personnalisés</strong> est cochée, les comptes d'affiliation doivent avoir les mêmes champs personnalisés que le compte principal, faute de quoi les actions échoueront.</p>
+    <h3>Remarques</h3>
+    <ul>
+      <li>La mise en correspondance des champs personnalisés ne fera que vérifier que les noms des champs personnalisés internes des deux comptes correspondent. Le type de champ (liste ou texte) n'a pas d'importance.</li>
+      <li>
+        <p>Si la chaîne définie par le compte principal applique la correspondance des champs personnalisés, puis partage une vidéo dont la valeur n'est pas autorisée par le compte d'affilié, cette tentative de partage échouera.</p>
+        <p>Si la chaîne définie par le compte principal n'applique pas la correspondance des champs personnalisés, puis partage une vidéo dont le champ personnalisé a une valeur non autorisée par le compte affilié, la tentative de partage fonctionnera, mais le champ avec la mauvaise valeur ne sera pas inclus dans la copie affiliée de la vidéo .</p>
+      </li>
+      <li>Remarque: Si une vidéo partagée dans le compte principal est configurée avec le filtrage géographique, les comptes d'affiliation doivent également être activés pour le filtrage géographique, faute de quoi le partage échouera. Tout filtrage géographique configuré sur la vidéo partagée sera également appliqué au (x) compte (s) d'affilié (s). Pour activer un compte pour le filtrage géographique, veuillez<a href="https://supportportal.brightcove.comlanguage=en_US"> contacter le support Brightcove</a>.</li>
+    </ul>  </section><section class="bcls-section">
+    <h2 id="remove_affiliates">Supprimer des affiliés</h2>
+    <p>Pour supprimer un compte d'affilié, localisez le compte à supprimer et cliquez sur l'icône Supprimer (<img alt="" src="/assets/images/s-admin-img/node18459-delete-icon.png" />). Une boîte de dialogue apparaît pour confirmer que vous souhaitez mettre fin à la relation de partage.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18459-end-sharing.png" /></figure>
+    <p>Cliquez sur<strong> Fin du partage</strong> pour mettre fin à la relation de partage.</p>  </section><section class="bcls-section">
+    <h2 id="accept_reject">Approuver/rejeter les relations de partage des médias</h2>
+    <p>Si un autre compte {{site.product_short}} a ajouté votre compte en tant qu'affilié (souhaite partager des vidéos sur votre compte {{site.product_short}}), un message s'affichera lorsque vous accéderez à la<strong> page</strong> Admin &gt; Partage multimédia.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18459-approve-sharing.png" /></figure>
+    <p>Si l'option<strong> Appliquer la correspondance des champs personnalisés</strong> est cochée, le compte d'affilié doit avoir les mêmes champs personnalisés que le compte principal, faute de quoi les actions échoueront.</p>
+    <p>Cliquez sur<strong> Rejeter</strong> pour rejeter la relation de partage de médias. Sinon, sélectionnez un mode<strong> d'acceptation</strong>:</p>
+    <ul>
+      <li><strong>Automatique</strong> - Acceptez toujours les vidéos partagées de ce compte principal. Les vidéos partagées apparaîtront dans la liste des vidéos du module Médias.</li>
+      <li><strong>Manuel</strong> - Passez en revue les vidéos partagées de ce compte principal avant de les ajouter à la médiathèque. Le module Médias affichera un<strong> élément</strong> Partages en attente dans le menu de navigation de gauche.</li>
+    </ul>
+    <p>Cliquez sur <strong></strong>Approuver pour approuver la relation de partage de médias. Une fois la relation approuvée, elle apparaît dans la<strong> section</strong> Gérer les maîtres de la page.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18459-manage-masters.png" /></figure>
+    <p>Cliquez sur<strong> Afficher le contrat</strong> pour afficher les paramètres de partage multimédia. Le<strong> curseur Mode</strong> d'acceptation peut être utilisé pour modifier le mode<strong> d'acceptation</strong>. Pour supprimer la relation de partage, cliquez sur l'icône Supprimer (<img alt="" src="/assets/images/admin/node18459-delete-icon.png" />).</p>   </section></article>

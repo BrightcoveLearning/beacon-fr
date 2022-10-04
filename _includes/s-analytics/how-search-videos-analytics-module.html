@@ -1,0 +1,174 @@
+<article class="bcls-article">
+  <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section">
+    <h2 id="find">Utilisation de la recherche rapide</h2>
+    <p>La fonction Recherche rapide du module Analytics peut être utilisée pour rechercher une vidéo spécifique. Après avoir saisi les critères de recherche, la recherche rapide recherchera le nom de la vidéo, la description courte, la description longue, les balises, l'identifiant de la vidéo et tous les champs de texte personnalisés que vous pourriez avoir. Une liste des correspondances s'affichera sous le champ de recherche.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="recherche rapide" src="/assets/images/s-analytics-img/node13712-basic-search.png" /></figure> <aside class="bcls-aside bcls-aside--information">Notez que les<strong> vidéos</strong> supprimées ne sont pas consultables via la fonctionnalité de recherche, mais nous conservons des analyses pour elles. Vous pouvez les trouver en développant ou en parcourant le rapport de performance et en utilisant la fonction de recherche du navigateur ou en téléchargeant le rapport et en effectuant une recherche dans un tableur.</aside>
+    <p>Cliquez sur le lien vers un match pour ouvrir le rapport qui est en contexte-fr/. Par exemple, si vous examinez l'engagement de votre compte, puis que vous utilisez la recherche rapide pour localiser une vidéo spécifique, cliquez sur le lien de la vidéo pour ouvrir le rapport d'engagement. Si vous consultez les rapports de performance, une recherche et un clic sur un lien ouvriront le rapport de performance.</p>  </section><section class="bcls-section">
+    <h2 id="basic">Recherche de base</h2>
+    <p>Si vous fournissez une valeur de recherche sans qualificatif, une recherche textuelle sera exécutée dans les champs suivants:</p>
+    <ul>
+      <li>Nom</li>
+      <li>Brève description</li>
+      <li>Description longue</li>
+      <li>Balises</li>
+      <li>ID de la vidéo</li>
+      <li>ID de référence</li>
+      <li>Tous les champs personnalisés</li>
+    </ul>
+    <p>Si vous souhaitez associer plusieurs mots, mettez le terme entre guillemets.</p>  </section><section class="bcls-section">
+    <h2 id="adv">Recherche avancée</h2>
+    <p>Le module Analytics permet également de rechercher des champs spécifiques<a href="#fields">,</a> de<a href="#dates"> rechercher en fonction de la date</a> et d'<a href="#terms">inclure ou d'exclure des termes spécifiques</a>.</p>
+    <div id="fields" class="BCL-subsection">
+      <h3>Recherche de champs spécifiques</h3>
+      <p>Pour rechercher une valeur spécifiée dans un champ spécifique, utilisez la syntaxe suivante:</p>
+      <ul>
+        <li><code translate="No">champ:valeur à rechercher</code></li>
+      </ul>
+      <p>Les champs suivants sont pris en charge:</p>
+      <table class="bcls-table">
+        <thead class="bcls-table__head">
+          <tr>
+            <th width="128">terrain</th>
+            <th width="582">Valeurs supportées</th>
+          </tr>
+        </thead>
+        <tbody class="bcls-table__body">
+          <tr>
+            <td><code translate="No">nom</code></td>
+            <td>chaînes ou chaînes entre guillemets</td>
+          </tr>
+          <tr>
+            <td><code translate="No">texte</code></td>
+            <td>chaînes ou chaînes entre guillemets (valeurs dans<code translate="No"> le</code> nom, description<code translate="No"> courte</code>, description<code translate="No"> longue</code>)</td>
+          </tr>
+          <tr>
+            <td><code translate="No">balises</code></td>
+            <td>chaînes ou chaînes entre guillemets</td>
+          </tr>
+          <tr>
+            <td><code translate="No">reference_id</code></td>
+            <td>chaîne ou chaînes entre guillemets</td>
+          </tr>
+          <tr>
+            <td><code translate="No">état</code></td>
+            <td><code translate="No">ACTIF</code>,<code translate="No"> INACTIF</code>,<code translate="No"> SUPPRIMÉ</code>,<code translate="No"> EN ATTENTE</code></td>
+          </tr>
+          <tr>
+            <td><code translate="No">updated_at</code></td>
+            <td>voir<a href="#dates"> Recherche de dates spécifiques</a> pour le format de date</td>
+          </tr>
+          <tr>
+            <td><code translate="No">created_at</code></td>
+            <td>voir<a href="#dates"> Recherche de dates spécifiques</a> pour le format de date</td>
+          </tr>
+          <tr>
+            <td><code translate="No">published_at</code></td>
+            <td>voir<a href="#dates"> Recherche de dates spécifiques</a> pour le format de date</td>
+          </tr>
+          <tr>
+            <td><code translate="No">achevée</code></td>
+            <td><code translate="No">vrai</code> ou<code translate="No"> faux</code></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Si vous voulez faire une correspondance exacte ou faire correspondre plusieurs mots, placez simplement le terme entre guillemets:</p>
+      <ul>
+        <li><code translate="No">en direct-fr/</code></li>
+        <li><code translate="No">diffusion en direct-fr/</code></li>
+      </ul>
+      <p>Cela fonctionne également lorsque vous effectuez une recherche dans un champ spécifique:</p>
+      <ul>
+        <li><code translate="No">name: live-fr/</code></li>
+        <li><code translate="No">name: diffusion en direct-fr/</code></li>
+      </ul>
+    </div>
+    <div id="dates" class="BCL-subsection">
+      <h3>Recherche de dates spécifiques</h3>
+      <p>Les champs de recherche dépendant de la date prennent des valeurs de plage de dates. Plusieurs formats de spécification de la date sont pris en charge:</p>
+      <table class="bcls-table">
+        <thead class="bcls-table__head">
+          <tr>
+            <th width="240">Format</th>
+            <th width="341">Le sens</th>
+          </tr>
+        </thead>
+        <tbody class="bcls-table__body">
+          <tr>
+            <td>01/08/2013</td>
+            <td>Date au format aaaa-mm-jj</td>
+          </tr>
+          <tr>
+            <td>2013-08-01T 00:00:00 Z</td>
+            <td>Une heure au format UTC</td>
+          </tr>
+          <tr>
+            <td>-1d</td>
+            <td>Heure actuelle moins 1 jour (voir Dates<a href="#relativeDates"> relatives</a>)</td>
+          </tr>
+          <tr>
+            <td>+1d</td>
+            <td>Heure actuelle plus 1 jour (voir Dates<a href="#relativeDates"> relatives</a>)</td>
+          </tr>
+        </tbody>
+      </table>
+      &nbsp;
+      <h4 id="relativeDates">Dates relatives</h4>
+      <p>Pour les dates relatives, nous prenons en charge une direction (+ ou -) suivie d'un nombre, suivie d'une durée (ou de son abréviation). Les durées légales sont les suivantes: minutes (m), heures (h), jours (d)</p>
+      <p>Par exemple:</p>
+      <ul>
+        <li><code translate="No">- 1 jour</code></li>
+        <li><code translate="No">- 2 jours</code></li>
+        <li><code translate="No">+ 4 heures</code></li>
+        <li><code translate="No">- 60 minutes</code></li>
+        <li><code translate="No">-1d</code></li>
+        <li><code translate="No">-2d</code></li>
+        <li><code translate="No">+4 h</code></li>
+        <li><code translate="No">-60 m</code></li>
+      </ul>
+      <h4>Plages de dates</h4>
+      <p>Si le champ que vous recherchez est une date, vous pouvez spécifier une plage de dates à rechercher:</p>
+      <ul>
+        <li><code translate="No">Updated_at:2013-08-01T 00:00:00 Z.. 2013-10-08T 00:00:00 Z</code></li>
+      </ul>
+      <p>Cela recherchera toutes les vidéos avec une<code translate="No"> valeur</code> updated_at entre le 1er août 2013 et le 8 octobre 2013.</p>
+      <h4>Gammes ouvertes</h4>
+      <p>Si vous souhaitez faire correspondre toutes les dates jusqu'à une heure donnée, ou faire correspondre toutes les dates depuis une heure donnée, omettez une extrémité de la plage. Par exemple, pour rechercher toutes les vidéos modifiées au cours des 2 derniers jours:</p>
+      <ul>
+        <li><code translate="No">q=updated_at: -2 jours.. </code></li>
+      </ul>
+      <p>Rechercher toutes les vidéos modifiées avant le 11 août 2013:</p>
+      <ul>
+        <li><code translate="No">q=updated_at:.. 2013-08-11T 00:00:00 Z</code></li>
+      </ul>
+      <p>&nbsp;</p>
+    </div>
+    <div id="terms" class="BCL-subsection">
+      <h3>Y compris et excluant des conditions spécifiques</h3>
+      <p>Vous pouvez marquer un terme comme obligatoire (les vidéos retournées<strong> DOIVENT</strong> correspondre) ou interdit (les vidéos renvoyées<strong> ne doivent PAS</strong> correspondre). Ceci est contrôlé par un<code translate="No"> signe</code> +<code translate="No"> ou</code> - immédiatement avant le terme:</p>
+      <table class="bcls-table">
+        <thead class="bcls-table__head">
+          <tr>
+            <th width="140">Exemple</th>
+            <th width="728">Le sens</th>
+          </tr>
+        </thead>
+        <tbody class="bcls-table__body">
+          <tr>
+            <td><code translate="No">+animaux</code></td>
+            <td>les vidéos<strong> DOIVENT</strong> inclure le terme animaux-fr/ dans le<code translate="No"> nom</code>, la description <code translate="No"></code>courte ou la description<code translate="No"> longue</code></td>
+          </tr>
+          <tr>
+            <td><code translate="No">-animaux</code></td>
+            <td>les vidéos<strong> ne doivent PAS</strong> inclure le terme animaux-fr/ dans le<code translate="No"> nom</code>, la description <code translate="No"></code>courte ou la description<code translate="No"> longue</code></td>
+          </tr>
+          <tr>
+            <td><code translate="No">+nom: animals</code></td>
+            <td>les vidéos<strong> DOIVENT</strong> inclure le terme animaux-fr/ dans le nom</td>
+          </tr>
+          <tr>
+            <td><code translate="No">-name: animals</code></td>
+            <td>les vidéos<strong> ne doivent PAS</strong> inclure le terme animaux-fr/ dans le nom</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>&nbsp;</p>
+    </div>   </section></article>

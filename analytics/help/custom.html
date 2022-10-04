@@ -1,149 +1,113 @@
 ---
-title: Custom Reports
-layout: help
+title: rapports personnalisés
+layout: help 
 ---
-<h1>Custom Reports</h1>
-<article class="bcls-article">
-    <section class="bcls-section">
-        <p>Create custom analytics reports that show selected data and metrics for a period of time.</p>
-   
-        <details class="details-item">
-          <summary>Report time zone</summary>
-          <section class="bcls-section">
-            <p>Data in custom reports is based on the account's reporting time zone; to configure your time zone:</p>
+<h1>Rapports personnalisés</h1>  <article class="bcls-article"><section class="bcls-section">
+        <p>Créez des rapports d'analyse personnalisés qui présentent des données et des mesures sélectionnées pendant un certain temps.</p> <details class="details-item"> <summary>Le fuseau horaire du rapport</summary> <section class="bcls-section">
+            <p>Les données des rapports personnalisés sont basées sur le fuseau horaire des rapports du compte&nbsp;; pour configurer votre fuseau horaire:</p>
             <ol class="bcls-tasklist-restart">
-              <li>In Beacon Studio, expand the <strong>Admin</strong> dropdown.</li>
-              <li>Select <strong>Account Settings</strong>.</li>
-              <li>Set your <strong>Current Time Zone</strong>.</li>
-              <li>Click <span class="button-blue">Save</span>.</li>
-            </ol>
-            <aside class="bcls-aside bcls-aside--information">Changing the reporting time zone only affects data going forward, and changes are not applied retroactively.</aside>
-            <p><a href="https://beacon-help.support.brightcove.com/analytics/creating-custom-analytics-reports.html#timezone" target="_blank">Learn more <img src="/assets/images/feather/external-link-blue.svg" alt="external link" style="width: .8rem;"></a></p>
-          </section>
-        </details>
-
-        <details class="details-item">
-          <summary>Report data</summary>
-          <section class="bcls-section">
+              <li>Dans Beacon Studio, développez le<strong> menu déroulant</strong> Admin.</li>
+              <li>Sélectionnez Paramètres<strong> du compte</strong>.</li>
+              <li>Définissez votre fuseau horaire<strong> actuel</strong>.</li>
+              <li>Cliquez sur<span class="button-blue"> Enregistrer</span>.</li>
+            </ol> <aside class="bcls-aside bcls-aside--information">La modification du fuseau horaire des rapports n'affecte que les données à venir, et les modifications ne sont pas appliquées rétroactivement.</aside>
+            <p><a href="https://beacon-help.support.brightcove.com/analytics/creating-custom-analytics-reports.html#timezone" target="_blank">En savoir plus <img src="/assets/images/feather/external-link-blue.svg" alt="lien externe" style="width: .8rem;"></a></p> </section> </details> <details class="details-item"> <summary>Données du rapport</summary> <section class="bcls-section">
             <ul>
-              <li><strong>Include Accounts</strong> - Include data from the current Video Cloud account or select multiple accounts</li>
-              <li><strong>Report Type</strong> 
+              <li><strong>Inclure les comptes</strong> - Incluez les données du compte Video Cloud actuel ou sélectionnez plusieurs comptes</li>
+              <li><strong>Type de rapport</strong> 
                 <ul>
-                  <li><strong>One-time</strong> - Report is run once, immediately
-                  <li><strong>Date Range</strong> - For one-time reports, specify the time period for analytics data</li>
+                  <li><strong>Une fois</strong> - Le rapport est exécuté une fois, immédiatement
+                  <li><strong>Plage de dates</strong>: pour les rapports ponctuels, spécifiez la période pour les données d'analyse</li>
                   </li>
-                  <li><strong>Recurring</strong> - Report can be scheduled to run on a daily, weekly or monthly basis
-                  <li><strong>Frequency</strong> - For recurring reports
+                  <li><strong>Récurrent</strong> - Le rapport peut être programmé pour s'exécuter sur une base quotidienne, hebdomadaire ou mensuelle
+                  <li><strong>Fréquence</strong> - Pour les rapports récurrents
                     <ul>
-                      <li><strong>Daily</strong> - Report covers an entire day</li>
-                      <li><strong>Weekly</strong> - Report covers an entire week, defined as Monday through Sunday</li>
-                      <li><strong>Monthly</strong> - Reports covers an entire month</li>
+                      <li><strong>Quotidien</strong> - Le rapport couvre une journée entière</li>
+                      <li><strong>Hebdomadaire</strong> - Le rapport couvre une semaine entière, définie du lundi au dimanche</li>
+                      <li><strong>Mensuel</strong> - Les rapports couvrent un mois entier</li>
                     </ul>
-                  </li>
-                  <aside class="bcls-aside bcls-aside--information">Recurring reports are executed after analytics reconciliation, usually 3 to 5 days after the end of a reporting period.</aside>
+                  </li> <aside class="bcls-aside bcls-aside--information">Les rapports récurrents sont exécutés après le rapprochement des analyses, généralement 3 à 5 jours après la fin d'une période de reporting.</aside>
                   </li>
                 </ul>
               </li>
-              <li><strong>Data Groups</strong> - Data Groups determine the data fields included in the report
+              <li><strong>Groupes de données</strong>: les groupes de données déterminent les champs de données inclus dans le rapport
                 <ul>
-                  <li>Data Fields that appear are based upon the data groups you select</li>
-                  <li>You can select multiple data groups but some combinations are not valid</li>
-                  <li>At least one Data Group must be selected</li>
+                  <li>Les champs de données qui apparaissent sont basés sur les groupes de données que vous sélectionnez</li>
+                  <li>Vous pouvez sélectionner plusieurs groupes de données, mais certaines combinaisons ne sont pas valides.</li>
+                  <li>Au moins un groupe de données doit être sélectionné</li>
                 </ul>
               </li>
-              <li><strong>Data Fields</strong> - When you select a Data Group, the Data Fields that can be returned are selectable
+              <li><strong>Champs de données</strong>: lorsque vous sélectionnez un groupe de données, les champs de données qui peuvent être renvoyés sont sélectionnables
                 <ul>
-                  <li>Grayed-out fields cannot be returned for the selected Data Group</li>
+                  <li>Les champs grisés ne peuvent pas être renvoyés pour le groupe de données sélectionné</li>
                 </ul>
               </li>
             
               
-              <li>Click <span class="button-blue">Save</span> to save your changes</li> 
+              <li>Cliquez sur<span class="button-blue"> Enregistrer</span> pour enregistrer vos modifications</li> 
             </ul>
-            <p><a href="https://beacon-help.support.brightcove.com/analytics/creating-custom-analytics-reports.html" target="_blank">Learn more <img src="/assets/images/feather/external-link-blue.svg" alt="external link" style="width: .8rem;"></a></p>
-          </section>
-        </details>
-
-        <details class="details-item">
-          <summary>Add report filters</summary>
-          <section class="bcls-section">
-            <p>Filters can be added to limit the amount of data returned.</p>
+            <p><a href="https://beacon-help.support.brightcove.com/analytics/creating-custom-analytics-reports.html" target="_blank">En savoir plus <img src="/assets/images/feather/external-link-blue.svg" alt="lien externe" style="width: .8rem;"></a></p> </section> </details> <details class="details-item"> <summary>Ajouter des filtres de rapport</summary> <section class="bcls-section">
+            <p>Des filtres peuvent être ajoutés pour limiter la quantité de données renvoyées.</p>
             <ul>
-              <li>When using multiple filters, an AND operation will be used</li>
-              <li>A filter will only display in your report if you have selected its matching data group
+              <li>Lors de l'utilisation de plusieurs filtres, une opération AND sera utilisée</li>
+              <li>Un filtre ne s'affichera dans votre rapport que si vous avez sélectionné son groupe de données correspondant.
                 <ul>
-                  <li>For example, if you want to filter on <strong>Video Tag</strong>, you must select the <strong>Video</strong> dimension</li>
+                  <li>Par exemple, si vous souhaitez appliquer un filtre sur la balise<strong> vidéo</strong>, vous devez sélectionner la<strong> dimension</strong> Vidéo</li>
                 </ul>
               </li>
             </ul>
-            <p>You can filter on the following:</p>
+            <p>Vous pouvez appliquer un filtre sur les éléments suivants:</p>
             <ul>
-              <li><strong>Video</strong> - One or more active video IDs in the account</li>
-              <li><strong>Video Tag</strong> - One or more video tags</li>
-              <li><strong>Custom Fields</strong> - One or more custom fields in the account</li>
-              <li><strong>Player</strong> - Enter one or more player IDs, separated by a comma</li>
-              <li><strong>Source Type</strong></li>
-              <li><strong>Device Type</strong></li>
-              <li><strong>Device OS</strong></li>
-              <li><strong>Device Manufacturer</strong></li>
-              <li><strong>Browser Type</strong></li>
-              <li><strong>Search Terms</strong></li>
-              <li><strong>Country</strong></li>
-              <li><strong>Destination Domain</strong></li>
-              <li><strong>Search Terms</strong></li>
+              <li><strong>Vidéo</strong>: un ou plusieurs identifiants vidéo actifs dans le compte</li>
+              <li><strong>Video Tag</strong> - Une ou plusieurs balises vidéo</li>
+              <li><strong>Champs personnalisés</strong>: un ou plusieurs champs personnalisés du compte</li>
+              <li><strong></strong>Joueur: saisissez un ou plusieurs identifiants de lecteur
+s, séparés par une virgule</li>
+              <li><strong>Type de source</strong></li>
+              <li><strong>Type d'appareil</strong></li>
+              <li><strong>OS de l'appareil</strong></li>
+              <li><strong>Fabricant de l'appareil</strong></li>
+              <li><strong>Type de navigateur</strong></li>
+              <li><strong>Termes de recherche</strong></li>
+              <li><strong>Pays</strong></li>
+              <li><strong>Domaine de destination</strong></li>
+              <li><strong>Termes de recherche</strong></li>
             </ul>
-            <p><a href="https://beacon-help.support.brightcove.com/analytics/creating-custom-analytics-reports.html#filter" target="_blank">Learn more <img src="/assets/images/feather/external-link-blue.svg" alt="external link" style="width: .8rem;"></a></p>
-          </section>
-        </details>
-
-        <details class="details-item">
-          <summary>Preview Report</summary>
-          <section class="bcls-section">
-            <p>The data displayed in the report preview is sample data, not actual data from your Video Cloud account.</p>
+            <p><a href="https://beacon-help.support.brightcove.com/analytics/creating-custom-analytics-reports.html#filter" target="_blank">En savoir plus <img src="/assets/images/feather/external-link-blue.svg" alt="lien externe" style="width: .8rem;"></a></p> </section> </details> <details class="details-item"> <summary>Aperçu du rapport</summary> <section class="bcls-section">
+            <p>Les données affichées dans l'aperçu du rapport sont des exemples de données, et non des données réelles de votre compte Video Cloud.</p>
             <ul>
-              <li>The <strong>Preview Report</strong> section shows the data columns selected, populated with sample data</li>
-              <li>Click <img class="ui-image" alt="Delete icon" src="/assets/images/admin/help/delete-icon.png" /> to delete the associated data item</li>
-              <li>The sort order of the preview has no effect on the sort order of the downloaded report</li>
-              <li>You can use a spreadsheet application to sort the downloaded data</li>
+              <li>La<strong> section</strong> Aperçu du rapport affiche les colonnes de données sélectionnées, remplies avec des exemples de données</li>
+              <li>Cliquez <img class="ui-image" alt="Icône Supprimer" src="/assets/images/admin/help/delete-icon.png" /> pour supprimer l'élément de données associé</li>
+              <li>L'ordre de tri de l'aperçu n'a aucun effet sur l'ordre de tri du rapport téléchargé</li>
+              <li>Vous pouvez utiliser un tableur pour trier les données téléchargées</li>
             </ul>
            
-            <p><a href="https://beacon-help.support.brightcove.com/analytics/creating-custom-analytics-reports.html#preview" target="_blank">Learn more <img src="/assets/images/feather/external-link-blue.svg" alt="external link" style="width: .8rem;"></a></p>
-          </section>
-        </details>
-
-        <details class="details-item">
-          <summary>Configure and Deliver Report</summary>
-          <section class="bcls-section">
+            <p><a href="https://beacon-help.support.brightcove.com/analytics/creating-custom-analytics-reports.html#preview" target="_blank">En savoir plus <img src="/assets/images/feather/external-link-blue.svg" alt="lien externe" style="width: .8rem;"></a></p> </section> </details> <details class="details-item"> <summary>Configuration et livraison du rapport</summary> <section class="bcls-section">
             <ul>
-              <li><strong>Report Name</strong> - Start by giving the report a meaningful name</li>
+              <li><strong>Report Name</strong>: commencez par donner un nom significatif au rapport</li>
               <li><strong>Format</strong> 
                 <ul>
-                  <li><strong>CSV</strong> - Comma-separated values </li>
+                  <li><strong>CSV</strong> - Valeurs séparées par des virgules </li>
                   <li><strong>XLSX</strong> - Microsoft Excel</li>
                 </ul>
               </li>
-              <li><strong>Email me when my report is ready</strong> - Get an email notification to yourself when the report is complete</li>
-              <li><strong>Notify others</strong> - Enter email addresses separated by a comma</li>
-              <li>In the Brighcove email, the link to download the report is valid for 90 days</li>
+              <li><strong>Envoyez-moi un e-mail lorsque mon rapport est prêt</strong> - Recevez une notification par e-mail lorsque le rapport est terminé</li>
+              <li><strong>Notifier les autres</strong> - Saisissez les adresses e-mail séparées par une virgule</li>
+              <li>Dans l'e-mail de Brighcove, le lien pour télécharger le rapport est valide pendant 90 jours</li>
               
-              <li>For one-time reports, 
+              <li>Pour les rapports ponctuels, 
                 <ul>
-                  <li>Click <span class="button-blue">Request Report</span></li>
-                  <li>The report will be downloaded when it is complete</li>
+                  <li>Cliquez sur<span class="button-blue"> Demande de rapport</span></li>
+                  <li>Le rapport sera téléchargé lorsqu'il sera terminé</li>
                 </ul>
               </li>
-              <li>For recurring reports, 
+              <li>Pour les rapports récurrents, 
                 <ul>
-                  <li>Click <span class="button-blue">Schedule Report</span></li>
-                  <li>The report will be queued and run when the data is ready</li>
+                  <li>Cliquez sur<span class="button-blue"> Schedule Report</span></li>
+                  <li>Le rapport sera mis en file d'attente et exécuté lorsque les données seront prêtes</li>
                 </ul>
               </li>
             </ul>
-            <li>To see all scheduled reports, click <span class="button-blue">Scheduled Reports</span> in the left navigation</li>
+            <li>Pour voir tous les rapports planifiés, cliquez sur Rapports<span class="button-blue"> planifiés</span> dans le volet de navigation de gauche</li>
            
-            <p><a href="https://beacon-help.support.brightcove.com/analytics/creating-custom-analytics-reports.html#options" target="_blank">Learn more <img src="/assets/images/feather/external-link-blue.svg" alt="external link" style="width: .8rem;"></a></p>
-          </section>
-        </details> 
-   
-  </section>
-</article>
+            <p><a href="https://beacon-help.support.brightcove.com/analytics/creating-custom-analytics-reports.html#options" target="_blank">En savoir plus <img src="/assets/images/feather/external-link-blue.svg" alt="lien externe" style="width: .8rem;"></a></p>    </section></details></section></article>

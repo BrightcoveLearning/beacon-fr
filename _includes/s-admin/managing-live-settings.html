@@ -1,0 +1,58 @@
+<article class="bcls-article">
+  <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section">
+    <p>Les paramètres Live vous permettent de gérer les ardoises de remplissage et les informations d'identification Live.</p> <aside class="bcls-aside bcls-aside--information">Remarque: Les configurations publicitaires côté serveur utilisées par Brightcove Live sont configurées dans le cadre de l'administration des paramètres publicitaires côté serveur. Pour plus d'informations, consultez<a href="https://studio.support.brightcove.com/admin/configuring-server-side-ad-settings.html"> la section Configuration des paramètres publicitaires côté serveur</a>.</aside> </section> <section class="bcls-section">
+    <h2 id="fill_slate">Gestion des ardoises de remplissage</h2>
+    <p>Les listes de remplissage sont du contenu qui peut être diffusé lorsqu'il y a des lacunes dans une pause publicitaire en direct. Les ardoises peuvent être utilisées pour fournir un message Revenez tout de suite-fr/ ou tout autre contenu que vous souhaitez afficher. Tous les formats<a href="https://zencoder.support.brightcove.com/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html#format"> d'entrée Zencoder</a> sont pris en charge.</p> <aside class="bcls-aside bcls-aside--information">Remarque: Les ardoises de remplissage peuvent également être gérées à l'aide de l'API Live. Pour plus d'informations, consultez l'API Live de<a href="/live-api/ssai/live-api-server-side-ad-insertion-ssai.html#Managing_slates"> Brightcove: Insertion de publicités côté serveur (SSAI)</a>.</aside>
+    <p>Pour ajouter une ardoise de remplissage, procédez comme suit.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Ouvrez le<strong> module</strong> Admin.</li>
+      <li>Dans le volet de navigation de gauche, cliquez sur Paramètres<strong> en direct</strong>. <aside class="bcls-aside bcls-aside--information">Remarque: Vous devez être administrateur de compte pour accéder au menu Admin.</aside>
+      </li>
+      <li>Cliquez sur<span class="button-blue"> + Ajouter une ardoise de remplissage</span>. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18588-fill-slate.png" /></figure>
+      </li>
+      <li>Saisissez un<strong> nom</strong>.</li>
+      <li>Saisissez l'URL<strong> source</strong> de la liste.</li>
+      <li>Cliquez sur<span class="button-blue"> Enregistrer</span>. Le processus d'ingestion de l'ardoise va commencer.</li>
+    </ol>
+    <p>Pour supprimer une ardoise de remplissage, cliquez sur le bouton Supprimer (<img alt="" src="/assets/images/admin/icon-delete.png" />) en regard de la ardoise de remplissage.</p>  </section><section class="bcls-section">
+    <h2 id="credentials">Gestion des identifiants</h2>
+    <p>Les informations d'identification sont utilisées à la fois par l'API Live et le module Live. Si vous créez un nouvel identifiant Live Video Cloud, vous devez d'abord créer un identifiant d'authentification API. L'ID client et le secret client créés seront utilisés lors de la création des informations d'identification Live Video Cloud. Lors de la création d'informations d'identification FTP, S3 ou RTMP, aucune information d'identification d'authentification API n'est nécessaire.</p>
+    <p>Si vous créez des informations d'identification S3, FTP ou RTMP, passez à l'<strong>étape 5</strong>. Pour créer un identifiant Live Video Cloud, commencez par créer un identifiant d'API.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Ouvrez le<strong> module</strong> Admin. <aside class="bcls-aside bcls-aside--information">Remarque: Vous devez être administrateur de compte pour accéder au menu ADMIN.</aside>
+      </li>
+      <li>Dans le menu de navigation de gauche, cliquez sur Authentification <strong></strong>API La page Authentification de l'API s'ouvre et affiche les inscriptions actuelles de vos clients.</li>
+      <li>Cliquez sur<span class="button-blue"> Enregistrer une nouvelle application</span> pour créer de nouvelles informations d'identification d'API. Les API suivantes doivent être sélectionnées. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18588-apis-to-select.png" /></figure> <aside class="bcls-aside bcls-aside--information">Remarque: Pour plus d'informations sur la création d'informations d'identification d'authentification d'API, consultez<a href="/admin/managing-api-authentication-credentials.html"> Gestion des informations d'</a>authentification</aside>
+      </li>
+      <li>Lorsque les informations d'identification sont créées, enregistrez l'ID<strong> client</strong> et les<strong> valeurs secrètes</strong> du client. Ces informations seront nécessaires lors de la création des informations d'identification Live Video Cloud.</li>
+      <li>Dans le volet de navigation de gauche, cliquez sur Paramètres<strong> en direct</strong>.</li>
+      <li>Cliquez sur<span class="button-blue"> + Ajouter des informations d'identification</span>. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node18588-create-credential.png" /></figure>
+      </li>
+      <li>Saisissez une<strong> étiquette</strong>. Il s'agit du nom qui sera utilisé en interne pour faire référence aux informations d'identification.</li>
+      <li>Sélectionnez un<strong> type</strong>:
+        <ul>
+          <li><strong>FTP</strong> - Utilisé pour enregistrer la ressource VOD sur un emplacement FTP (utilisation de l'API)</li>
+          <li><strong>RTMP</strong>: utilisé pour créer des informations d'identification RTMP à utiliser par l'encodeur</li>
+          <li><strong>S3</strong> - Utilisé pour enregistrer l'actif VOD sur un compte Amazon S3 (utilisation de l'API)</li>
+          <li><strong>Video Cloud</strong> - Utilisé pour enregistrer la ressource VOD sur un compte Video Cloud (utilisation de l'API)</li>
+        </ul>
+      </li>
+      <li>Pour<strong> Public Key/Username</strong>, entrez ce qui suit en fonction du type d'informations d'identification:
+        <ul>
+          <li><strong>FTP</strong> - Saisissez le nom d'utilisateur du site FTP</li>
+          <li><strong>RTMP</strong> - Entrez le nom d'utilisateur que l'encodeur utilisera pour s'authentifier</li>
+          <li><strong>S3</strong> - Entrez le nom d'utilisateur du compte S3</li>
+          <li><strong>Video Cloud</strong>: saisissez l'ID<strong> client</strong> généré pour les informations d'identification d'authentification API</li>
+        </ul>
+      </li>
+      <li>Pour Clé<strong> privée/Mot de passe</strong>, entrez ce qui suit en fonction du type d'informations d'identification:
+        <ul>
+          <li><strong>FTP</strong> - Entrez le mot de passe du site FTP</li>
+          <li><strong>RTMP</strong> - Entrez le mot de passe que l'encodeur utilisera pour s'authentifier</li>
+          <li><strong>S3</strong> - Entrez le mot de passe du compte S3</li>
+          <li><strong>Video Cloud</strong>: saisissez le secret<strong> client</strong> généré pour les informations d'identification d'authentification API</li>
+        </ul>
+      </li>
+      <li>Cliquez sur<span class="button-blue"> Enregistrer</span>.</li>
+    </ol>
+    <p>Les informations d'identification apparaîtront dans la liste des informations d'identification. Pour supprimer une information d'identification, cliquez sur le bouton Supprimer (<img alt="" src="/assets/images/admin/icon-delete.png" />) en regard des informations d'identification.</p>   </section></article>

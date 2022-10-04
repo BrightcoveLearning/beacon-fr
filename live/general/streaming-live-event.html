@@ -1,132 +1,96 @@
 ---
-title: 'Streaming a Live Event using Beacon Classic'
-description: In this topic, you will learn how to stream a Live event in Brightcove Beacon.
-parent: General
-grandparent: Live Streaming
+title: Streaming d'un événement en direct avec Beacon Classic-fr/
+description: Dans cette rubrique, vous allez apprendre comment diffuser un événement en direct dans Brightcove Beacon. 
+parent: Informations Générales
+grandparent: Live
 ---
 
-<h1>{{ page.title }}</h1>
-<article class="bcls-article">
-  <summary>{{ page.description }}</summary>
-  <aside class="bcls-aside bcls-aside--information">NOTE: In this topic, some of the steps are performed in Beacon Classic.</aside>
-
-  <section class="bcls-section">
-    <h2 id="overview">Overview</h2>
+<h1>{{page.title}}</h1> <article class="bcls-article"> <summary>{{page.description}}</summary> <aside class="bcls-aside bcls-aside--information"> REMARQUE
+description: Dans cette rubrique, certaines des étapes sont effectuées dans Beacon Classic.</aside> <section class="bcls-section">
+    <h2 id="overview">Aperçu</h2>
 
     <p>
-      To stream a Live event to your application, you must follow a series of
-      steps to connect your Beacon Studio Live account and Beacon Classic.
+      Pour diffuser un événement en direct sur votre application, vous devez suivre une série d'étapes pour connecter votre compte Beacon Studio Live et Beacon Classic.
     </p>
-    <p>A high-level view of the process is:</p>
+    <p>Voici une vue de haut niveau du processus:</p>
     <ol>
       <li>
-        In Beacon Classic, create an event and a playlist.
+        Dans Beacon Classic, créez un événement et une playlist.
       </li>
       <li>
-        In Beacon Studio, access the Live module to create your event and obtain a
-        job ID.
+        Dans Beacon Studio, accédez au module Live pour créer votre événement et obtenir un ID de tâche.
       </li>
       <li>
-        In Beacon Classic, register your live event using the job ID from
-        Beacon Studio.
+        Dans Beacon Classic, enregistrez votre événement en direct à l'aide de l'ID de tâche de Beacon Studio.
       </li>
       <li>
-        The Live video will start streaming in the Beacon App.
+        La vidéo en direct commencera à être diffusée dans l'application Beacon.
       </li>
     </ol>
     <p>
-      In the last section of this document you will see the steps to create a
-      different type of event in Live by using a Static Entry Point. This allows
-      for recurring live events that can be activated and deactivated and need
-      to be configured only once.
+      Dans la dernière section de ce document, vous verrez les étapes permettant de créer un type d'événement différent dans Live à l'aide d'un point d'entrée statique. Cela permet des événements en direct récurrents qui peuvent être activés et désactivés et qui ne doivent être configurés qu'une seule fois.
     </p>
     <p>
-      The rest of this document will provide details for each of the steps
-      above.
-    </p>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="create">Creating a Live event in Beacon Classic</h2>
-    <p>Follow these steps to create an Event in Beacon Classic.</p>
-
-    <aside class="bcls-aside bcls-aside--information">
-      Only activated accounts with <strong>Beacon Classic Live</strong> will
-      have the <strong>Playlists</strong> and <strong>Events</strong> available
-      in the tabs section. Please contact Brightcove Support in case you don't
-      have them activated.
-    </aside>
+      Le reste de ce document fournit des détails pour chacune des étapes ci-dessus.
+    </p>  </section><section class="bcls-section">
+    <h2 id="create">Création d'un événement en direct dans Beacon Classic</h2>
+    <p>Suivez ces étapes pour créer un événement dans Beacon Classic.</p> <aside class="bcls-aside bcls-aside--information"> Seuls les comptes activés avec<strong> Beacon Classic Live</strong> auront les<strong> listes de lecteur</strong> et les<strong> événements</strong> disponibles dans la section des onglets. Veuillez contacter le support Brightcove au cas où ils ne seraient pas activés. </aside>
     <ol class="bcls-tasklist">
       <li>
-        In Beacon Classic, click on the <strong>Events</strong> tab to start
-        the set up of an Event.
+        Dans Beacon Classic, cliquez sur l'<strong>onglet</strong> Événements pour démarrer la configuration d'un événement.
       </li>
       <li>
-        Click on <strong>Add a new Event</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/1-add-new-event.png" />
-        </figure>
+        Cliquez sur<strong> Ajouter un nouvel événement</strong>. <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/1-add-new-event.png" /> </figure>
       </li>
       <li>
-        Give the Live event a <strong>Name</strong> and an
-        <strong>Event Start Date</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/2-beacon-basic-data.png" />
-        </figure>
+        Donnez un<strong> nom</strong> et une date de début à<strong> l'événement en direct</strong>. <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/2-beacon-basic-data.png" /> </figure>
       </li>
       <li>
-        In the <strong>Textual Data</strong> tab, fill in your event
-        information.
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/3-beacon-textual-data.png" />
-        </figure>
+        Dans l'<strong>onglet Données</strong> textuelles, saisissez les informations de votre événement. <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/3-beacon-textual-data.png" /> </figure>
       </li>
-      <li>Click on the <strong>Non-Textual Data</strong> tab.</li>
+      <li>Cliquez sur l'<strong>onglet Données</strong> non textuelles.</li>
       <li>
-        Supply an image for the <strong>Portrait Poster</strong> and
-        <strong>Landscape Poster</strong> matching the requirements below. You
-        DO NOT need to supply images for <strong>Thumbnail</strong> and
-        <strong>Wide banner</strong>.
+        Fournissez une image pour l'affiche<strong> de portrait</strong> et l'affiche<strong> paysage</strong> correspondant aux exigences ci-dessous. Vous n'avez PAS besoin de fournir des images pour les<strong> vignettes</strong> et les bannières<strong> larges</strong>.
         <table class="bcls-table">
           <thead class="bcls-table__head">
             <tr>
               <th>Image</th>
-              <th>Requirements</th>
+              <th>Exigences</th>
             </tr>
           </thead>
           <tbody class="bcls-table__body">
             <tr>
-              <td>Portrait Poster</td>
+              <td>Poster Portrait</td>
               <td>
-                Poster image (2:3)
+                Image de l'affiche (2:3)
                 <table>
                   <tr>
-                    <td>Minimum</td>
-                    <td>Width: 1000px</td>
-                    <td>Height: 563px</td>
+                    <td>Au minimum</td>
+                    <td>Largeur: 1000 px</td>
+                    <td>Hauteur: 563 px</td>
                   </tr>
                   <tr>
                     <td>Maximum</td>
-                    <td>Width: 4000px</td>
-                    <td>Height: 2250px</td>
+                    <td>Largeur: 4000 px</td>
+                    <td>Hauteur: 2 250 px</td>
                   </tr>
                 </table>
               </td>
             </tr>
             <tr>
-              <td>Landscape Poster</td>
+              <td>Poster paysage</td>
               <td>
-                Landscape image (16:9)
+                Image paysage (16:9)
                 <table>
                   <tr>
-                    <td>Minimum</td>
-                    <td>Width: 1000px</td>
-                    <td>Height: 563px</td>
+                    <td>Au minimum</td>
+                    <td>Largeur: 1000 px</td>
+                    <td>Hauteur: 563 px</td>
                   </tr>
                   <tr>
                     <td>Maximum</td>
-                    <td>Width: 4000px</td>
-                    <td>Height: 2250px</td>
+                    <td>Largeur: 4000 px</td>
+                    <td>Hauteur: 2 250 px</td>
                   </tr>
                 </table>
               </td>
@@ -135,528 +99,257 @@ grandparent: Live Streaming
         </table>
       </li>
       <li>
-        Click the <strong>Rights & Scheduling</strong> tab, as shown here:
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/5-beacon-right-schedualing.png" />
-        </figure>
+        Cliquez sur l'<strong>onglet</strong> Droits et planification, comme illustré ici: <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/5-beacon-right-schedualing.png" /> </figure>
       </li>
       <li>
-        Add values for the following fields:
+        Ajoutez des valeurs pour les champs suivants:
         <ul>
-          <li>
-            <strong>Rights Type</strong>: Choose the type of rights between
-            <em>Advertising</em>, <em>Subscription</em> or <em>Free</em>.
+          <li> <strong>Type de droits</strong>: Choisissez le type de droits entre<em> Publicité</em>,<em> Abonnement</em> ou<em> Gratuit</em>.
           </li>
-          <li>
-            <strong>Start Time</strong>: Set the start date of your event.
+          <li> <strong>Heure de début</strong>: Définissez la date de début de votre événement.
           </li>
-          <li><strong>End Time</strong>: Set the end date of your event.</li>
-          <li>
-            <strong>Max Streams</strong>: Set the maximum number of streams
-            allowed to view the live event. The default number is 0 (zero).
+          <li><strong>Heure de fin</strong>: Fixez la date de fin de votre événement.</li>
+          <li> <strong>Flux maximum</strong>: Définissez le nombre maximum de diffusions autorisées pour visionner l'événement en direct. Le nombre par défaut est 0 (zéro).
           </li>
-          <li>
-            <strong>Devices to publish</strong>: Add the devices to which you
-            wish to publish. Click
-            <strong>Select / Unselect All Devices</strong>
-            to see a list of available devices.
+          <li> <strong>Appareils à publier</strong>: Ajoutez les appareils sur lesquels vous souhaitez publier. Cliquez sur<strong> Sélectionner/Désélectionner tous les appareils</strong> pour afficher la liste des appareils disponibles.
           </li>
-          <li>
-            <strong>Permitted locations</strong>: Select the locations where you
-            want to stream your content, if no restrictions enter
-            <em>World</em>.
+          <li> <strong>Lieux autorisés</strong>: Sélectionnez les emplacements où vous souhaitez diffuser votre contenu, si aucune restriction n'entre dans<em> World</em>.
           </li>
-          <li>
-            <strong>Denied Locations</strong>: Select the locations where you DO
-            NOT want to stream your content.
+          <li> <strong>Lieux refusés</strong>: Sélectionnez les emplacements où vous NE SOUHAITEZ PAS diffuser votre contenu en continu.
           </li>
         </ul>
       </li>
       <li>
-        Click the <strong>Create New Event</strong> button to create your event.
+        Cliquez sur le<strong> bouton</strong> Créer un nouvel événement pour créer votre événement.
       </li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Playlist">Adding the Beacon Classic event to a playlist</h2>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="Playlist">Ajout de l'événement Beacon Classic à une liste de lecteur</h2>
     <p>
-      Once you create an event, the next task is to add the event to a Playlist.
-      The following steps lead you through that process.
+      Une fois que vous avez créé un événement, la tâche suivante consiste à l'ajouter à une liste de lecteur. Les étapes suivantes vous guident tout au long de ce processus.
     </p>
     <ol class="bcls-tasklist">
       <li>
-        In Beacon Classic, click the <strong>Playlists</strong> tab.
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/7-playlist-menu.png" />
-        </figure>
+        Dans Beacon Classic, cliquez sur l'<strong>onglet</strong> Playlists. <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/7-playlist-menu.png" /> </figure>
       </li>
       <li>
-        Click on the <strong>Add new playlist</strong> button.
-        <aside class="bcls-aside bcls-aside--warning">
-          You need to create a playlist in Beacon Classic that will contain
-          your Live events. <strong>Do not</strong> use a playlist from Video
-          Cloud. Using a Video Cloud playlist may overwrite and delete your
-          Beacon Classic Live recordings.
-        </aside>
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/8-playlist.png" />
-        </figure>
+        Cliquez sur le<strong> bouton</strong> Ajouter une nouvelle liste de lecteur. <aside class="bcls-aside bcls-aside--warning"> Vous devez créer une liste de lecteur dans Beacon Classic qui contiendra vos événements en direct. <strong>N'</strong>utilisez pas de liste de lecteur de Video Cloud. L'utilisation d'une liste de lecteur Video Cloud peut écraser et supprimer vos enregistrements Beacon Classic Live. </aside> <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/8-playlist.png" /> </figure>
       </li>
 
       <li>
-        In <strong>Playlists</strong>, from the content type tabs, select the
-        <strong>Events</strong> tab.
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/9-playlist-events.png" />
-        </figure>
+        Dans<strong> Playlists</strong>, dans les onglets Type de contenu, sélectionnez l'<strong>onglet</strong> Événements. <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/9-playlist-events.png" /> </figure>
       </li>
 
       <li>
-        Look for your event in the contents list and click on the (+) button to
-        add it to the left playlist. You can position the order of the events in
-        the way you want them to be displayed in the app.
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/10-playlist-select-event.png" />
-        </figure>
+        Recherchez votre événement dans la liste de contenu et cliquez sur le bouton (+) pour l'ajouter à la liste de lecteur de gauche. Vous pouvez positionner l'ordre des événements de la manière dont vous souhaitez qu'ils soient affichés dans l'application. <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/10-playlist-select-event.png" /> </figure>
       </li>
 
       <li>
-        Adjust the settings of your playlist (time, devices, location, etc.) in
-        the <strong>Rights & Scheduling</strong> tab, as you did with your
-        event.
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/10.2-scheduling-playlist.png" />
-        </figure>
+        Ajustez les paramètres de votre liste de lecteur (heure, appareils, lieu, etc.) dans l'<strong>onglet</strong> Droits et planification, comme vous l'avez fait pour votre événement. <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/10.2-scheduling-playlist.png" /> </figure>
       </li>
 
-      <li>Click on the <strong>Save changes in Playlist</strong> button.</li>
+      <li>Cliquez sur le<strong> bouton</strong> Enregistrer les modifications dans la liste de lecteur.</li>
 
       <li>
-        Click on the <strong>Tools</strong> (wrench) button in the upper right
-        of the screen. Then clear the cache.
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/12-clear-cache.png" />
-        </figure>
+        Cliquez sur le bouton<strong> Outils</strong> (clé) en haut à droite de l'écran. Ensuite, effacez le cache. <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/12-clear-cache.png" /> </figure>
       </li>
     </ol>
     <p>
-      At this point, your event is created as a container in the Brightcove
-      Beacon app as shown in the left image (the event names and pictures on the
-      image are for example purposes only), click on your event, and you will
-      see something similar to the image on the right. To actually start
-      streaming a Live video, you will need to set up your transmission in the
-      Beacon Studio Live Platform.
-    </p>
-    <figure class="bcls-figure">
-      <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/13-beacon-apps-white.png" />
-    </figure>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Live">Creating a Live event in Beacon Studio</h2>
+      À ce stade, votre événement est créé en tant que conteneur dans l'application Brightcove Beacon comme indiqué dans l'image de gauche (les noms des événements et les images sur l'image ne sont fournis qu'à titre d'exemple), cliquez sur votre événement et vous verrez apparaître quelque chose de similaire à l'image de droite. Pour commencer à diffuser une vidéo en direct, vous devez configurer votre transmission sur la plateforme Beacon Studio Live.
+    </p>     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/13-beacon-apps-white.png" /></figure></section><section class="bcls-section">
+    <h2 id="Live">Création d'un événement en direct dans Beacon Studio</h2>
     <p>
-      Follow these steps to create the actual live event that will be streamed
-      to the Beacon App.
+      Suivez ces étapes pour créer l'événement en direct qui sera diffusé sur l'application Beacon.
     </p>
 
     <ol class="bcls-tasklist">
       <li>
-        Log in to Beacon Studio and click <strong>Live</strong> in the
-        in the primary navigation.
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/beacon-studio.png" />
-        </figure>
+        Connectez-vous à Beacon Studio et cliquez sur<strong> Live</strong> dans la navigation principale. <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/beacon-studio.png" /> </figure>
       </li>
       <li>
-        From the <strong>Manage Events</strong> page, click
-        <strong>Create Event</strong>. The
-        <strong>Create Live Event</strong> page will open.
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/15-live-event.png" />
-        </figure>
+        Sur la<strong> page</strong> Gérer les événements, cliquez sur<strong> Créer un événement</strong>. La<strong> page</strong> Créer un événement en direct s'ouvre. <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/15-live-event.png" /> </figure>
       </li>
       <li>
-        Enter the event details.
+        Saisissez les détails de l'événement.
         <ul>
-          <li>
-            <strong>Event Name</strong> - Name for the event; this name will
-            also appear in the Media module if the live event is saved as a
-            video asset (max 255 characters)
+          <li> <strong></strong>Nom de l'événement: nom de l'événement&nbsp;; ce nom apparaîtra également dans le module Médias si l'événement en direct est enregistré en tant que ressource vidéo (255 caractères maximum)
           </li>
-          <li>
-            <strong>Short Description</strong> - Description of the event (max
-            250 characters)
+          <li> <strong>Description courte</strong> - Description de l'événement (250 caractères maximum)
           </li>
-          <li>
-            <strong>Tags</strong> - Tags to associate with the event; tags will
-            be assigned to the video if the live event is saved as a video asset
-            (max 128 characters and 1200 tags)
+          <li> <strong>Tags</strong>: balises à associer à l'événement&nbsp;; les balises seront attribuées à la vidéo si l'événement en direct est enregistré en tant que ressource vidéo (128 caractères maximum et 1 200 balises)
           </li>
-          <li>
-            <strong>Reference ID</strong> - Reference ID for the event; must be
-            unique (max 150 characters)
+          <li> <strong>Reference ID</strong>: ID de référence de l'événement&nbsp;; doit être unique (150 caractères maximum)
           </li>
         </ul>
       </li>
       <li>
-        Click <strong>Allowed</strong> if you wish to enable the live event to
-        be streamed to social media platforms, otherwise click
-        <strong>Not allowed</strong>. This can be done
-        <a href="https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html#social">once the event has started streaming</a>
-        or by using the
-        <a href="https://live.support.brightcove.com/live-module/publishing-live-event-facebook.html">Social module</a>.
+        Cliquez sur<strong> Autorisé</strong> si vous souhaitez que l'événement en direct soit diffusé en continu sur les plateformes de réseaux sociaux, sinon cliquez sur<strong> Non autorisé</strong>. Cela peut être fait<a href="https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html#social"> une fois que l'événement a commencé à être diffusé en continu</a> ou en utilisant le module<a href="https://live.support.brightcove.com/live-module/publishing-live-event-facebook.html"> Social</a>.
       </li>
       <li>
-        Select a <strong>Live Ingest Profile</strong>. The dropdown list will
-        list all Live ingest profiles. The ingest profile will control the
-        quality and number of live renditions that are created. Clicking the
-        <strong>Manage Profiles</strong> link will open the ingest profile
-        editor in another browser tab. Note that you must be an account
-        administrator to access the ingest profile editor. Click the
-        <strong>RENDITIONS</strong> link to view the renditions that will be
-        created using the selected ingest profile.
-        <aside class="bcls-aside bcls-aside--information">
-          The bitrate and billing details of the three tiers are as follows:
+        Sélectionnez un profil<strong> Live Ingest</strong>. La liste déroulante répertorie tous les profils d'acquisition Live. Le profil d'acquisition contrôlera la qualité et le nombre de rendus en direct créés. Cliquez sur le<strong> lien</strong> Gérer les profils pour ouvrir l'éditeur de profil d'acquisition dans un autre onglet du navigateur. Notez que vous devez être administrateur de compte pour accéder à l'éditeur de profil d'acquisition. Cliquez sur le<strong> lien</strong> RENDUS pour afficher les rendus qui seront créés à l'aide du profil d'acquisition sélectionné. <aside class="bcls-aside bcls-aside--information"> Le débit binaire et les détails de facturation des trois niveaux sont les suivants:
           <ul>
             <li>
-              Tier 1 allows up to 5,500 Kbps and is charged at 1.0x hours
+              Le niveau 1 permet jusqu'à 5 500 Kbits/s et est chargé à 1 heure
             </li>
             <li>
-              Tier 2 allows up to 10,000 Kbps and is charged at 1.5x hours
+              Le niveau 2 permet jusqu'à 10 000 Kbits/s et est chargé à 1,5 fois l'heure
             </li>
             <li>
-              Tier 3 allows up to 20,000 Kbps and is charged at 2.0x hours
+              Le niveau 3 permet jusqu'à 20 000 Kbits/s et est chargé 2 fois par heure
             </li>
-          </ul>
-        </aside>
+          </ul> </aside>
       </li>
       <li>
-        Select <strong>Convert event to video asset when complete</strong> to
-        save a VOD version of the live event to your Beacon Studio account. When
-        this option is selected, the highest quality rendition from the selected
-        <strong>Live Ingest Profile</strong> is used as the source for the VOD
-        video. The default ingest profile for the account is used when creating
-        renditions.
-        <strong>Note that the VOD version is not available as soon as the live event
-          ends, the video will be available once the ingestion process is
-          complete.</strong>
-        <aside class="bcls-aside bcls-aside--information">
-          Note: This option is not supported when using a recurring event.
-        </aside>
+        Sélectionnez<strong> Convertir l'événement en ressource vidéo lorsque vous avez terminé</strong> pour enregistrer une version VOD de l'événement en direct sur votre compte Beacon Studio. Lorsque cette option est sélectionnée, le rendu de la plus haute qualité du profil d'acquisition<strong> en direct sélectionné</strong> est utilisé comme source pour la vidéo VOD. Le profil d'acquisition par défaut du compte est utilisé lors de la création de formats associés. <strong>Notez que la version VOD n'est pas disponible dès la fin de l'événement en direct, la vidéo sera disponible une fois le processus d'ingestion terminé.</strong> <aside class="bcls-aside bcls-aside--information"> Remarque
+description: Cette option n'est pas prise en charge lorsque vous utilisez un événement récurrent. </aside>
       </li>
       <li>
-        Click <strong>ADVANCED OPTIONS</strong> and view the advanced options.
-        Only one of which will need your attention.
+        Cliquez sur OPTIONS<strong> AVANCÉES</strong> et affichez les options avancées. Un seul d'entre eux aura besoin de votre attention.
       </li>
       <li>
-        Click in the
-        <strong>Enable stream status notifications</strong> checkbox and add the
-        notifications URL from Beacon Classic CMS (your Brightcove Support
-        representative will provide this URL).
-
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/16-enable-notifications.png" />
-        </figure>
+        Cochez la<strong> case</strong> Activer les notifications d'état du flux et ajoutez l'URL de notification de Beacon Classic CMS (votre représentant du support Brightcove fournira cette URL). <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/16-enable-notifications.png" /> </figure>
       </li>
       <li>
-        Click <strong>Create Event</strong> to start the live event. The Control
-        Room page will open with details about the live event including the
-        <strong>Streaming Endpoint (RTMP URL)</strong> and
-        <strong>Stream Name</strong> which will be used by your encoder. It will
-        take about a minute to process your streams.
-        <aside class="bcls-aside bcls-aside--information">
-          To start streaming in the Live platform, you will need an Encoder, for
-          information on how to use an encoder please read the following the
-          documentation:
-          <p>
-            <a href="https://live.support.brightcove.com/get-started/step-step-using-live-module-telestream-wirecast.html" target="_blank">Step-by-Step: Using the Live Module with Telestream Wirecast</a>
+        Cliquez sur<strong> Créer un événement</strong> pour démarrer l'événement en direct. La page Control Room s'ouvre avec des détails sur l'événement en direct, y compris le point de terminaison de<strong> diffusion (URL RTMP)</strong> et le nom du<strong> flux</strong> qui seront utilisés par votre encodeur. Le traitement de vos flux prendra environ une minute. <aside class="bcls-aside bcls-aside--information"> Pour démarrer le streaming sur la plateforme Live, vous aurez besoin d'un encodeur. Pour plus d'informations sur l'utilisation d'un encodeur, veuillez lire la documentation suivante:
+          <p> <a href="https://live.support.brightcove.com/get-started/step-step-using-live-module-telestream-wirecast.html" target="_blank">Étape par étape: Utilisation du module Live avec Telestream Wirecast</a>
           </p>
-          <p>
-            <a href="https://live.support.brightcove.com/get-started/step-step-using-live-module-open-broadcaster-software-obs.html" target="_blank">Step-by-Step: Using the Live Module with Open Broadcaster
-              Software (OBS)</a>
-          </p>
-        </aside>
+          <p> <a href="https://live.support.brightcove.com/get-started/step-step-using-live-module-open-broadcaster-software-obs.html" target="_blank">Étape par étape: Utilisation du module Live avec Open Broadcaster Software (OBS)</a>
+          </p> </aside>
       </li>
       <li>
-        In the <strong>Control Room</strong>, copy the
-        <strong>Job Id</strong> and the <strong>Video ID</strong> from the
-        <strong>Test Event</strong> panel, you will need both to configure the
-        Live event in the Beacon Classic platform settings.
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/16.2-control-room.png" />
-        </figure>
+        Dans la<strong> Control Room</strong>, copiez l'ID de la<strong> tâche</strong> et l'ID<strong> de la</strong> vidéo depuis le<strong> panneau</strong> Test Event, vous ont besoin des deux pour configurer l'événement en direct dans les paramètres de la plate-forme Beacon Classic. <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/16.2-control-room.png" /> </figure>
       </li>
       <li>
-        Next, go back to Beacon Classic and click in the
-        <strong>Event</strong> tab. Select the event you previously created
-        there, and in the <strong>Basic Data</strong> settings paste the
-        <em>Job ID</em> of your Live event.
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/17-beacon-job-id.png" />
-        </figure>
+        Ensuite, revenez à Beacon Classic et cliquez sur dans l'<strong>onglet</strong> Événement. Sélectionnez l'événement que vous y avez précédemment créé et, dans les<strong> paramètres</strong> de données de base, collez l'ID<em> de la</em> tâche de votre événement en direct. <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/17-beacon-job-id.png" /> </figure>
       </li>
       <li>
-        Go to the <strong>Streams</strong> tab and create a new stream by
-        clicking in the <strong> + Add new stream</strong> button.
+        Accédez à l'<strong>onglet</strong> Streams et créez un nouveau flux en cliquant sur le<strong> bouton</strong> + Ajouter un nouveau flux.
       </li>
       <li>
-        In the <strong>Stream Video ID</strong> field, paste the
-        <strong>Video ID</strong> from the Beacon Studio Event you previously
-        created. Also fill in the following information about the stream:
+        Dans le<strong> champ</strong> Stream Video ID, collez l'ID<strong> vidéo</strong> de l'événement Beacon Studio que vous avez créé précédemment. Renseignez également les informations suivantes concernant le flux:
         <ul>
           <li>
-            Select the number of devices in which you can publish your video.
+            Sélectionnez le nombre d'appareils sur lesquels vous pouvez publier votre vidéo.
           </li>
           <li>
-            Set the <strong>Stream Type</strong> to <strong>Live</strong> from
-            the dropdown menu.
+            Définissez le type<strong> de</strong> flux sur<strong> Live</strong> dans le menu déroulant.
           </li>
           <li>
-            And click the <strong>Update event</strong> button before leaving
-            the page.
+            Et cliquez sur le<strong> bouton</strong> Mettre à jour l'événement avant de quitter la page.
           </li>
-        </ul>
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/18-beacon-stream-id.png" />
-        </figure>
+        </ul>   <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/18-beacon-stream-id.png" /></figure>
       </li>
 
       <li>
-        Click on the <strong>Tools</strong> (wrench) button in the upper right
-        of the screen. Then clear the cache.
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/12-clear-cache.png" />
-        </figure>
+        Cliquez sur le bouton<strong> Outils</strong> (clé) en haut à droite de l'écran. Ensuite, effacez le cache. <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/12-clear-cache.png" /> </figure>
       </li>
 
       <li>
-        Open your Beacon App and select your event (the event names
-        and pictures on the image are for example purposes only).
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" width="400" height="700" src="/assets/images/live/streaming-live-event/18.5-app-event.png" />
-        </figure>
+        Ouvrez votre application Beacon et sélectionnez votre événement (les noms et les images de l'événement sur l'image ne sont fournis qu'à titre d'exemple). <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" width="400" height="700" src="/assets/images/live/streaming-live-event/18.5-app-event.png" /> </figure>
       </li>
 
       <li>
-        Click on the <strong>Play</strong> button, and you should now be able to
-        see your Live Event streaming from Beacon Studio in the Beacon Classic
-        App.
-
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" width="400" height="700" src="/assets/images/live/streaming-live-event/19-app-play.png" />
-        </figure>
+        Cliquez sur le<strong> bouton</strong> Jouer et vous devriez maintenant pouvoir voir votre événement en direct diffusé depuis Beacon Studio dans l'application Beacon Classic. <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" width="400" height="700" src="/assets/images/live/streaming-live-event/19-app-play.png" /> </figure>
       </li>
     </ol>
     <p>
-      Once your event ends, you can save all or part of it as a clip that
-      becomes a video asset in Beacon Studio or a playable stream that can be
-      shown in Beacon Classic. The process is detailed in the next section of
-      this document.
-    </p>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Clip">Creating a Clip from your Live event</h2>
-    <aside class="bcls-aside bcls-aside--information">
-      You have to create a clip of your Beacon Classic Live event if you want
-      to keep the video for streaming later on as a VOD recorded video.
-    </aside>
+      Une fois votre événement terminé, vous pouvez enregistrer tout ou partie de celui-ci sous forme de clip qui deviendra un actif vidéo dans Beacon Studio ou un flux jouable pouvant être diffusé dans Beacon Classic. Le processus est détaillé dans la section suivante de ce document.
+    </p>  </section><section class="bcls-section">
+    <h2 id="Clip">Création d'un clip à partir de votre événement en direct</h2> <aside class="bcls-aside bcls-aside--information"> Vous devez créer un extrait de votre événement Beacon Classic Live si vous souhaitez conserver la vidéo pour la diffuser ultérieurement en tant que vidéo enregistrée en VOD. </aside>
     <p>
-      The Live module provides the ability to create video clips from completed
-      events. Clips can also be created while a live event is in progress.
+      Le module Live permet de créer des clips vidéo à partir d'événements terminés. Des clips peuvent également être créés pendant qu'un événement en direct est en cours.
     </p>
     <p>
-      For a complete Clipping feature list, please review the
-      <a href="https://live.support.brightcove.com/live-module/creating-video-clip-using-live-module.html">Creating a Video Clip Using the Live Module</a>
-      documentation.
+      Pour une liste complète des fonctionnalités d'écrêtage, veuillez consulter la<a href="https://live.support.brightcove.com/live-module/creating-video-clip-using-live-module.html"> documentation</a> Création d'un clip vidéo à l'aide du module Live.
     </p>
 
     <ol class="bcls-tasklist-restart">
       <li>
-        In the Live module go to the <strong>Create Clip</strong> tab in the
-        left panel.
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/20-create-clip.png" />
-        </figure>
+        Dans le module Live, accédez à l'<strong>onglet</strong> Créer un clip dans le panneau de gauche. <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/20-create-clip.png" /> </figure>
       </li>
       <li>
-        Using the clipping buttons or shortcut keys, set the start and endpoints
-        for the clip. You can also just click on the
-        <strong>Save</strong> button to keep the entire video.
+        À l'aide des boutons d'écrêtage ou des touches de raccourci, définissez les points de début et de fin du clip. Vous pouvez également simplement cliquer sur le<strong> bouton</strong> Enregistrer pour conserver l'intégralité de la vidéo.
       </li>
       <li>
-        Enter the clip video properties.
+        Saisissez les propriétés du clip vidéo.
         <ul>
-          <li><strong>Clip Name</strong> - Name of the clip</li>
-          <li><strong>Short Description</strong> - Description of the clip</li>
-          <li><strong>Tags</strong> - Tags to associate with the clip</li>
-          <li>
-            <strong>Reference ID</strong> - Reference ID to assign to the clip
+          <li><strong>Clip Name</strong>: nom du clip</li>
+          <li><strong>Brève description</strong> - Description du clip</li>
+          <li><strong>Tags</strong>: tags à associer au clip</li>
+          <li> <strong>Reference ID</strong>: ID de référence à attribuer au clip
           </li>
-          <li>
-            <strong>Remove Source Ad Break Content</strong> - This option
-            removes ad breaks triggered within the clip, keeping only program
-            content
-            <aside class="bcls-aside bcls-aside--information">
-              Note: The Remove Source Ad Break checkbox will only appear when
-              the stream is SSAI enabled.
-            </aside>
+          <li> <strong>Remove Source Ad Break Content</strong> - Cette option supprime les coupures de publicité déclenchées dans le clip, en conservant uniquement le contenu du programme<aside class="bcls-aside bcls-aside--information"> Remarque: La case à cocher Supprimer le saut publicitaire source n'apparaît que lorsque le flux est activé par SSAI. </aside>
           </li>
-        </ul>
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/21-create-clip-menu.png" />
-        </figure>
+        </ul>   <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/21-create-clip-menu.png" /></figure>
       </li>
       <li>
-        Click <strong>Create Clip</strong>. The transcoding process for the clip
-        will begin. Clips are transcoded using the default ingest profile for
-        the account.
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/22-clip-name.png" />
-        </figure>
+        Cliquez sur<strong> Créer un clip</strong>. Le processus de transcodage du clip va commencer. Les clips sont transcodés à l'aide du profil d'acquisition par défaut du compte. <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/22-clip-name.png" /> </figure>
       </li>
-    </ol>
-  </section>
-  <section class="bcls-section">
+    </ol>  </section><section class="bcls-section">
     <h2 id="ClipToBeacon">
-      Adding your Clip to Beacon Classic as a playable stream video
+      Ajout de votre clip à Beacon Classic en tant que flux vidéo jouable
     </h2>
     <p>
-      Here you will use the ID of your newly created clip video and make it a
-      stream that can be played in Beacon Classic.
+      Ici, vous utiliserez l'ID de votre clip vidéo nouvellement créé et en ferez un flux pouvant être lu dans Beacon Classic.
     </p>
     <ol class="bcls-tasklist-restart">
       <li>
-        While still in Beacon Studio's Live module, copy the number
-        <strong>ID</strong> of your created clip.
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/23-control-room-id.png" />
-        </figure>
+        Pendant que vous êtes toujours dans le module Live de Beacon Studio, copiez l'<strong>ID</strong> du numéro de votre clip créé. <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/23-control-room-id.png" /> </figure>
       </li>
       <li>
-        In the Beacon Classic platform, go to the <strong>Events</strong> tab
-        and select the <strong>Streams</strong> menu. You will see the following
-        form:
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/24-beacon-stream-id.png" />
-        </figure>
+        Sur la plateforme Beacon Classic, accédez à l'<strong>onglet</strong> Événements et sélectionnez le<strong> menu</strong> Streams. Le formulaire suivant s'affiche: <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/24-beacon-stream-id.png" /> </figure>
       </li>
       <li>
-        Paste the <strong>ID</strong> you just copied from Studio's Live
-        platform into the <strong>Stream Video ID</strong> field.
+        Collez l'<strong>ID</strong> que vous venez de copier depuis la plateforme Live de Studio dans le<strong> champ</strong> Stream Video ID.
       </li>
       <li>
-        From the <strong>Stream Type</strong> dropdown change
-        <strong>Live</strong> to <strong>Stream</strong>.
+        Dans la<strong> liste déroulante Type de</strong> flux, remplacez<strong> Live</strong> par<strong> Stream</strong>.
       </li>
       <li>
-        Click in the <strong>Basic Data</strong> tab and change the
-        <strong>Status</strong> from <strong>Ended</strong> to
-        <strong>Finished</strong>.
+        Cliquez sur l'<strong>onglet Données</strong> de base et changez le<strong> statut</strong> de<strong> Terminé</strong> à<strong> Terminé</strong>.
       </li>
       <li>
-        Before leaving, click the <strong>Update Event</strong> button at the
-        bottom of the page. This will make the <strong>Play</strong> button
-        available in the Beacon App to see the recording of the
-        event.
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" width="400" height="700" src="/assets/images/live/streaming-live-event/25-beacon-app-play-button.png" />
-        </figure>
+        Avant de partir, cliquez sur le<strong> bouton</strong> Mettre à jour l'événement en bas de la page. Cela rendra le<strong> bouton</strong> Play disponible dans l'application Beacon pour voir l'enregistrement de l'événement. <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" width="400" height="700" src="/assets/images/live/streaming-live-event/25-beacon-app-play-button.png" /> </figure>
       </li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="SEP">(Static Entry Point) SEP Live events</h2>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="SEP">(Static Entry Point) Événements SEP Live</h2>
     <p>
-      SEP Live Events are recurring events that you can activated/deactivated
-      when your event starts over and over again as for a weekly program, for
-      example. This event can be used as a one for all
-      <strong>Live Job ID</strong> that can be transmitted to several channels
-      in the Beacon App.
-    </p>
-
-    <aside class="bcls-aside bcls-aside--information">
+      Les événements SEP Live sont des événements récurrents que vous pouvez activer/désactiver lorsque votre événement recommence encore et encore, comme pour un programme hebdomadaire, par exemple. Cet événement peut être utilisé comme un identifiant<strong> Live Job ID unique</strong> qui peut être transmis à plusieurs canaux dans l'application Beacon.
+    </p> <aside class="bcls-aside bcls-aside--information">
       <ul>
         <li>
-          Note that when you create a recurring event, a video is automatically
-          created for it in the Media module. Do not delete this video, as it
-          will be needed every time the event recurs.
+          Notez que lorsque vous créez un événement récurrent, une vidéo est automatiquement créée pour celui-ci dans le module Médias. Ne supprimez pas cette vidéo, car elle sera nécessaire chaque fois que l'événement se reproduira.
         </li>
         <li>
-          The recurring event should be activated before the encoder is started.
+          L'événement récurrent doit être activé avant le démarrage de l'encodeur.
         </li>
-      </ul>
-    </aside>
+      </ul> </aside>
 
     <p>
-      Follow these steps to create a SEP (Static Entry Point) Live event in
-      Beacon Classic.
+      Suivez ces étapes pour créer un événement SEP (Static Entry Point) Live dans Beacon Classic.
     </p>
     <ol class="bcls-tasklist-restart">
       <li>
-        In the Live Platform, <strong>Create a new Event</strong>. For more
-        information in how to create an event please read the
-        <a href="https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html#create">
-          Creating a new event
-        </a>
-        section of the
-        <em>Creating and Managing Live Events using the Live Module</em>
-        document.
+        Dans la plateforme en direct,<strong> créez un nouvel événement</strong>. Pour plus d'informations sur la façon de créer un événement, veuillez lire la<a href="https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html#create"> section</a> Création d'un nouvel événement du<em> document</em> Création et gestion d'événements en direct à l'aide du module Live.
       </li>
       <li>
-        Expand the <strong>ADVANCED OPTIONS</strong>, and enable the
-        <strong>Create this as a recurring event using a Static Entry Point
-          (SEP)</strong>
-        option. For more information on SEP see the
-        <a href="https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html#work_recurring">Working with recurring events
-        </a>
-        section of the
-        <em>Creating and Managing Live Events using the Live Module</em>
-        document .
-
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/26-sep.png" />
-        </figure>
+        Développez les OPTIONS <strong></strong>AVANCÉES et activez l'<strong>option</strong> Créer cet événement en tant qu'événement récurrent à l'aide d'un point d'entrée statique (SEP). Pour plus d'informations sur SEP, consultez la<a href="https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html#work_recurring"> section</a> Utilisation des événements récurrents du<em> document</em> Création et gestion d'événements en direct à l'aide du module Live. <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/26-sep.png" /> </figure>
       </li>
 
       <li>
-        If you already have a SEP event, click on the
-        <strong>Standby</strong> tab, and you will be able to
-        <strong>activate/deactivate</strong> it from the Live Control Room.
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/27-control-room-activate.png" />
-        </figure>
+        Si vous avez déjà un événement SEP, cliquez sur l'<strong>onglet</strong> Veille, et vous pourrez l'<strong>activer/le</strong> désactiver depuis la salle de contrôle en direct. <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/27-control-room-activate.png" /> </figure>
       </li>
       <li>
-        Copy your <strong>Live Job ID</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/28-control-room-jobid.png" />
-        </figure>
+        Copiez votre<strong> Live Job ID</strong>. <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/28-control-room-jobid.png" /> </figure>
       </li>
       <li>
-        Return to the Beacon Classic platform and configure your event by
-        pasting the <strong>Job ID</strong> of the recurring event. Also supply
-        a <strong>Name</strong> and an <strong>Event Start Date</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/29-beacon-calendar.png" />
-        </figure>
+        Revenez sur la plateforme Beacon Classic et configurez votre événement en collant l'ID<strong> de la</strong> tâche de l'événement récurrent. Indiquez également un<strong> nom</strong> et une date de début de<strong> l'événement</strong>. <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/live/streaming-live-event/29-beacon-calendar.png" /> </figure>
       </li>
       <li>
-        The date and time of your event must be in the following format.
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" width="300" height="200" src="/assets/images/live/streaming-live-event/30-date-format.png" />
-        </figure>
+        La date et l'heure de votre événement doivent être au format suivant. <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" width="300" height="200" src="/assets/images/live/streaming-live-event/30-date-format.png" /> </figure>
       </li>
-      <li>Click in the <strong>Update event</strong> button.</li>
-    </ol>
-    <aside class="bcls-aside bcls-aside--warning">Beacon Classic CMS is automating the <strong>Status</strong> transitions for Live events, but in Static Entry Points, you may have multiple Beacon Classic events associated with the same SEP. If there are issues with the automation as one running late and is overlapping, you can adjust the CMS transition by manually changing the <strong>Status</strong>. For example, from <strong>Available</strong> to <strong>Finished</strong> in the <strong>Status</strong> field. </aside>
+      <li>Cliquez sur le<strong> bouton</strong> Mettre à jour l'événement.</li>
+    </ol> <aside class="bcls-aside bcls-aside--warning">Beacon Classic CMS automatise les<strong> transitions de</strong> statut pour les événements en direct, mais dans Static Entry Points, vous pouvez avoir plusieurs événements Beacon Classic associés au même SEP. S'il y a des problèmes avec l'automatisation en raison d'un retard et d'un chevauchement, vous pouvez ajuster la transition CMS en modifiant manuellement le<strong> statut</strong>. Par exemple, de<strong> Disponible</strong> à<strong> Terminé</strong> dans le<strong> champ</strong> Statut. </aside>
 
     <p>
-      You can perform this process for all the Live events you want in the
-      Beacon Classic platform. All of them will be streaming from the same
-      Live transmission, but each one with the different date and time that you
-      adjusted in its event settings.
-    </p>
-
-  </section>
-</article>
+      Vous pouvez effectuer ce processus pour tous les événements en direct que vous souhaitez sur la plateforme Beacon Classic. Tous seront diffusés en continu à partir de la même transmission en direct, mais chacun avec la date et l'heure différentes que vous avez ajustées dans ses paramètres d'événement.
+    </p>  </section></article>

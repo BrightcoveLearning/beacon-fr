@@ -1,942 +1,943 @@
 - section:
-  name: Home
+  name: Accueil
   url: /index.html
 - section:
-  name: Getting Started
+  name: Pour commencer
   url: /get-started/index.html
   docs:
-    - name: Brightcove Beacon Learning Guide
+    - name: Guide de formation Brightcove Beacon
       url: /get-started/learning-guide-bc-beacon.html
-    - name: Implementation Phases
+    - name: "Phases d'implémentation"
       url: /get-started/implementation-phases.html
-    - name: Getting Started with Beacon Studio
+    - name: Premiers pas avec Beacon Studio
       url: /get-started/getting-started-beacon-studio.html
-    - name: When to Use Beacon Studio and/or Beacon Classic
+    - name: Quand utiliser Beacon Studio et/ou Beacon Classic
       url: /general/beacon-studio-or-classic.html
-    - name: App Design Best Practices
+    - name: "Meilleures pratiques pour la conception d'applications"
       url: /get-started/design-best-practices.html
-    - name: App Design Considerations
+    - name: Considérations concernant la conception
       url: /get-started/app-design-considerations.html
-    - name: Training
+    - name: Entraînement
       url: /get-started/training/index.html
-    - name: Learn the Basics
+    - name: Apprenez les bases
       url: '/get-started/basics/index.html'
       docs:
-        - name: Layout
+        - name: Disposition
           url: /get-started/basics/layout/index.html
           docs:
-            - name: Archiving Pages
+            - name: Archivage des pages
               url: /get-started/basics/layout/archiving-pages.html
-            - name: Configuring Calendar Restrictions
+            - name: Configuration des restrictions du calendrier
               url: /get-started/basics/layout/availability-date.html
-            - name: Configuring Device Restrictions
+            - name: "Configuration des restrictions d'appareils"
               url: /get-started/basics/layout/availability-device.html
-            - name: Configuring Location Restrictions
+            - name: "Configuration des restrictions d'emplacement"
               url: /get-started/basics/layout/availability-location.html
-            - name: Creating a Page
+            - name: "Création d'une page"
               url: /get-started/basics/layout/creating-page.html
-        - name: Media
+        - name: Médias
           url: /get-started/basics/media/index.html
           docs:
-            - name: Activating Videos
+            - name: Activation des vidéos
               url: /get-started/basics/media/activating-and-deactivating-video.html
-            - name: Adding an Episode to a Season
+            - name: "Ajout d'un épisode à une saison"
               url: /get-started/basics/media/adding-episode-season.html
-            - name: Capturing Video Poster Images
+            - name: "Capture d'images d'affiches vidéo"
               url: /get-started/basics/media/capturing-video-poster-thumbnail-images.html
-            - name: Creating a Manual Playlist
+            - name: "Création d'une liste de lecteur manuelle"
               url: /get-started/basics/media/creating-manual-playlist.html
-            - name: Creating a Season
+            - name: "Création d'une saison"
               url: /get-started/basics/media/creating-season.html
-            - name: Creating a Series
+            - name: "Création d'une série"
               url: /get-started/basics/media/creating-series.html
-            - name: Creating a Smart Playlist
+            - name: "Création d'une liste de lecteur intelligente"
               url: /get-started/basics/media/creating-smart-playlist.html
-            - name: Editing Basic Video Details
+            - name: Édition des détails vidéo de base
               url: /get-started/basics/media/editing-basic-video-details.html
-            - name: Editing Multiple Videos
+            - name: Montage de plusieurs vidéos
               url: /get-started/basics/media/editing-video-properties-multiple-videos.html
-            - name: Using Folders
+            - name: Utiliser des dossiers
               url: /get-started/basics/media/organizing-videos-using-folders.html
-            - name: Uploading Video Images
+            - name: "Téléchargement d'images vidéo"
               url: /get-started/basics/media/uploading-video-poster-thumbnail-images.html
-            - name: Uploading Videos
+            - name: Téléchargement de vidéos
               url: /get-started/basics/media/uploading-videos.html
-        - name: Players
+        - name: Joueurs
           url: /get-started/basics/players/index.html
           docs:
-            - name: Creating a Player
+            - name: "Création d'un lecteur"              
               url: /get-started/basics/players/creating-player.html
-            - name: Creating a Playlist Player
+            - name: "Création d'un lecteur de playlist"
               url: /get-started/basics/players/creating-playlist-player.html
-            - name: Styling Players
+            - name: Joueurs de style
               url: /get-started/basics/players/styling-player.html
-        - name: Publish
+        - name: Publier
           url: /get-started/basics/publish/index.html
           docs:
-            - name: Publishing Playlists
+            - name: Publier des playlists
               url: /get-started/basics/publish/publishing-playlist-web.html
-            - name: Publishing Videos
+            - name: Publier des vidéos
               url: /get-started/basics/publish/publishing-single-video-web.html
-        - name: Analytics
+        - name: Analyses
           url: /get-started/basics/analytics/index.html
           docs:
-            - name: Determining How Much of a Video is Watched
+            - name: "Déterminer la durée de visionnage d'une vidéo"
               url: /get-started/basics/analytics/determining-how-much-video-being-watched.html
-            - name: Determining Which Videos Have the Most Views
+            - name: Déterminer quelles vidéos ont le plus de vues
               url: /get-started/basics/analytics/determining-which-videos-have-most-views.html
         - name: Administration
           url: /get-started/basics/admin/index.html
           docs:
-            - name: Adding Users to an Account
+            - name: "Ajout d'utilisateurs à un compte"
               url: /get-started/basics/admin/adding-user-account.html
 - section:
-  name: Managing Media
+  name: Gérer les médias
   url: /media/index.html
   docs:
-    - name: Adding Audio Tracks to Videos
+    - name: Ajout de pistes audio aux vidéos
       url: /media/adding-audio-tracks-videos-using-media-module.html
-    - name: Adding Captions to Videos
+    - name: Ajout de sous-titres aux vidéos
       url: /media/adding-captions-videos-using-media-module.html
-    - name: Adding Chapters to a Video
+    - name: Ajout de chapitres à une vidéo
       url: /media/adding-chapters-video.html
-    - name: Capturing Poster and Thumbnail Images
+    - name: "Capture d'images d'affiches et de vignettes"
       url: /media/capturing-poster-and-thumbnail-images.html
-    - name: Configuring Playlist Availability
+    - name: Configuration de la disponibilité de
       url: /media/configuring-playlist-availability.html
-    - name: Configuring Season Availability
+    - name: Configuration de la disponibilité pour
       url: /media/configuring-season-availability.html
-    - name: Configuring Series Availability
+    - name: Configuration de la disponibilité des
       url: /media/configuring-series-availability.html
-    - name: Configuring Video Availability
+    - name: Configuration de la disponibilité vidéo
       url: /media/configuring-video-availability.html
-    - name: Creating and Managing Playlists
+    - name: Création et gestion de listes de lecteur
       url: /media/creating-and-managing-playlists.html
-    - name: Creating and Managing Rule Sets
+    - name: Création et gestion d'ensembles de règles
       url: /media/creating-managing-rule-sets.html
-    - name: 'Creating Series, Seasons & Episodes'
+    - name: "Création de séries, de saisons et d'épisodes"
       url: /media/creating-series-seasons-episodes.html
-    - name: Downloading Videos
+    - name: Téléchargement de vidéos
       url: /media/downloading-videos-video-cloud.html
-    - name: Editing Series Details
+    - name: Modification des détails de la
       url: /media/editing-series-details.html
-    - name: Editing Video Details
+    - name: Montage des détails vidéo
       url: /media/editing-video-properties-using-media-module.html
-    - name: Editing Details using Quick Edit
+    - name: Modification des détails en utilisant Quick Edit
       url: /media/editing-video-properties-using-quick-edit.html
-    - name: Editing Series Details
+    - name: Modification des détails de la
       url: /media/editing-series-details.html
-    - name: Exporting Video Data
+    - name: Exporter des données vidéo
       url: /media/exporting-video-data.html
-    - name: Generating Captions for Videos
+    - name: Générer des sous-titres pour les vidéos
       url: /media/generating-captions-videos.html
-    - name: Getting Started with the Media Module
+    - name: Premiers pas avec le module Media
       url: /media/getting-started-media-module.html
-    - name: Increasing the Quality of Poster Images
+    - name: Améliorer la qualité des images d'affiches
       url: /media/increasing-quality-poster-and-thumbnail-images.html
-    - name: Introduction to Playlists
+    - name: Présentation des listes de lecteur
       url: /media/introduction-playlists.html
-    - name: Managing Series
+    - name: Série Managing
       url: /media/managing-series.html
-    - name: Managing Videos
+    - name: Gérer les vidéos
       url: /media/managing-videos.html
-    - name: Offline Playback
+    - name: Lecture hors ligne
       url: /media/offline-playback-beacon.html
-    - name: Organizing Videos Using Folders
+    - name: Organisation des vidéos en utilisant des dossiers
       url: /media/organizing-videos-using-folders.html
-    - name: 'Overview: Adding Captions to a Video'
+    - name: "Vue d'ensemble: Ajout de sous-titres à une vidéo"
       url: /media/overview-adding-captions-video.html
-    - name: Replacing a Video Source File
+    - name: "Remplacement d'un fichier source vidéo"
       url: /media/replacing-video-source-file.html
-    - name: Retranscoding Videos
+    - name: Vidéos de retranscodage
       url: /media/retranscoding-videos-using-media-module.html
-    - name: Searching Videos and Playlists
+    - name: Recherche de vidéos et de listes de lecteur
       url: /media/how-search-videos-and-playlists-media-module.html
-    - name: Setting Required Fields
+    - name: Définition des champs obligatoires
       url: /media/setting-required-fields-videos.html
-    - name: Sharing Videos
+    - name: Partage de vidéos
       url: /media/media-sharing-using-media-module.html
-    - name: Styling Captions
+    - name: Légendes de style
       url: /media/styling-captions.html
-    - name: Syncing with Video Cloud Catalog
+    - name: Synchronisation avec Video Cloud Catalog
       url: /media/syncing-video-cloud-catalog.html
-    - name: Uploading Videos
+    - name: Téléchargement de vidéos
       url: /media/uploading-videos-using-upload-module.html
-    - name: Uploading Video Images
+    - name: "Téléchargement d'images vidéo"
       url: /media/uploading-poster-and-thumbnail-images.html
-    - name: Uploading Videos Remote URLs
+    - name: Téléchargement de vidéos URL distantes
       url: /media/uploading-videos-remote-urls.html
-    - name: Using the Caption Editor
+    - name: "Utilisation de l'éditeur de légende"
       url: /media/using-the-caption-editor.html
-    - name: Working with Cue Points
+    - name: Travailler avec les points de repère
       url: /media/working-cue-points-media-module.html
-    - name: Working with Multi-Lingual Metadata
+    - name: Utilisation des métadonnées multilingues
       url: /media/working-multi-lingual-metadata.html
-    - name: Working with Remote Asset Videos
+    - name: "Vidéos sur l'utilisation des ressources distantes"
       url: /media/working-remote-asset-videos.html
 - section:
-  name: Managing Pages
+  name: Gérer les pages
   url: '/layout/index.html'
   docs:
-    - name: Getting Started with the Layout Module
+    - name: Premiers pas avec le module Layout
       url: /layout/getting-started-layout-module.html
-    #- name: Configuring App Settings
+    #- name: Configuration des paramètres des applications
     #  url: /layout/configuring-app-settings.html
-    - name: Configuring Page Availability
+    - name: Configuration de la disponibilité des
       url: /layout/configuring-page-availability.html
-    - name: Creating and Managing Pages
+    - name: Création et gestion de pages
       url: /layout/creating-managing-pages.html
-    - name: Managing Linked Pages
+    - name: Gestion des pages liées
       url: /layout/managing-linked-pages.html
-    - name: Managing Playlists on Pages
+    - name: Gérer les listes de lecteur sur les pages
       url: /layout/managing-playlists-on-pages.html
-    - name: Page Details Overview
+    - name: Aperçu des détails des pages
       url: /layout/page-details-overview.html
-    - name: Refreshing the App Cache
+    - name: "Actualisation du cache de l'application"
       url: /layout/clearing-cache.html
-    - name: Using Core Pages
+    - name: Utilisation des pages principales
       url: /layout/using-core-pages.html
-    - name: Using Page Layouts
+    - name: Utilisation des mises en page
       url: /layout/using-page-layouts.html
 - section:
-  name: Managing Channels
+  name: Gérer les chaînes
   url: '/channels/index.html'
   docs:
-    - name: Beacon Channels
+    - name: Canaux Beacon
       url: /channels/beacon-channels/index.html
       docs:
-        - name: Creating a Beacon Channel
+        - name: "Création d'un canal Beacon"
           url: /channels/beacon-channels/creating-a-channel.html
-        - name: Creating an EPG
+        - name: "Création d'un EPG"
           url: /channels/beacon-channels/electronic-program-guides.html
-        - name: Streaming VODs to a Channel
+        - name: Diffusion de vidéos à la demande sur une chaîne
           url: /channels/beacon-channels/streaming-vods-to-a-channel.html
-    - name: Cloud Playout Channels
+    - name: Chaînes Cloud Playout
       url: /channels/cloud-playout/index.html
       docs:
-        - name: 'Overview: Cloud Playout'
+        - name: "Vue d'ensemble: Playout sur le Cloud"
           url: /channels/cloud-playout/cloud-playout-overview.html
-        - name: Creating a Cloud Playout Channel
+        - name: "Création d'une chaîne de diffusion dans le cloud"
           url: /channels/cloud-playout/cloud-playout-stream-vod.html
-        - name: Configuring S3 Buckets
+        - name: Configuration des compartiments S3
           url: /channels/cloud-playout/configuring-s3-buckets.html
-        - name: Using Live Redundancy with Channels
+        - name: Utilisation de la redondance en direct avec les canaux
           url: /channels/cloud-playout/channel-live-redundancy.html
-        - name: Managing the Channel Program
+        - name: Gérer le programme de distribution
           url: /channels/cloud-playout/cloud-playout-add-content.html
-        - name: Managing Slates
+        - name: Gérer les ardoises
           url: /channels/cloud-playout/managing-slates.html
-        - name: Adding Static Image Overlays
+        - name: Ajout de superpositions d'images statiques
           url: /channels/cloud-playout/static-image-overlays.html
-        - name: Adding Dynamic Overlays
+        - name: Ajout de superpositions dynamiques
           url: /channels/cloud-playout/dynamic-overlays.html
-        - name: Adding Bumpers to Cloud Playout
+        - name: Ajout de bumpers à Cloud Playout
           url: /channels/cloud-playout/adding-bumpers-to-vod.html
-        - name: Importing Captions
+        - name: Importer des légendes
           url: /channels/cloud-playout/import-captions.html
-        - name: Monetizing Cloud Playout
+        - name: Monétisation de Cloud Playout
           url: /channels/cloud-playout/enabling-server-side-ads.html
-        - name: Adding Mid-Roll Ads to a Channel
+        - name: "Ajout de publicités Mid-Roll à une chaîne"
           url: /channels/cloud-playout/mid-roll-ad-insertion.html
-        - name: Setting a Hard Start for a Channel
+        - name: "Définition d'un démarrage difficile pour une chaîne"
           url: /channels/cloud-playout/hard-start.html
-        - name: Searching for Channels
+        - name: Recherche de chaînes
           url: /channels/cloud-playout/searching-for-channels.html
-        - name: Publishing a Cloud Playout Channel
+        - name: Publier une chaîne Cloud Playout
           url: /channels/cloud-playout/publish-channel-beacon.html
-        - name: Using Channel Actions
+        - name: Utilisation des actions des chaînes
           url: /channels/cloud-playout/using-channel-actions.html
-        - name: Viewing Channel Output and Analytics
+        - name: Affichage des résultats et des analyses des canaux
           url: /channels/cloud-playout/viewing-channel-output-and-analytics.html
-    #    - name: Generating the Channel Embed Code
+    #    - name: Génération du code intégré de la chaîne
     #      url: /channels/cloud-playout/generating-channel-embed-code.html
 - section:
-  name: Managing Players
+  name: Gérer les lecteurs
   url: /players/index.html
   docs:
-    - name: Adding Thumbnail Seeking
+    - name: Ajout de la recherche de vignettes
       url: /players/adding-thumbnail-seeking-player.html
-    - name: Configuring a Player Overlay
+    - name: "Configuration d'une superposition de lecteur"    
       url: /players/configuring-player-overlay-using-overlay-plugin.html
-    - name: Configuring a Playlist Endscreen
+    - name: "Configuration d'un écran de fin de playlist"
       url: /players/configuring-playlist-endscreen-using-plugin.html
-    - name: Configuring Adobe Analytics Event Tracking
+    - name: "Configuration du suivi des événements d'Adobe Analytics"
       url: /players/configuring-adobe-analytics-event-tracking.html
-    - name: Configuring Google Analytics Event Tracking
+    - name: Configuration du suivi des événements Google Analytics
       url: /players/configuring-google-analytics-event-tracking.html
-    - name: Configuring Player Advertising
+    - name: Configuration de la publicité pour
       url: /players/configuring-player-advertising-using-players-module.html
-    - name: Configuring Player Content Restrictions
+    - name: Configuration des restrictions de contenu du lecteur
       url: /players/configuring-player-content-restrictions.html
-    - name: Configuring Player Controls
+    - name: Configuration des commandes du lecteur
       url: /players/configuring-player-controls.html
-    - name: Configuring the Player Endscreen
+    - name: "Configuration de l'écran de fin du lecteur"
       url: /players/configuring-player-endscreen.html
-    - name: Configuring Player Localization
+    - name: Configuration de la localisation des
       url: /players/configuring-player-localization.html
-    - name: Configuring Player Playback Properties
+    - name: Configuration des propriétés de lecteur du lecteur
       url: /players/configuring-player-playback-properties.html
-    - name: Configuring Player Plugins
+    - name: Configuration des plugins de lecteur
       url: /players/configuring-player-plugins.html
-    - name: Configuring the Social Properties
+    - name: Configuration des propriétés sociales
       url: /players/configuring-social-properties-player.html
-    - name: Generating Player Embed Code
+    - name: Génération du code intégré du lecteur
       url: /players/generating-player-embed-code.html
-    - name: Getting Started with the Players Module
+    - name: Premiers pas avec le module Players
       url: /players/getting-started-players-module.html
-    - name: Setting Player Information Properties
+    - name: Définition des propriétés des informations du lecteur
       url: /players/setting-player-information-properties.html
-    - name: Setting Player Properties
+    - name: Définition des propriétés du lecteur
       url: /players/setting-player-properties.html
-    - name: Setting the Player Update Mode
+    - name: Configuration du mode de mise à jour du
       url: /players/setting-player-update-mode-and-version.html
-    - name: Styling Players
+    - name: Joueurs de style
       url: /players/styling-players.html
 - section:
-  name: 'Monetizing Content'
+  name: 'Monétisation du contenu'
   url: '/monetization/index.html'
   docs:
-    - name: 'General'
+    - name: 'Général'
       url: '/monetization/general/index.html'
       docs:
-        - name: Creating a Stripe Account
+        - name: "Création d'un compte Stripe"
           url: /monetization/general/creating-stripe-account.html
-        - name: Creating an SVOD Plan
+        - name: "Création d'un plan SVOD"
           url: /monetization/general/creating-svod-plan.html
-        - name: Creating Promo Coupons
+        - name: 'Création de coupons promotionnels'
           url: /monetization/general/promo-codes.html
-        - name: Custom Fields for Monetization
+        - name: Champs personnalisés pour la monétisation
           url: /monetization/general/vc-custom-fields.html
-        - name: Implementing AuthVOD
+        - name: "Implémentation d'AuthVOD"
           url: /monetization/general/implementing-authvod.html
-        - name: Receiving In-App Purchase Notifications
+        - name: "Recevoir des notifications d'achat intégrées"
           url: /monetization/general/receive-iap-notifications.html
-        - name: Resources for Monetization
+        - name: Ressources pour la monétisation
           url: /monetization/general/resources.html
-        - name: Retrieving Stripe Subscription Info
+        - name: "Récupération des informations d'abonnement Stripe"
           url: /monetization/general/stripe-custom-metadata.html
-        - name: Understanding Monetization Options
+        - name: Comprendre les options de monétisation
           url: /monetization/general/monetization-options.html
-        - name: Using an SVOD Plan
+        - name: Utiliser un forfait SVOD
           url: /monetization/general/using-svod-plan.html
     - name: SSAI
       url: '/monetization/ssai/index.html'
       docs:
-        - name: 'Creating an Advertisement'
+        - name: "Création d'une publicité"
           url: '/monetization/ssai/advertisement.html'
-        - name: 'Configuring Server-Side Ad Settings'
+        - name: 'Configuration des paramètres des publicités côté serveur'
           url: '/monetization/ssai/configuring-server-side-ad-settings.html'
-        - name: 'Implementing Live SSAI'
+        - name: 'Mise en œuvre de Live SSAI'
           url: '/monetization/ssai/live-ssai.html'
-        - name: Implementing VOD SSAI
+        - name: Mettre en œuvre la VOD SSAI
           url: '/monetization/ssai/vod-ssai.html'
-        - name: 'Beacon Apps Ad Targeting'
+        - name: 'Ciblage publicitaire Beacon Apps'
           url: '/monetization/ssai/beacon-apps-ad-targeting.html'
 - section:
-  name: 'Beacon Web Store'
+  name: 'Boutique en ligne Beacon'
   url: '/beacon-web-store/index.html'
   docs:
-    - name: 'Overview: Brightcove Beacon Web Store'
+    - name: "Vue d'ensemble: Boutique en ligne Brightcove Beacon"
       url: '/beacon-web-store/beacon-webstore-overview.html'
-    - name: 'Integrating with the Beacon Web Store'
+    - name: 'Intégration avec le Beacon Web Store'
       url: '/beacon-web-store/integration-details.html'
-    - name: 'Beacon Store Webhook Reference'
+    - name: 'Référence du webhook Beacon Store'
       url: '/beacon-web-store/beacon-store-webhook-reference.html'
 - section:
-  name: Reviewing Analytics
+  name: "Révision d'Analytics"
   url: /analytics/index.html
   docs:
-    - name: Using the Analytics Module
+    - name: Utilisation du module Analytics
       url: /analytics/index.html
       docs:
-        - name: Getting Started with the Analytics Module
+        - name: Premiers pas avec le module Analytics
           url: /analytics/getting-started-analytics-module.html
-        - name: Analytics Module UI Glossary
+        - name: "Glossaire de l'interface utilisateur"
           url: /analytics/analytics-module-ui-glossary.html
-        - name: How to Search for Videos
+        - name: Comment rechercher des vidéos
           url: /analytics/how-search-videos-analytics-module.html
-        - name: 'FAQ: Analytics Module'
+        - name: "FAQ: Module d'analyse"
           url: /analytics/faq-analytics-module.html
-    - name: Analytics Reports
+    - name: "Rapports d'analyse"
       url: /analytics/index.html
       docs:
-        - name: Analytics Report Reference
+        - name: Référence du rapport Analytics
           url: /analytics/analytics-report-reference.html
-        - name: Creating Custom Analytics Reports
+        - name: "Création de rapports d'analyse personnalisés"
           url: /analytics/creating-custom-analytics-reports.html
-        - name: Engagement Report Reference
+        - name: "Référence du rapport d'engagement"
           url: /analytics/engagement-report-reference.html
-        - name: Managing Scheduled Reports
+        - name: Gestion des rapports planifiés
           url: /analytics/managing-scheduled-reports.html
-        - name: Performance Report Reference
+        - name: Référence du rapport de performance
           url: /analytics/performance-report-reference.html
-    - name: General Information
+    - name: Informations générales
       url: /analytics/index.html
       docs:
-        - name: Analytics Overview
+        - name: "Aperçu d'Analytics"
           url: /analytics/analytics-overview.html
-        - name: Beacon Analytics Business Metrics
+        - name: Métriques métiers de Beacon Analytics
           url: /analytics/analytics-business-metrics.html
-        - name: Calculating Video Engagement Score
+        - name: "Calcul du score d'engagement vidéo"
           url: /analytics/calculating-video-engagement-score.html
-        - name: Exporting Data
+        - name: Exporter des données
           url: /analytics/exporting-data-analytics-module.html
-        - name: Resources for Analytics
+        - name: Ressources pour Analytics
           url: /analytics/resources.html
-        - name: SSAI Performance Analytics
+        - name: Analyse des performances SSAI
           url: /analytics/ssai-performance-data.html
-    - name: Third-Party Analytics
+    - name: Analyses tierces
       url: /analytics/index.html
       docs:
-        - name: Google Analytics Self Configuration
+        - name: Auto-configuration de Google Analytics
           url: /analytics/ga-self-configuration.html
-        - name: Reviewing Player Event Data in Google Analytics
+        - name: Consulter les données des événements des lecteurs dans Google Analytics
           url: /analytics/reviewing-player-event-data-google-analytics.html
-        - name: Viewing Analytics Data in Google Analytics
+        - name: Affichage des données Analytics dans Google Analytics
           url: /analytics/viewing-analytics-data-google.html
 - section:
-  name: Protecting Content
+  name: Protéger le contenu
   url: /protecting-content/index.html
   docs:
-    - name: DRM Output Protection Settings
+    - name: Paramètres de protection de sortie DRM
       url: /general/drm-output-protection-settings.html
-    - name: Forensic Watermarking
+    - name: Filigrane judiciaire
       url: /protecting-content/forensic-watermarking-with-beacon.html
-    - name: Protecting Videos with HLS Encryption
+    - name: Protéger les vidéos avec le chiffrement HLS
       url: /general/protecting-videos-hls-encryption.html
 - section:
-  name: 'App Publishing and Behavior'
+  name: 'Publication et comportement des applications'
   url: '/publishing-apps/index.html'
   docs:
-    - name: 'General Information'
+    - name: 'Informations générales'
       url: '/publishing-apps/general/index.html'
       docs:
-        - name: 'Common Required Information for Submitting Apps'
+        - name: "Informations communes requises pour l'envoi d'applications"
           url: '/publishing-apps/general/common-required-info.html'
-        - name: 'Device Apps Validation Guide'
+        - name: 'Guide de validation des applications pour appareils'
           url: '/publishing-apps/general/device-apps-validation-guide.html'
-        - name: 'In-App Subscription Resources'
+        - name: "Ressources d'abonnement In-App"
           url: '/publishing-apps/general/in-app-subscription-resources.html'
-        - name: 'Links to the App Stores Subscriptions'
+        - name: 'Liens vers les abonnements aux App Stores'
           url: '/publishing-apps/general/links-subscriptions.html'
-        - name: 'Scheduling App Releases in the App Stores'
+        - name: "Planification des sorties d'applications dans les App Stores"
           url: '/publishing-apps/general/schedule-apps.html'
-    - name: 'App Behavior'
+    - name: 'Comportement de'
       url: '/publishing-apps/app-behavior/index.html'
       docs:
-        - name: 'Account Deletion'
+        - name: 'Suppression de compte'
           url: '/publishing-apps/app-behavior/account-deletion.html'
-        - name: 'Parental Controls'
+        - name: 'Contrôle parental'
           url: '/publishing-apps/app-behavior/parental-controls.html'
     - name: 'Android'
       url: '/publishing-apps/android/index.html'
       docs:
-        - name: 'Submitting New Apps to the Android Store'
+        - name: "Soumission de nouvelles applications sur l'Android Store"
           url: '/publishing-apps/android/submitting-to-android.html'
-        - name: 'Updating Android Apps to Brightcove Beacon'
+        - name: 'Mise à jour des applications Android vers Brightcove Beacon'
           url: '/publishing-apps/android/updating-android-apps-to-bcb.html'
-        - name: 'Adding Subscriptions to Android'
+        - name: "Ajout d'abonnements à Android"
           url: '/publishing-apps/android/adding-subscriptions-in-android.html'
-        - name: 'Improving Search Relevance in the Android Play Store'
+        - name: 'Améliorer la pertinence de la recherche sur Android Play Store'
           url: '/publishing-apps/android/improving-relevance-android.html'
-        - name: 'Installing an Android Test Build'
+        - name: "Installation d'une version de test Android"
           url: '/publishing-apps/android/installing-android-test-build.html'
-        - name: 'Managing Google Subscriptions Part 1'
+        - name: 'Gestion des abonnements Google, partie 1'
           url: '/publishing-apps/android/managing-google-subscriptions-1.html'
-        - name: 'Managing Google Subscriptions Part 2'
+        - name: 'Gestion des abonnements Google, partie 2'
           url: '/publishing-apps/android/managing-google-subscriptions-2.html'
     - name: 'Fire TV'
       url: '/publishing-apps/fire-tv/index.html'
       docs:
-        - name: 'Add Brightcove Email to Amazon Account'
+        - name: 'Ajouter une adresse e-mail Brightcove à un compte Amazon'
           url: '/publishing-apps/fire-tv/add-bc-email.html'
-        - name: 'Installing a Fire TV Test Build'
+        - name: "Installation d'une version de test Fire TV"
           url: '/publishing-apps/fire-tv/installing-fire-tv-test-build.html'
-        - name: 'Submitting to the Amazon Store'
+        - name: 'Soumission à la boutique Amazon'
           url: '/publishing-apps/fire-tv/submitting-to-amazon.html'
     - name: 'iOS/tvOS'
       url: '/publishing-apps/ios-tvos/index.html'
       docs:
-        - name: 'Account Deletion'
+        - name: 'Suppression de compte'
           url: '/publishing-apps/ios-tvos/account-deletion.html'
-        - name: 'FairPlay Certificate Registration'
+        - name: 'Enregistrement du certificat FairPlay'
           url: '/publishing-apps/ios-tvos/fairplay-certificate.html'
-        - name: 'Installing an iOS/tvOS Test Build'
+        - name: "Installation d'une version de test iOS/tvOS"
           url: '/publishing-apps/ios-tvos/installing-ios-test-build.html'
-        - name: 'Resources'
+        - name: 'Ressources'
           url: '/publishing-apps/ios-tvos/resources.html'
-        - name: 'Submitting to the Apple Store'
+        - name: "Soumission sur l'Apple Store"
           url: '/publishing-apps/ios-tvos/submitting-to-apple.html'
     - name: 'LG'
       url: '/publishing-apps/lg/index.html'
       docs:
-        - name: 'Submitting to the LG (webOS) Store'
+        - name: 'Envoi sur le LG (webOS) Store'
           url: '/publishing-apps/lg/submitting-to-lg.html'
     #- name: 'Panasonic'
     #  url: '/publishing-apps/panasonic/index.html'
     #  docs:
-    #    - name: 'Submitting to the Panasonic Store'
+    #    - name: 'Soumission à la boutique Panasonic'
     #      url: '/publishing-apps/panasonic/submitting-to-panasonic.html'
     - name: 'Roku'
       url: '/publishing-apps/roku/index.html'
       docs:
-        - name: 'Add Brightcove User to Roku Account'
+        - name: 'Ajouter un utilisateur Brightcove au compte Roku'
           url: '/publishing-apps/roku/add-bc-user.html'
-        - name: 'Configuring In-Channel Products in Roku'
+        - name: 'Configuration des produits in-channel dans Roku'
           url: '/publishing-apps/roku/configuring-inchannel-products.html'
-        - name: 'Installing a Roku Test Build'
+        - name: "Installation d'une version de test Roku"
           url: '/publishing-apps/roku/installing-roku-test-build.html'
-        - name: 'Submitting to the Roku Store'
+        - name: 'Soumission sur la boutique Roku'
           url: '/publishing-apps/roku/submitting-to-roku.html'
     - name: 'Samsung'
       url: '/publishing-apps/samsung/index.html'
       docs:
-        - name: 'Becoming a Samsung Partner'
+        - name: 'Devenir partenaire Samsung'
           url: '/publishing-apps/samsung/samsung-partner.html'
-        - name: 'Installing the Samsung Test Build'
+        - name: 'Installation du Samsung Test Build'
           url: '/publishing-apps/samsung/installing-samsung-test-build.html'
-        - name: 'Submitting to the Samsung Store'
+        - name: 'Envoi sur le Samsung Store'
           url: '/publishing-apps/samsung/submitting-to-samsung.html'
 - section:
-  name: 'Publishing Videos & Players'
+  name: 'Publier des vidéos et des lecteurs'
   url: /publish/index.html
   docs:
-    - name: Adding a 3Play Media Interactive Transcript
+    - name: "Ajout d'une transcription interactive 3Play Media"
       url: /publish/adding-3play-media-interactive-transcript-video.html
-    - name: Adding an Application ID to the Embed Code
+    - name: "Ajout d'un ID d'application au code intégré"
       url: /publish/adding-application-id-player-embed-code.html
-    - name: Adding a Player to a Facebook Fan Page
+    - name: Ajouter un lecteur à une page de fans Facebook
       url: /publish/adding-brightcove-player-facebook-fan-page.html
-    - name: Changing a Video in a Player
+    - name: Modifier une vidéo dans un lecteur
       url: /publish/changing-video-player-without-changing-embed-code.html
-    - name: Choosing the Correct Embed Code
+    - name: "Choisir le bon code d'intégration"
       url: /publish/choosing-correct-embed-code.html
-    - name: Creating and Publishing High Quality Screencasts
+    - name: Création et publication de screencasts de haute qualité
       url: /publish/creating-and-publishing-high-quality-screencasts.html
     - name: Deep Linking
       url: /publish/deep-linking.html
-    - name: Driving Video Views Through Email
+    - name: Générer des vues de vidéos par e-mail
       url: /publish/driving-video-views-through-email.html
-    - name: Dynamically Assigning Videos to a Player
+    - name: Attribution dynamique de vidéos à un lecteur
       url: /publish/dynamically-assigning-videos-player.html
-    - name: Embedding a Player on a Google Sites Page
+    - name: "Intégration d'un lecteur sur une page Google Sites"
       url: /publish/embedding-brightcove-player-google-sites-page.html
-    - name: Publishing a Player in a Wordpress Page
+    - name: Publier un lecteur dans une page Wordpress
       url: /publish/publishing-brightcove-player-wordpress-page.html
-    - name: Publishing Players in Facebook Instant Articles
+    - name: Publier des lecteurs dans des articles instantanés Facebook
       url: /publish/publishing-brightcove-players-facebook-instant-articles.html
-    - name: Publishing Players in Joomla
+    - name: Publier des lecteurs dans Joomla
       url: /publish/publishing-brightcove-players-joomla.html
-    - name: Publishing a Video to Email
+    - name: Publier une vidéo par e-mail
       url: /publish/publishing-video-email.html
-    - name: Publishing Videos and Playlists
+    - name: Publication de vidéos et de listes de lecteur
       url: /publish/publishing-videos-and-playlists-media-module.html
-    - name: 'Step-by-Step:  Creating and Publishing a Player'
+    - name: "Étape par étape: Création et publication d'un lecteur"
       url: /publish/step-step-using-players-module-create-and-publish-player.html
-    - name: Using Multiple Players on One Page
+    - name: Utilisation de plusieurs lecteurs sur une seule page
       url: /publish/using-multiple-players-one-page.html
-    - name: Using Reference IDs
+    - name: Utilisation des ID de référence
       url: /publish/using-reference-ids.html
 - section:
-  name: Registered Users
+  name: Utilisateurs enregistrés
   url: /registered-users/index.html
   docs:
-    - name: Working with Registered Users
+    - name: Travailler avec les utilisateurs enregistrés
       url: /registered-users/working-with-registered-users.html
-    - name: Exporting Registered Users
+    - name: Exporter les utilisateurs enregistrés
       url: /registered-users/export-registered-users.html
-    - name: Sending Push Notifications
+    - name: Envoi de notifications push
       url: /registered-users/sending-push-notifications.html
 - section:
-  name: Social Sharing
+  name: Partage social
   url: /social/index.html
   docs:
-    - name: Adding a Facebook Like Button to a Player
+    - name: "Ajout d'un bouton J'aime Facebook à un lecteur"
+
       url: /social/adding-facebook-button-brightcove-player.html
-    - name: Creating Publishing Destinations
+    - name: Création de destinations de publication
       url: /social/creating-social-media-publishing-destinations.html
-    - name: Creating a Video Clip
+    - name: "Création d'un clip vidéo"
       url: /social/creating-video-clip-using-brightcove-social.html
-    - name: Enabling Longer Videos In YouTube
+    - name: Activation de vidéos plus longues sur YouTube
       url: /social/enabling-longer-videos-youtube.html
-    - name: Getting Started with Social
+    - name: Premiers pas avec les réseaux sociaux
       url: /social/getting-started-brightcove-social.html
-    - name: Publishing Videos to Social Media
+    - name: Publier des vidéos sur les réseaux sociaux
       url: /social/publishing-videos-social-media-platforms.html
-    - name: Reviewing Social Analytics
+    - name: Révision de Social Analytics
       url: /social/reviewing-social-analytics.html
-    - name: Reviewing Social Engagement Analytics
+    - name: Révision de Social Engagement Analytics
       url: /social/reviewing-social-engagement-analytics.html
-    - name: Reviewing Social Views Analytics
+    - name: Révision de Social Views Analytics
       url: /social/reviewing-social-views-analytics.html
-    - name: Setting the Privacy Status for a Video
+    - name: "Définition de l'état de confidentialité d'une vidéo"
       url: /social/setting-privacy-status-video.html
-    - name: Sharing Videos to Twitter Player Cards
+    - name: Partage de vidéos sur Twitter Player Cards
       url: /social/sharing-videos-twitter-player-cards.html
-    - name: Using Auto Sync
+    - name: Utilisation de la synchronisation automatique
       url: /social/using-auto-sync-synchronize-videos-social-media-accounts.html
-    - name: Viewing Published Videos
+    - name: Affichage des vidéos publiées
       url: /social/viewing-videos-published-social-media.html
 - section:
-  name: Live Streaming
+  name: Diffusion en direct
   url: /live/index.html
   docs:
-  - name: Getting Started
+  - name: Pour commencer
     url: /live/get-started/index.html
     docs:
-    - name: Delivering Live Streams
+    - name: Diffusion de flux live
       url: /live/get-started/delivering-live-streams.html
-    - name: "Brightcove Live: Best Practices"
+    - name: "Brightcove Live: Meilleures pratiques"
       url: /live/get-started/live-module-guidelines-and-best-practices.html
-    - name: "Step-by-Step: SRT Live event"
+    - name: "Étape par étape: Événement SRT Live"
       url: /live/get-started/step-step-live-srt.html
-    - name: "Step-by-Step: Using the Live Module with OBS"
+    - name: "Étape par étape: Utiliser le module Live avec OBS"
       url: /live/get-started/step-step-using-live-module-open-broadcaster-software-obs.html
-    - name: "Step-by-Step: Using the Live Module with Wirecast"
+    - name: "Étape par étape: Utilisation du module Live avec Wirecast"
       url: /live/get-started/step-step-using-live-module-telestream-wirecast.html
-  - name: Using the Live Module
+  - name: Utilisation du module Live
     url: /live/live-module/index.html
     docs:
-    - name: Client-Side Pre-roll Ads with Live SSAI
+    - name: Publicités pré-roll côté client avec SSAI en direct
       url: /live/live-module/client-side-preroll-with-live-ssai.html
-    - name: Creating and Managing Live Events using the Live Module
+    - name: "Création et gestion d'événements en direct à l'aide du module Live"
       url: /live/live-module/creating-and-managing-live-events-using-live-module.html
-    - name: Creating a Video Clip
+    - name: "Création d'un clip vidéo"
       url: /live/live-module/creating-video-clip-using-live-module.html
-    - name: Implementing Server-Side Ads
+    - name: Mise en œuvre des publicités côté serveur
       url: /live/live-module/implementing-server-side-ads-live-module.html
-    - name: Live Redundancy
+    - name: Redondance en direct
       url: /live/live-module/live-redundancy.html
-    - name: Multi Language Audio
+    - name: Audio multilingue
       url: /live/live-module/multi-language-audio.html
-    - name: Playback Restrictions with Live Events
+    - name: Restrictions de lecteur pour les événements
       url: /live/live-module/playback-restrictions-live-module.html
-    - name: Reviewing Live Analytics
+    - name: Révision de Live Analytics
       url: /live/live-module/reviewing-live-analytics.html
-    - name: Scheduling Clips
+    - name: Planification des clips
       url: /live/live-module/scheduling-clips.html
-    - name: Scheduling Live Events
+    - name: "Planification d'événements en direct"
       url: /live/live-module/scheduling-live-event.html
-    - name: Streaming to Facebook and YouTube
+    - name: Streaming sur Facebook et YouTube
       url: /live/live-module/using-live-rtmp-outputs-stream-facebook-and-youtube.html
-    - name: "Brightcove Live - Zoom Integration"
+    - name: "Intégration de Brightcove Live - Zoom"
       url: /live/live-module/zoom-live-integration.html
-  - name: General Information
+  - name: Informations générales
     url: /live/general/index.html
     docs:
-    - name: Captions with Live Streams
+    - name: Sous-titres avec flux en direct
       url: /live/general/captions-with-live-streams.html
-    - name: Forensic Watermarking with Live Streams
+    - name: Filigranage judiciaire avec flux en direct
       url: /live/general/forensic-watermarking-live.html
-    - name: Live DRM
+    - name: DRM en direct
       url: /live/general/live-drm.html
-    - name: Live Video Glossary
+    - name: Glossaire des vidéos
       url: /live/general/live-video-glossary.html
-    - name: Reducing Latency for Live Streams
+    - name: Réduire la latence des flux en direct
       url: /live/general/reducing-latency-live-streams.html
-    - name: Streaming a Live Event using Beacon Classic
+    - name: "Streaming d'un événement en direct avec Beacon Classic"
       url: /live/general/streaming-live-event.html
-    - name: Supported Encoders for Live Events
+    - name: Codeurs pris en charge pour les événements en direct
       url: /live/general/supported-encoders-live-events.html
-  - name: Web Conferencing
+  - name: Conférence Web
     url: /live/web-conferencing/index.html
     docs:
-    - name: Hosting an Avaya Conference
+    - name: Organiser une conférence Avaya
       url: /live/web-conferencing/host-avaya-conference-brightcove-live.html
-    - name: Hosting a Cisco Webex Conference
+    - name: "Organisation d'une conférence Cisco Webex"
       url: /live/web-conferencing/host-cisco-webex-conference-brightcove-live.html
-    - name: Hosting an INXPO Event
+    - name: Organiser un événement INXPO
       url: /live/web-conferencing/host-inxpo-live.html
-    - name: Hosting a Zoom Conference
+    - name: Organiser une conférence Zoom
       url: /live/web-conferencing/host-zoom-conference-brightcove-live.html
 - section:
-  name: Styling & Appearance
+  name: Style et apparence
   url: /styling/index.html
   docs:
     - name: Branding Brightcove Beacon Apps
       url: /styling/branding-beacon-apps.html
-    - name: Image Specifications
+    - name: "Spécifications de l'image"
       url: /styling/image-requirements.html
 - section:
-  name: Marketing Automation
+  name: Automatisation marketing
   url: /campaign/index.html
   docs:
-  - name: Getting Started
+  - name: Pour commencer
     url: /campaign/get-started/index.html
     docs:
-      - name: Getting Started with Campaign
+      - name: Premiers pas avec Campaign
         url: /campaign/get-started/getting-started-campaign-module.html
-      - name: Creating a Campaign-enabled Player
+      - name: "Création d'un lecteur compatible avec la campagne"
         url: /campaign/general/creating-campaign-enabled-player.html
-      - name: Overview of Video Content Types
+      - name: Aperçu des types de contenu vidéo
         url: /campaign/get-started/overview-video-content-types.html
-      - name: Using the Chrome Extension
+      - name: "Utilisation de l'extension Chrome"
         url: /campaign/get-started/using-hud.html
-  - name: General Information
+  - name: Informations générales
     url: /campaign/general/index.html
     docs:
-      - name: Campaign FAQ
+      - name: FAQ de la campagne
         url: /campaign/general/campaign-faq.html
-      - name: Campaign Fields and Data Definitions
+      - name: Champs de campagne et définitions de données
         url: /campaign/general/campaign-fields-and-data-definitions.html
-      - name: Campaign Plugin FAQ
+      - name: FAQ du plugin de campagne
         url: /campaign/general/campaign-plugin-faq.html
-      - name: Configuring Campaign Settings
+      - name: Configuration des paramètres de campagne
         url: /campaign/general/configuring-campaign-settings.html
-      - name: Creating a Campaign-enabled Player
+      - name: "Création d'un lecteur compatible avec la campagne"
         url: /campaign/general/creating-campaign-enabled-player.html
-      - name: Creating a Campaign Lead Form
+      - name: "Création d'un formulaire de prospect de campagne"
         url: /campaign/general/creating-campaign-lead-form.html
-      - name: How Campaign Identifies Viewers
+      - name: Comment Campaign identifie les spectateurs
         url: /campaign/general/how-campaign-module-identifies-viewers.html
-      - name: How Video Benchmark Score is Calculated
+      - name: Comment est calculé le score de référence vidéo
         url: /campaign/general/how-vbs-calculated.html
-      - name: Overview of Video Content Types
+      - name: Aperçu des types de contenu vidéo
         url: /campaign/general/overview-video-content-types.html
-      - name: Publishing a Video to Email
+      - name: Publier une vidéo par e-mail
         url: /campaign/general/publishing-video-email-using-campaign-module.html
-      - name: Using Custom Metrics and Events
+      - name: "Utilisation de métriques et d'événements personnalisés"
         url: /campaign/general/using-custom-metrics-and-events.html
-      - name: Viewing Player Events
+      - name: Affichage des événements des lecteurs
         url: /campaign/general/viewing-player-events-campaign-module.html
-      - name: Viewing Video Activity
+      - name: "Affichage de l'activité vidéo"
         url: /campaign/general/viewing-video-activity.html
-      - name: Viewing Viewer Profile Information
+      - name: Affichage des informations sur le profil du
         url: /campaign/general/viewing-viewer-profile-information.html
-      - name: Working with UTM Fields
+      - name: Utilisation des champs UTM
         url: /campaign/general/working-utm-fields-campaign-module.html
-  - name: Integrations
+  - name: Intégrations
     url: /campaign/integrations/index.html
     docs:
       - name: Eloqua
         url: /campaign/integrations/eloqua/index.html
         docs:
-          - name: Creating Custom Lead Forms
+          - name: Création de formulaires de prospects personnalisés
             url: /campaign/integrations/eloqua/creating-custom-lead-forms-oracle-eloqua.html
-          - name: Eloqua Integration Testing Guide
+          - name: "Guide de test d'intégration Eloqua"
             url: /campaign/integrations/eloqua/eloqua-integration-testing-guide.html
-          - name: Embedding a Video on a Landing Page
+          - name: "Intégration d'une vidéo sur une page de destination"
             url: /campaign/integrations/eloqua/embedding-video-cloud-video-eloqua-landing-page.html
-          - name: Integrating with Oracle Eloqua
+          - name: Intégration à Oracle Eloqua
             url: /campaign/integrations/eloqua/integrating-video-cloud-oracle-eloqua.html
       - name: HubSpot
         url: /campaign/integrations/hubspot/index.html
         docs:
-          - name: Creating Custom Lead Forms
+          - name: Création de formulaires de prospects personnalisés
             url: /campaign/integrations/hubspot/creating-custom-lead-forms-hubspot.html
-          - name: HubSpot REST API Testing Guide
+          - name: Guide de test des API REST HubSpot
             url: /campaign/integrations/hubspot/hubspot-rest-api-integration-testing-guide.html
-          - name: 'Integrating with HubSpot (Client-Side APIs)'
+          - name: 'Intégration avec HubSpot (API côté client)'
             url: /campaign/integrations/hubspot/integrating-video-cloud-hubspot-using-client-side-apis.html
-          - name: 'Integrating with HubSpot (REST APIs)'
+          - name: 'Intégration avec HubSpot (API REST)'
             url: /campaign/integrations/hubspot/integrating-video-cloud-hubspot-using-rest-apis.html
       - name: Marketo
         url: /campaign/integrations/marketo/index.html
         docs:
-          - name: Creating Custom Lead Forms
+          - name: Création de formulaires de prospects personnalisés
             url: /campaign/integrations/marketo/creating-custom-lead-forms-marketo.html
-          - name: 'Integrating with Marketo (Munchkin)'
+          - name: 'Intégration avec Marketo (Munchkin)'
             url: /campaign/integrations/marketo/integrating-video-cloud-marketo-using-munchkin.html
-          - name: 'Integrating with Marketo (REST APIs)'
+          - name: 'Intégration avec Marketo (API REST)'
             url: /campaign/integrations/marketo/integrating-video-cloud-marketo-using-rest-apis.html
-          - name: Marketo REST Integration Testing Guide
+          - name: "Guide de test d'intégration Marketo REST"
             url: /campaign/integrations/marketo/marketo-rest-integration-testing-guide.html
       - name: Non-MAP
         url: /campaign/integrations/non-map/index.html
         docs:
-          - name: Creating Custom Integrations
+          - name: "Création d'intégrations personnalisées"
             url: /campaign/integrations/non-map/creating-custom-integrations-campaign-module.html
-          - name: Integrating with Single Sign-On
+          - name: Intégration avec Single Sign-On
             url: /campaign/integrations/non-map/integrating-campaign-single-sign.html
-          - name: Using Campaign to Track Viewers
+          - name: Utiliser Campaign pour suivre les spectateurs
             url: /campaign/integrations/non-map/using-campaign-module-track-viewers.html
       - name: Salesforce
         url: /campaign/integrations/salesforce/index.html
         docs:
-          - name: Creating Custom Lead Forms
+          - name: Création de formulaires de prospects personnalisés
             url: /campaign/integrations/salesforce/creating-custom-lead-forms-salesforce.html
-          - name: Creating Salesforce Object for Pardot
+          - name: "Création d'un objet Salesforce pour Pardot"
             url: /campaign/integrations/salesforce/creating-salesforce-object-pardot.html
-          - name: Integrating with Salesforce
+          - name: Intégration à Salesforce
             url: /campaign/integrations/salesforce/integrating-video-cloud-salesforce.html
-  - name: Administering Campaign
+  - name: Administration de Campaign
     url: /campaign/admin/index.html
     docs:
-      - name: Exporting Data from Campaign
+      - name: Exporter les données de Campaign
         url: /campaign/admin/exporting-campaign-data-campaign-module.html
-      - name: Exporting Gallery Lead Data
+      - name: Exporter les données des prospects Gallery
         url: /campaign/admin/exporting-gallery-lead-data.html
-      - name: Managing Viewer Data
+      - name: Gestion des données des utilisateurs
         url: /campaign/admin/managing-viewer-data.html
-      - name: Troubleshooting Campaign Issues
+      - name: Résolution des problèmes de campagne
         url: /campaign/admin/troubleshooting-campaign-issues.html
-  - name: Developers (Audience API)
+  - name: Développeurs (API Audience)
     url: 'https://apis.support.brightcove.com/audience/index.html'
 - section:
-  name: Administering Accounts
+  name: Administration des comptes
   url: /admin/index.html
   docs:
-    - name: Configuring Language Settings
+    - name: Configuration des paramètres linguistiques
       url: /admin/configuring-language-settings.html
-    - name: Configuring Server-Side Ad Settings
+    - name: Configuration des paramètres des publicités côté serveur
       url: /admin/configuring-server-side-ad-settings.html
-    - name: Creating Custom Live Ingest Profiles
+    - name: Création de profils Live Ingest personnalisés
       url: /admin/creating-custom-live-ingest-profiles.html
-    - name: Creating Custom Metadata Fields
+    - name: Création de champs de métadonnées personnalisés
       url: /admin/creating-custom-metadata-fields.html
-    - name: Creating Ingest Profiles for Context Aware Encoding
+    - name: "Création de profils d'ingestion pour le codage sensible au contexte"
       url: /admin/creating-ingest-profiles-context-aware-encoding.html
-    - name: Creating Ingest Profiles for Dynamic Delivery
+    - name: "Création de profils d'ingestion pour une diffusion dynamique"
       url: /admin/creating-ingest-profiles-dynamic-delivery.html
-    - name: Fields for Live Ingest Profiles
+    - name: "Champs pour les profils d'ingestion en direct"
       url: /admin/fields-custom-live-ingest-profiles.html
-    - name: Ingest Profiles Best Practices
+    - name: "Meilleures pratiques en matière de profils d'ingestion"
       url: /admin/ingest-profiles-best-practices.html
-    - name: Managing Account Information
+    - name: Gestion des informations de compte
       url: /admin/managing-account-information.html
-    - name: Managing Account Settings
+    - name: Gestion des paramètres du compte
       url: /admin/managing-account-settings.html
-    - name: Managing API Authentication Credentials
+    - name: "Gestion des informations d'authentification des API"
       url: /admin/managing-api-authentication-credentials.html
-    - name: Managing Ingest Profiles
+    - name: "Gestion des profils d'ingestion"
       url: /admin/managing-ingest-profiles.html
-    - name: Managing Live Settings
+    - name: Gestion des paramètres Live
       url: /admin/managing-live-settings.html
-    - name: Managing Media Sharing Settings
+    - name: Gestion des paramètres de partage multimédia
       url: /admin/managing-media-sharing-settings.html
-    - name: Managing Profile Information
+    - name: Gestion des informations de profil
       url: /admin/managing-profile-information.html
-    - name: Managing Users
+    - name: Gestion des utilisateurs
       url: /admin/managing-users.html
-    - name: 'Standard Ingest Profiles (DD & CAE)'
+    - name: "Profils d'ingestion standard (DD et CAE)"
       url: /admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html
-    - name: Standard Live Ingest Profiles
+    - name: Profils Live Ingest standard
       url: /admin/standard-live-ingest-profiles.html
 - section:
-  name: 'General Information'
+  name: 'Informations générales'
   url: '/general/index.html'
   docs:
-    - name: 'References'
+    - name: 'Références'
       url: '/general/references/index.html'
       docs:
-        - name: 'Best Practices: Transcoding and Uploading'
+        - name: 'Meilleures pratiques: Transcodage et téléversement'
           url: /general/references/best-practices-video-creating-transcoding-and-uploading-workflow.html
-        - name: 'Common Required Information for Submitting Apps'
+        - name: "Informations communes requises pour l'envoi d'applications"
           url: '/publishing-apps/general/common-required-info.html'
-        - name: Glossary
+        - name: Lexique
           url: /general/references/glossary.html
-        - name: Known Issues
+        - name: Problèmes connus
           url: /general/references/known-issues.html
-        - name: Making Your Video Content Indexable
+        - name: Rendre votre contenu vidéo indexable
           url: /general/references/making-your-video-content-indexable.html
-        - name: Marketplace
+        - name: Marché
           url: /general/references/marketplace.html
-        - name: Optimal Video Dimensions
+        - name: Dimensions vidéo optimales
           url: /general/references/optimal-video-dimensions.html
-        - name: 'Overview: China Delivery Overview'
+        - name: "Vue d'ensemble: Présentation de livraison en Chine"
           url: /general/references/china-delivery-overview.html
-        - name: Product Release Notes
+        - name: Notes de version du produit
           url: /release-notes/product-updates.html
-        - name: Related Content
+        - name: Contenus connexes
           url: /general/references/related-content.html
-        - name: Remote Asset Limitations
+        - name: Limitations relatives aux actifs
           url: /general/references/remote-asset-limitations.html
-        - name: Resetting Your Studio Password
+        - name: Réinitialisation de votre mot de passe Studio
           url: /general/references/resetting-your-studio-password.html
-        - name: Supported Video and Audio Formats
+        - name: Formats vidéo et audio pris en charge
           url: /general/references/supported-video-and-audio-formats-codecs-and-containers.html
-        - name: Video Source File Specs and Recommendations
+        - name: Spécifications et recommandations relatives aux fichiers source vidéo
           url: /general/references/video-source-file-specifications-and-recommendations.html
-        - name: Using Multiple Languages
+        - name: Utilisation de plusieurs langues
           url: /general/references/using-multiple-languages.html
-        - name: When to Use Beacon Studio / Beacon Classic
+        - name: Quand utiliser Beacon Studio/ Beacon Classic
           url: /general/references/beacon-studio-or-classic.html
-        - name: Working with 360° Videos
+        - name: Travailler avec des vidéos à 360°
           url: /general/references/working-360deg-videos.html
-        - name: Working with Audio-Only Content
+        - name: Utilisation de contenu uniquement audio
           url: /general/references/working-audio-content.html
     - name: 'Architecture'
       url: '/general/architecture/index.html'
       docs:
-        - name: Content Delivery Options
+        - name: Options de diffusion de contenu
           url: /general/architecture/content-delivery-options.html
-        - name: 'Domains and Ports for Video Cloud'
+        - name: 'Domaines et ports pour Video Cloud'
           url: '/general/architecture/domains-and-ports-must-be-accessible-video-cloud.html'
-        - name: Overview of Context Aware Encoding
+        - name: "Présentation de l'encodage sensible au contexte"
           url: /general/architecture/overview-context-aware-encoding.html
-        - name: Overview of Dynamic Delivery
+        - name: Présentation de Dynamic Delivery
           url: /general/architecture/overview-dynamic-delivery.html
-    - name: 'Authentication'
+    - name: "L'authentification"
       url: '/general/authentication/index.html'
       docs:
-        - name: Authentication Using OAuth
+        - name: Authentification via OAuth
           url: /general/authentication/authentication-using-oauth.html
-        - name: Login Durations
+        - name: Durées de connexion
           url: /general/authentication/login-durations.html
-        - name: 'OIDC Configuration and Testing'
+        - name: 'Configuration et tests OIDC'
           url: '/general/authentication/oidc-authentication-for-beacon.html'
-        - name: 'OIDC Example: Integrating with the Beacon Web Store'
+        - name: 'Exemple OIDC: Intégration avec le Beacon Web Store'
           url: '/beacon-web-store/integration-details.html'
-    - name: 'Content Protection'
+    - name: 'Protection du contenu'
       url: '/general/content-protection/index.html'
       docs:
-        - name: DRM Output Protection Settings
+        - name: Paramètres de protection de sortie DRM
           url: /general/content-protection/drm-output-protection-settings.html
-        - name: 'Overview: Digital Rights Management (DRM)'
+        - name: "Vue d'ensemble: Gestion numérique des droits (DRM)"
           url: /general/content-protection/overview-digital-rights-management-drm-video-cloud.html
-        - name: Protecting Videos with HLS Encryption
+        - name: Protéger les vidéos avec le chiffrement HLS
           url: /general/content-protection/protecting-videos-hls-encryption.html
-        - name: TLS for Media, Player, and API URLs
+        - name: TLS pour les URL des médias, des lecteurs et des API
           url: /general/content-protection/tls-media-player-and-api-urls.html
-    - name: 'Cookie Consent'
+    - name: 'Consentement relatif'
       url: '/general/cookie-consent/index.html'
       docs:
-        - name: Managing Cookie Consent Using OneTrust
+        - name: Gérer le consentement aux cookies avec OneTrust
           url: /general/cookie-consent/managing-cookie-consent.html
-    - name: 'Notifications'
+    - name: 'Les notifications'
       url: '/general/notifications/index.html'
       docs:
-        - name: Sending App Notifications
+        - name: "Envoyer des notifications d'applications"
           url: /general/notifications/sending-app-notifications.html
 - section:
-  name: Beacon Plugins
+  name: Plugins Beacon
   url: /ott-plugins/index.html
   docs:
-    - name: 'Learning Guide: Beacon Plugins'
+    - name: "Guide d'apprentissage: Plugins Beacon"
       url: /ott-plugins/learning-guide-beacon-plugins.html
-    - name: Use JavaScript Modules for Plugins
+    - name: Utiliser des modules JavaScript pour les plugins
       url: /ott-plugins/javascript-modules-beacon-plugins.html
-    - name: Dispatch & Handle Events in Plugins
+    - name: Répartir et gérer les événements dans les plugins
       url: /ott-plugins/dispatching-handling-events.html
-    - name: Creating a Custom Page
+    - name: "Création d'une page personnalisée"
       url: /ott-plugins/custom-page.html
-    - name: Implement Buttons and Event Handlers
+    - name: "Mettre en œuvre des boutons et des gestionnaires d'événements"
       url: /ott-plugins/buttons-and-events.html
-    - name: Implement Custom Sections
+    - name: Mettre en œuvre des sections
       url: /ott-plugins/custom-divs.html
-    - name: Implement the Side Panel
+    - name: Mise en œuvre du panneau latéral
       url: /ott-plugins/side-panel.html
-    - name: Implement User Events
+    - name: Mettre en œuvre des événements
       url: /ott-plugins/user-events.html
-    - name: Storing Data in a Separate Module
+    - name: Stockage des données dans un module séparé
       url: /ott-plugins/data-module.html
-    - name: Working with Page Events
+    - name: Utilisation des événements de page
       url: /ott-plugins/working-with-page-events.html
 - section:
-  name: Release Notes
+  name: Notes de version
   url: /release-notes/index.html
   docs:
-    - name: Product Release Notes
+    - name: Notes de version du produit
       url: /release-notes/product-updates.html
 - section:
-  name: 'Support'
+  name: 'Assistance'
   url: '/support/index.html'
   docs:
-    - name: 'Viewing the Brightcove System Status Page'
+    - name: "Affichage de la page d'état du système Brightcove"
       url: '/support/viewing-brightcove-system-status-page.html'
-    - name: 'Opening a Support Case'
+    - name: "Ouvrir un dossier d'assistance"
       url: '/support/opening-case-with-brightcove-support.html'
-    - name: 'Reset Your Support Portal Password'
+    - name: 'Réinitialiser le mot de passe de'
       url: '/support/reset-support-portal-password.html'
-    - name: 'Contact Sales'
+    - name: 'Contacter le service commercial'
       url: '/support/contact-sales.html'

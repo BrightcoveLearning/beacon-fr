@@ -1,41 +1,36 @@
 ---
-title: 'Learning Guide: Brightcove Beacon'
-description: This learning guide provides a starting point for your understanding of Brightcove Beacon.
-parent: Getting Started
+title: "Guide d'apprentissage"
+description: "Ce guide d'apprentissage constitue un point de départ pour votre compréhension de Brightcove Beacon. "
+parent: Pour commencer 
 ---
 
-<h1>{{ page.title }}</h1>
-<article class="bcls-article">
-  <summary>{{ page.description }}</summary>
+<h1>{{page.title}}</h1> <article class="bcls-article"> <summary>{{page.description}}</summary> <section class="bcls-section">
+    <h2 id="What_is_Brightcove_Beacon">Qu'est-ce que Brightcove Beacon&nbsp;?</h2>
 
-  <section class="bcls-section">
-    <h2 id="What_is_Brightcove_Beacon">What is Brightcove Beacon?</h2>
-
-    <p>Brightcove Beacon is a platform which enables you to create and configure a single media streaming experience which is then used across multiple devices. With Brightcove Beacon you can curate your content, implement monetization strategies, and design viewer experiences. In doing so, you can:</p>
+    <p>Brightcove Beacon est une plate-forme qui vous permet de créer et de configurer une expérience de streaming multimédia unique qui est ensuite utilisée sur plusieurs appareils. Avec Brightcove Beacon, vous pouvez organiser votre contenu, mettre en œuvre des stratégies de monétisation et concevoir des expériences de visionnage. Ce faisant, vous pouvez:</p>
     <ul>
-      <li>Greatly reduce overall costs. The costs of developing apps for each platform are considerable, anywhere from $50K-$250K for a custom app targeted at just ONE platform. Brightcove Beacon allows creation of multiple apps from a single
-        configured experience.</li>
-      <li>Provide a consistent experience for viewers across all platforms.</li>
-      <li>Allow monetization of video content via options like AVOD and SVOD.</li>
+      <li>Réduisez considérablement les coûts globaux. Les coûts de développement d'applications pour chaque plateforme sont considérables, allant de 50 à 250 000 dollars pour une application personnalisée destinée à UNE seule plateforme. Brightcove Beacon permet de créer plusieurs applications à partir d'une seule expérience configurée.</li>
+      <li>Offrez une expérience cohérente aux spectateurs sur toutes les plateformes.</li>
+      <li>Autorisez la monétisation du contenu vidéo via des options telles que l'AVOD et la SVOD.</li>
     </ul>
 
-    <p>Apps can be generated to run on the following four device types (some specific examples included):</p>
+    <p>Les applications peuvent être générées pour s'exécuter sur les quatre types d'appareils suivants (exemples spécifiques inclus):</p>
     <ul>
-      <li>Mobile (Phone / Tablets)
+      <li>Mobile (téléphone/tablettes)
         <ul>
-          <li>Android<strong><sup>*</sup></strong></li>
+          <li><strong><sup>Android*</sup></strong></li>
           <li>iOS</li>
         </ul>
       </li>
-      <li>Connected TVs
+      <li>Téléviseurs connectés
         <ul>
-          <li>Android TV<strong><sup>**</sup></strong></li>
+          <li>Android<strong><sup> TV**</sup></strong></li>
           <li>Apple TV</li>
           <li>Fire TV</li>
           <li>Roku</li>
         </ul>
       </li>
-      <li>Smart TVs
+      <li>Téléviseurs intelligents
         <ul>
           <li>LG</li>
           <!-- <li>Panasonic</li> -->
@@ -51,69 +46,53 @@ parent: Getting Started
               </ul>
             </li> -->
       <li>Web</li>
-    </ul>
-    <aside class="bcls-aside bcls-aside--information language-editable">
-      <p><strong><sup>*</sup></strong>The Huawei platform is not supported even if it is Android based.</p>
-      <p><strong><sup>**</sup></strong>Beacon supports the Android TV operating system. Brightcove Beacon support is not attached to a specific brand. As long as a device runs Android TV with Google Services enabled, it's expected to be supported. Brightcove does not test every single Android TV device, but it is expected that devices that properly support the operating system will also support Brightcove Beacon.</p>
-    </aside>
+    </ul> <aside class="bcls-aside bcls-aside--information language-editable">
+      <p><strong><sup>*</sup></strong> La plateforme Huawei n'est pas prise en charge même si elle est basée sur Android.</p>
+      <p><strong><sup>**</sup></strong> Beacon prend en charge le système d'exploitation Android TV. La prise en charge de Brightcove Beacon n'est pas liée à une marque spécifique. Tant qu'un appareil exécute Android TV avec Google Services activés, il est censé être pris en charge. Brightcove ne teste pas tous les appareils Android TV, mais il est prévu que les appareils prenant correctement en charge le système d'exploitation prennent également en charge Brightcove Beacon.</p> </aside>
 
-    <p>Not only do you get multiple device apps from a single source, but Brightcove Beacon also allows you to control the content and layout for each device app from your single Brightcove Beacon Experience.</p>
-    <p>The following is a visual representation of Brightcove Beacon:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/getting-started/learning-guide/beacon-intro-diagram.png" alt="introductory diagram">
-    </figure>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="How_is_Brightcove_Beacon_implemented">How is Brightcove Beacon implemented?</h2>
-    <p>The phases listed in this table are detailed in the <a href="/get-started/implementation-phases.html">Implementation Phases</a> document.</p>
+    <p>Non seulement vous obtenez plusieurs applications d'appareil d'une seule source, mais Brightcove Beacon vous permet également de contrôler le contenu et la mise en page de chaque application d'appareil à partir de votre expérience Brightcove Beacon Experience unique.</p>
+    <p>Voici une représentation visuelle de Brightcove Beacon:</p> <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/getting-started/learning-guide/beacon-intro-diagram.png" alt="schéma d'introduction">   </figure></section><section class="bcls-section">
+    <h2 id="How_is_Brightcove_Beacon_implemented">Comment Brightcove Beacon est-il mis en œuvre&nbsp;?</h2>
+    <p>Les phases répertoriées dans ce tableau sont détaillées dans le<a href="/get-started/implementation-phases.html"> document Phases de</a> mise en œuvre.</p>
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>Implementation Phase</th>
+          <th>Phase d'implémentation</th>
           <th>Description</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td>Prepare for Brightcove Beacon Experience Creation*</td>
-          <td>Gather design artifacts, create your application design and plan strategies for advertising and monetization.</td>
+          <td>Préparation à la création de Brightcove Beacon Experience*</td>
+          <td>Rassemblez des artefacts de conception, créez la conception de votre application et planifiez des stratégies de publicité et de monétisation.</td>
         </tr>
         <tr>
-          <td>Establish Relationships with 3rd Party Vendors*</td>
-          <td>Create accounts for: Stores to which you wish to submit device apps, advertising server, online payment vendor, etc.</td>
+          <td>Établir des relations avec des fournisseurs tiers*</td>
+          <td>Créez des comptes pour: Boutiques auxquelles vous souhaitez soumettre des applications d'appareils, un serveur publicitaire, un fournisseur de paiement en ligne, etc.</td>
         </tr>
         <tr>
-          <td>Create Your Application Design</td>
-          <td>Determine you information architecture around which videos will be available for viewing, as well as how they are grouped and ordered.</td>
+          <td>Créez la conception de votre application</td>
+          <td>Déterminez votre architecture d'information autour des vidéos qui seront disponibles pour le visionnage, ainsi que la manière dont elles sont regroupées et ordonnées.</td>
         </tr>
         <tr>
-          <td>Ingest or Add Content and Configure Your Brightcove Beacon Experience</td>
-          <td>Configuration of, and media assets added to, your Brightcove Beacon Experience.</td>
+          <td>Intégrez ou ajoutez du contenu et configurez votre expérience Brightcove Beacon</td>
+          <td>Configuration de votre expérience Brightcove Beacon et ajout de ressources multimédias.</td>
         </tr>
         <tr>
-          <td>Create Device Application(s) from Your Brightcove Beacon Experience</td>
-          <td>Work with a Brightcove representative to finalize the configuration of your Brightcove Beacon Experience, from which the device apps are then generated.</td>
+          <td>Créez des applications d'appareil à partir de votre expérience Brightcove Beacon</td>
+          <td>Collaborez avec un représentant Brightcove pour finaliser la configuration de votre Brightcove Beacon Experience, à partir de laquelle les applications de l'appareil sont ensuite générées.</td>
         </tr>
         <tr>
-          <td>Submit Your Device Applications to Corresponding Stores</td>
-          <td>Submit the newly generated device app(s) to corresponding store(s) for approval, and then your apps are ready for customers’ use.</td>
+          <td>Soumettez les applications de votre appareil aux boutiques correspondantes</td>
+          <td>Soumettez la ou les applications de l'appareil nouvellement générées aux boutiques correspondantes pour approbation, puis vos applications sont prêtes à être utilisées par les clientsâ €™.</td>
         </tr>
       </tbody>
     </table>
 
-    <p>
-    <aside class="bcls-aside bcls-aside--information">* The first two phases should be executed simultaneously.</aside>
-    </p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="How_are_the_device_apps_updated">How are the device apps updated?</h2>
-    <p>Your specific device apps are submitted initially to vendors for approval, and only need to be resubmitted in very rare instances like an OS update. Of course, you will want to change the media that is offered for viewing, alter the app layout, or change your monetization for advertising strategy. This is done by altering the experience, which does NOT require a resubmission to a vendor store. The key to updating the app, but not having to resubmit to the vendor store, lies in the architecture of Brightcove Beacon as shown here:</p>
-    <aside class="bcls-aside bcls-aside--information">The diagram assumes you have, of course, downloaded and installed the Brightcove Beacon app on a device.</aside>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/getting-started/learning-guide/brightcove-beacon-load-process.png" alt="load process">
-    </figure>
-    <p>This architecture provides the functionality to only alter the single Brightcove Beacon Experience to update the layout or configuration of all your device apps.</p>
-  </section>
-
-</article>
+    <p> <aside class="bcls-aside bcls-aside--information">* Les deux premières phases doivent être exécutées simultanément.</aside>
+    </p>  </section><section class="bcls-section">
+    <h2 id="How_are_the_device_apps_updated">Comment les applications de l'appareil sont-elles mises à jour&nbsp;?</h2>
+    <p>Les applications spécifiques de votre appareil sont soumises initialement aux fournisseurs pour approbation, et ne doivent être soumises à nouveau que dans de très rares cas, comme pour une mise à jour du système d'exploitation. Bien entendu, vous voudrez modifier le support proposé pour le visionnage, modifier la mise en page de l'application ou modifier votre stratégie de monétisation pour la publicité. Cela se fait en modifiant l'expérience, ce qui ne nécessite PAS de nouvelle soumission à un magasin fournisseur. La clé pour mettre à jour l'application, sans avoir à la soumettre à nouveau au magasin du fournisseur, réside dans l'architecture de Brightcove Beacon, comme illustré ici:</p> <aside class="bcls-aside bcls-aside--information">Le schéma suppose que vous avez, bien entendu, téléchargé et installé l'application Brightcove Beacon sur un appareil.</aside> <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/getting-started/learning-guide/brightcove-beacon-load-process.png" alt="processus de chargement"> </figure>
+    <p>Cette architecture fournit la fonctionnalité permettant de modifier uniquement l'expérience Brightcove Beacon unique afin de mettre à jour la disposition ou la configuration de toutes les applications de votre appareil.</p>  </section></article>

@@ -1,0 +1,132 @@
+<h1>{{page.title}}</h1> <article class="bcls-article"> <summary>{{page.description}}</summary> <section class="bcls-section"> <aside class="bcls-aside bcls-aside--information"> Brightcove {{site.product_short}} ne renvoie PAS d'analyse complète à Video Cloud. Seuls les démarrages vidéo sont signalés à Video Cloud Analytics.</aside>
+    <h2 id="Introduction">Présentation</h2>
+    <p>Il ne fait aucun doute que vous voudrez savoir ce que les spectateurs regardent dans vos applications Brightcove {{site.product_short}}. Pour ce faire, vous allez utiliser Google Analytics. Brightcove chargera un tableau de bord personnalisé et un rapport Google Data Studio personnalisé dans votre compte Google Analytics. Ces deux outils fournissent un excellent aperçu de la manière dont vos clients utilisent vos applications Brightcove {{site.product_short}}.</p>
+    <p>Outre le tableau de bord et le rapport personnalisés, vous pouvez utiliser les outils d'analyse standard de Google Analytics pour consulter le comportement des clients. Vous pouvez utiliser les données d'analyse standard collectées par Google. En outre, Brightcove ajoute d'autres entités à utiliser, détaillées plus loin dans ce document. Par exemple, les<strong> événements</strong> Movies sont distribués lorsqu'un film est visionné, une mesure Google Analytics par défaut, et le temps de visionnage est calculé, une mesure ajoutée par Brightcove. Par conséquent, dans Google Analytics, vous pouvez voir les films les plus regardés-fr/ en fonction du nombre de fois que les spectateurs ont lu le film et de la durée totale de visionnage. Ces entités ajoutées par Brightcove sont largement utilisées dans le tableau de bord personnalisé et le rapport mentionnés dans le paragraphe précédent.</p>  </section><section class="bcls-section">
+    <h2 id="Viewing_the_Dashboard">Afficher le tableau de bord</h2>
+    <p>Pour afficher le tableau de bord Google Analytics installé par Brightcove, et surtout les données qu'il affiche, procédez comme suit:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Connectez-vous à<a href="https://analytics.google.com"> Google Analytics</a>.</li>
+      <li>Cliquez sur le menu déroulant (surligné en jaune sur la capture d'écran) pour voir tous vos comptes Google Analytics. <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/using-beacon-analytics/click-accounts.png" alt="Comptes Beacon Analytics" /> </figure>
+      </li>
+      <li>Dans la liste déroulante à trois panneaux, sélectionnez:
+        <ol type="a">
+          <li>Votre compte Brightcove {{site.product_short}}</li>
+          <li>Votre application pour laquelle vous souhaitez des analyses</li>
+          <li>Votre point de vue (vous n'aurez qu'une seule vue par application)</li>
+        </ol> <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/using-beacon-analytics/app-groups.png" alt="Groupes d'applications Beacon Analytics" /> </figure>
+      </li>
+      <li>Dans le menu de navigation de gauche, cliquez sur l'<strong>option</strong> Personnalisation, puis sur<strong> Tableaux de bord</strong> pour voir le tableau de bord personnalisé pour votre vue actuelle. <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/using-beacon-analytics/select-dashboards.png" alt="sélectionner des tableaux de bord"> </figure>
+      </li>
+      <li>Si le tableau de bord n'apparaît pas, vous devez le sélectionner dans la liste: <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/using-beacon-analytics/click-on-report.png" alt="Sélectionnez le tableau de"> </figure>
+      </li>
+      <li>Votre tableau de bord apparaît sur le côté droit de l'écran. Un exemple de tableau de bord est présenté ici: <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/using-beacon-analytics/dashboard.png" alt="Tableau de"> </figure>
+      </li>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="Viewing_the_Data_Studio_report">Affichage du rapport Data Studio</h2>
+    <p>Selon Google: Data Studio est un outil gratuit qui transforme vos données en tableaux de bord et rapports informatifs, faciles à lire, faciles à partager et entièrement personnalisables. «</p>
+    <p>Pour afficher le rapport personnalisé Google Data Studio installé par Brightcove, procédez comme suit:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Connectez-vous à<a href="https://datastudio.google.com/"> Google Data Studio (datastudio.google.com)</a>.</li>
+      <li>Vous verrez une liste des rapports répertoriés sur la page de destination (surligné en jaune): <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/using-beacon-analytics/data-studio-landing-page.png" alt="page d'accueil de Data Studio"> </figure>
+      </li>
+      <li>Cliquez sur le nom du rapport pour l'ouvrir.</li>
+      <li>La première page d'un exemple de rapport est présentée ici. Remarque dans le coin supérieur gauche du rapport se trouve la navigation (surlignée en jaune) pour voir les autres pages. <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/using-beacon-analytics/data-studio-report.png" alt="rapport de Data Studio"> </figure>
+      </li>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="Viewing_dimensions_and_metrics">Visualisation des dimensions et des statistiques</h2> <aside class="bcls-aside bcls-aside--tip">Si vous n'êtes pas familier avec les dimensions et mesures d'analyse, voici une explication TRÈS simplifiée:
+      <ul>
+        <li>Les dimensions sont des attributs de vos données. Par exemple, la ville d'où proviennent les vues est une dimension. Une seule dimension peut contenir de nombreuses valeurs, comme les noms de toutes les villes dont vous avez des vues.</li>
+        <li>Les métriques sont des mesures quantitatives. Le nombre de sessions d'une ville donnée serait donc une mesure.</li>
+      </ul> </aside>
+    <p>Brightcove ajoute des fonctionnalités aux mesures Google par défaut pour vos rapports d'analyse. Vous pouvez utiliser les dimensions et statistiques par défaut de Google Analytics, les éléments constitutifs des rapports d'analyse, ainsi que de nombreuses dimensions et une mesure ajoutées par Brightcove. Ces dimensions supplémentaires et la mesure unique sont utilisées dans le tableau de bord et le rapport Data Studio présentés dans les deux premières sections de ce document.</p>
+    <p> Notez que les dimensions et les statistiques ajoutées par Brightcove ne sont PAS les mêmes pour chaque type d'application Brightcove {{site.product_short}}. Par exemple, les données mobiles iOS ont 16 dimensions personnalisées ajoutées, tandis que l'application du site Web en a 20 ajoutées. Pour afficher la liste des dimensions et des statistiques dans l'interface utilisateur de Google Analytics, procédez comme suit:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Connectez-vous à<a href="https://analytics.google.com"> Google Analytics</a>.</li>
+      <li>Cliquez sur le menu déroulant (surligné en jaune sur la capture d'écran) pour voir tous vos comptes Google Analytics. <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/using-beacon-analytics/click-accounts.png" alt="Comptes Beacon Analytics" /> </figure>
+      </li>
+      <li>Dans la liste déroulante à trois panneaux, sélectionnez:
+        <ol type="a">
+          <li>Votre compte Brightcove {{site.product_short}}</li>
+          <li>Votre application pour laquelle vous souhaitez des analyses</li>
+          <li>Votre point de vue (vous n'aurez qu'une seule vue par application)</li>
+        </ol> <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/using-beacon-analytics/app-groups.png" alt="Groupes d'applications Beacon Analytics" /> </figure>
+      </li>
+      <li>Dans le menu de navigation de gauche, cliquez sur l'<strong>option</strong> Admin. <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/using-beacon-analytics/admin-click.png" alt="Cliquez sur admin" /> </figure>
+      </li>
+      <li>Cliquez sur Définitions<strong> personnalisées</strong>. <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/using-beacon-analytics/click-custom-definitions.png" alt="Cliquez sur Définitions personnalisées" /> </figure>
+      </li>
+      <li>Lorsque vous cliquez sur Définitions<strong> personnalisées,</strong> vous verrez des liens vers les dimensions<strong> personnalisées</strong> et les mesures<strong> personnalisées</strong>. <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/using-beacon-analytics/list-custom-definitions.png" alt="liste des définitions personnalisées" /> </figure>
+      </li>
+      <li>Cliquez sur le<strong> lien Dimensions</strong> personnalisées pour voir les dimensions de cette application. Les dimensions changent selon l'application. <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/using-beacon-analytics/dimensions-list.png" alt="liste des définitions personnalisées" /> </figure>
+      </li>
+      <li>Cliquez sur le<strong> lien Mesures</strong> personnalisées pour voir la mesure unique,<strong> Time Watched</strong>. Il s'agit de la seule mesure personnalisée pour les applications Brightcove {{site.product_short}}. <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/using-beacon-analytics/metrics-list.png" alt="liste des définitions personnalisées" /> </figure>
+      </li>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="Report_examples">Exemples de rapports</h2>
+    <p>Ce document a pour but de vous informer des informations que vous pouvez utiliser de Google Analytics. L'intention de ce document n'est PAS d'être un guide d'instructions complet sur la façon d'utiliser Google Analytics avec vos applications Brightcove {{site.product_short}}. Cela dit, la section suivante du document détaille comment consulter quelques rapports fréquemment demandés sur vos applications Brightcove {{site.product_short}}.</p>  </section><section class="bcls-section">
+    <h2 id="Audience_information">Informations sur le public</h2>
+    <p>Vous pouvez consulter les statistiques de votre audience en suivant ces étapes:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Choisissez votre application/vue en suivant les trois premières étapes de l'une des sections ci-dessus.</li>
+      <li>Dans le menu de navigation de gauche, cliquez d'abord sur<strong> Audience,</strong> puis sur<strong> Aperçu</strong>.
+        <p></p> <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/using-beacon-analytics/audience-overview.png" alt="aperçu du public" /> </figure>
+      </li>
+      <li>Sur le côté droit de l'écran, vous voyez un résumé de votre audience à l'aide de différentes mesures telles que la<strong> langue</strong>, les informations sur <strong></strong>l'application et<strong> les appareils</strong>. Vous pouvez cliquer sur une mesure spécifique pour plus de détails. <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/using-beacon-analytics/audience-details.png" alt="détails sur le public" /> </figure>
+      </li>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="Screen_views_information">Informations sur les écrans</h2>
+    <p>Bien entendu, vous souhaiterez voir ce que font vos spectateurs dans vos applications. L'option pour cela est<strong> Behavior</strong>. Suivez ces étapes pour afficher les<strong> informations sur les affichages d'</strong>écran:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Dans le menu de navigation de gauche, cliquez sur<strong> Comportement</strong> â†' Contenu du<strong> site</strong> â†' Toutes les pages.
+        <p></p> <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/using-beacon-analytics/behavior-screens.png" alt="écrans de comportement" /> </figure>
+      </li>
+      <li>Sur le côté droit de l'écran, vous pouvez voir la liste des écrans les plus consultés. <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/using-beacon-analytics/screens-details.png" alt="détails des écrans" /> </figure>
+      </li>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="Played_and_time_watched_information">Informations de lecteur et de visionnage</h2>
+    <p>Toujours dans l'<strong>option</strong> Comportement, vous pouvez voir le nombre de fois où le bouton de lecteur d'une ressource vidéo a été cliqué, ainsi que la durée pendant laquelle la ressource a été réellement regardée. Suivez ces étapes pour obtenir ces informations:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Tout en restant dans l'<strong>option</strong> Comportement, cliquez sur<strong> Événements â†' Principaux événements</strong>.</li>
+      <li>Dans la<strong> liste des catégories</strong> d'événements, cliquez sur<strong> Lire des films</strong> <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/using-beacon-analytics/event-category-play-movie.png" alt="catégorie d'événement play movie" /> </figure>
+      </li>
+      <li>Dans la<strong> liste Catégorie</strong> d'événement, cliquez sur<strong> Film</strong>. <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/using-beacon-analytics/event-category.png" alt="catégorie d'événement" /> </figure>
+      </li>
+      <li>Dans la<strong> liste</strong> Action d'événement, cliquez sur<strong> Jouer</strong>. <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/using-beacon-analytics/event-action.png" alt="action de l'événement" /> </figure>
+      </li>
+      <li>Notez que la liste indique le nombre de fois où le bouton de lecteur a été cliqué pour chaque élément. <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/using-beacon-analytics/play-movies-details.png" alt="lire les détails des films" /> </figure>
+      </li>
+      <li>Notez que vous pouvez voir des informations sur une ou plusieurs de vos dimensions personnalisées en ajoutant la colonne appropriée au tableau. Pour ce faire, cliquez sur la flèche vers le bas de la<strong> liste déroulante Dimension</strong> secondaire, où vous pouvez voir le<strong> groupe Dimensions</strong> personnalisées. <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/using-beacon-analytics/secondary-dimension-dropdown.png" alt="liste déroulante des dimensions secondaires" /> </figure>
+      </li>
+      <li>Vous pouvez maintenant ouvrir le<strong> groupe Dimensions</strong> personnalisées et sélectionner une dimension. <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/using-beacon-analytics/choose-custom-definition.png" alt="choisir une définition personnalisée" /> </figure>
+      </li>
+      <li>Consultez le tableau d'exemple avec la dimension<strong> personnalisée</strong> Genre ajoutée. <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/using-beacon-analytics/language-in-table.png" alt="langue dans le tableau" /> </figure>
+      </li>
+      <li>Notez que dans la<strong> liste Action de l'</strong>événement, vous pouvez également voir<strong> Time Watched</strong>, qui utilise bien entendu votre métrique personnalisée<strong> Time Watched</strong>.</li>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="Google_Analytics_learning_resources">Ressources d'apprentissage Google Analytics</h2>
+    <p>Vous venez de gratter la surface de Google Analytics dans ce document. Vous pouvez créer des rapports personnalisés avec des informations récapitulatives quotidiennes ou hebdomadaires sur des actifs sélectionnés, etc. La Google Analytics Academy<a href="https://analytics.google.com/analytics/academy/"> et/ou la documentation Google Analytics constituent un bon point de départ pour en savoir plus sur</a> Google Analytics<a href="https://developers.google.com/analytics">.</a></p>  </section></article>

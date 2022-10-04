@@ -1,39 +1,30 @@
 ---
-title: Creating Your Application Design - Information Architecture
-parent: Getting Started
----
+title: "Création de votre conception d'application - Architecture de l'information "
+parent: Pour commencer 
+--- 
+
 <style media="screen">
   .small_image p {
     color: red;
   }
-</style>
-<link href="/assets/css/splide.min.css" rel="stylesheet" />
-<style media="screen">
+</style> <link href="/assets/css/splide.min.css" rel="stylesheet" /> <style media="screen">
   .splide {
     background-color: #dcf3fb;
     padding: 1em;
   }
-</style>
-<article class="bcls-article">
-  <h1>Creating Your Application Design - Information Architecture</h1>
-  <summary> In this topic, you will answer a series of questions, recording answers in a spreadsheet, that will help you determine which videos are displayed in your app, how they are grouped and the order in which the videos are displayed. </summary>
-  <section class="bcls-section">
-    <h2 id="Introduction">Introduction</h2>
-    <p> This document will lead you through a series of questions about what videos should appear, and how those videos are organized, in your Brightcove Beacon Experience. The result of answering these questions will help you build your application design for the Brightcove Beacon Experience. A very simple example of what you want to have defined for your app is pictured here: </p>
-    <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/getting-started/creating-app-design/top-level-example.png" alt="" /> </figure>
-    <p> You may not have experience in designing a UX for an OTT app. In the last section of this doc, <a href="#Is_guidance_available">Is guidance available?</a> , a list of vendors' advice is shown. You may wish to read and consider their guidance before designing your UI. </p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Structure_of_a_page">Structure of a page</h2>
-    <p> It will be helpful for you to have a high-level understanding of how pages are built before selecting your categories. Pages of your app are made up of the following: </p>
+</style> <article class="bcls-article">
+  <h1>Création de votre conception d'application - Architecture de l'information</h1> <summary> Dans cette rubrique, vous allez répondre à une série de questions, en enregistrant les réponses dans une feuille de calcul, qui vous aideront à déterminer quelles vidéos sont affichées dans votre application, comment elles sont regroupées et l'ordre dans lequel elles sont affichées. </summary> <section class="bcls-section">
+    <h2 id="Introduction">Présentation</h2>
+    <p> Ce document vous guidera à travers une série de questions sur les vidéos qui doivent apparaître et la manière dont elles sont organisées dans votre Brightcove Beacon Experience. Les réponses à ces questions vous aideront à concevoir votre application pour Brightcove Beacon Experience. Voici un exemple très simple de ce que vous souhaitez définir pour votre application: </p>   <figure class="bcls-figure"><img class="bcls-image" src="/assets/images/getting-started/creating-app-design/top-level-example.png" alt="" /></figure>
+    <p> Vous n'avez peut-être pas d'expérience dans la conception d'une expérience utilisateur pour une application OTT. Dans la dernière section de ce document,<a href="#Is_guidance_available"> Des conseils sont-ils disponibles&nbsp;? </a>, une liste des conseils des fournisseurs s'affiche. Vous pouvez lire et prendre en compte leurs conseils avant de concevoir votre interface utilisateur. </p>  </section><section class="bcls-section">
+    <h2 id="Structure_of_a_page">Structure d'une page</h2>
+    <p> Il vous sera utile d'avoir une bonne compréhension de la façon dont les pages sont créées avant de sélectionner vos catégories. Les pages de votre application sont composées des éléments suivants: </p>
     <ul>
-      <li> <strong>Playlists</strong> : A group of related videos. The relationships that tie the videos together are defined by you, the app creator. </li>
-      <li> <strong>Blocks</strong> : A set of playlists that use the same layout. You can arrange blocks in a list, tab or dropdown. </li>
-      <li> <strong>Layouts</strong> : The settings on how to present each playlist in a block. You can set tiles aspect ratios, number of assets on screen, number of elements, among several other properties of the presentation. </li>
+      <li> <strong>Playlists</strong>: Un groupe de vidéos connexes. Les relations qui relient les vidéos sont définies par vous, le créateur de l'application. </li>
+      <li> <strong>Blocs</strong>: Un ensemble de listes de lecteur utilisant la même mise en page. Vous pouvez organiser les blocs dans une liste, un onglet ou une liste déroulante. </li>
+      <li> <strong>Mises en page</strong>: Les paramètres de présentation de chaque liste de lecteur dans un bloc. Vous pouvez définir les proportions des mosaïques, le nombre de ressources à l'écran, le nombre d'éléments, entre autres propriétés de la présentation. </li>
     </ul>
-    <p> Some examples will help clarify those, now somewhat abstract, definitions.
-      The screenshot below shows three blocks on a page. To the right of each block you see the configuration. </p>
-    <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/getting-started/creating-app-design/page-block-playlist-web-app-labels-in.png" alt="" /> </figure>
+    <p> Quelques exemples aideront à clarifier ces définitions, aujourd'hui quelque peu abstraites. La capture d'écran ci-dessous montre trois blocs sur une page. À droite de chaque bloc, vous pouvez voir la configuration. </p>   <figure class="bcls-figure"><img class="bcls-image" src="/assets/images/getting-started/creating-app-design/page-block-playlist-web-app-labels-in.png" alt="" /></figure>
     <!--     <p>Details for the page are in the following table:</p> <table class="bcls-table">
  <thead class="bcls-table__head">
  <tr>
@@ -68,92 +59,81 @@ parent: Getting Started
  </tbody>
  </table>
  -->
-    <p> The reason of showing the different possibilities is not to have you decide at this point the blocks, layouts and playlists, but to show options for display when you are deciding how to organize your content via playlists. </p>
+    <p> La raison de l'affichage des différentes possibilités n'est pas de vous laisser décider à ce stade des blocs, des mises en page et des listes de lecteur, mais d'afficher les options d'affichage lorsque vous décidez comment organiser votre contenu via des listes de lecteur. </p>
     <!--     <aside class="bcls-aside bcls-aside--information"> For full information on laying out your app using blocks, layouts and playlists, see the
  <a href="/using-brightcove-beacon/creating_custom_video_page.html"> Creating a Customized Video Display Page </a>
  document .
- </aside> -->
-  </section>
-  <section class="bcls-section">
-    <h2 id="Recording_your_categories_selections"> Recording your categories/selections </h2>
-    <p> You will record your decisions as you work through this document in a spreadsheet. To prepare the spreadsheet follow these steps: </p>
+ </aside> -->  </section><section class="bcls-section">
+    <h2 id="Recording_your_categories_selections"> Enregistrement de vos catégories/sélections </h2>
+    <p> Vous allez enregistrer vos décisions au fur et à mesure que vous parcourez ce document dans une feuille de calcul. Pour préparer la feuille de calcul, procédez comme suit: </p>
     <ol class="bcls-tasklist">
-      <li> Download a template by clicking on this link: <a href="https://solutions.brightcove.com/bcls/bcbeacon/app-design-info-architecture.xlsx"> app-design-info-architecture.xlsx </a>. Be sure to remember where it is saved. </li>
-      <li>Open a blank spreadsheet from the Google Sheets app.</li>
-      <li> From the Google Sheets menu select <strong>File > Import</strong> . </li>
-      <li> From the dialog that appears, first choose <strong>Upload</strong> then click the <strong>Select a file from your device</strong> button, as shown here:
-        <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/getting-started/creating-app-design/import-upload.png" alt="" /> </figure>
+      <li> Téléchargez un modèle en cliquant sur ce lien:<a href="https://solutions.brightcove.com/bcls/bcbeacon/app-design-info-architecture.xlsx"> app-design-info-architecture.xlsx</a>. N'oubliez pas où il est enregistré. </li>
+      <li>Ouvrez une feuille de calcul vierge dans l'application Google Sheets.</li>
+      <li> Dans le menu Google Sheets, sélectionnez<strong> Fichier &gt; Importer</strong>. </li>
+      <li> Dans la boîte de dialogue qui apparaît, choisissez d'abord<strong> Upload,</strong> puis cliquez sur le<strong> bouton</strong> Select a file from your device, comme illustré ci-dessous: <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/getting-started/creating-app-design/import-upload.png" alt="" /> </figure>
       </li>
-      <li> Find the Excel file just downloaded, select it, then click <strong>Open</strong> . </li>
-      <li> From the <strong>Import file</strong> dialog that appears, choose <strong>Replace spreadsheet</strong> , then click the <strong>Import data</strong> button.
-        <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/getting-started/creating-app-design/import-file-dialog.png" alt="" /> </figure>
+      <li> Recherchez le fichier Excel que vous venez de télécharger, sélectionnez-le, puis cliquez sur<strong> Ouvrir</strong>. </li>
+      <li> Dans la boîte de<strong> dialogue</strong> Importer le fichier qui apparaît, choisissez<strong> Remplacer la feuille de calcul</strong>, puis cliquez sur le<strong> bouton</strong> Importer les données. <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/getting-started/creating-app-design/import-file-dialog.png" alt="" /> </figure>
       </li>
-      <li> After the spreadsheet is imported you will see something similar to the following:
-        <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/getting-started/creating-app-design/imported-info-architecture.png" alt="" /> </figure>
+      <li> Une fois la feuille de calcul importée, vous verrez un message similaire à ce qui suit: <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/getting-started/creating-app-design/imported-info-architecture.png" alt="" /> </figure>
       </li>
     </ol>
-    <p> In the spreadsheet you will record the answers to the questions in this document. </p>
-    <p> At the end of this process, you will share your completed Google Sheet with the Brightcove representative helping configure your experience. </p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="How_to_organize_your_content"> How to organize your content </h2>
-    <p> For an effective presentation of your video assets you need to consider categories for those assets. The categories are groups of videos where you define the grouping rules for each category. These categories will be implemented as playlists, whose use was shown in the proceeding section.
-      The driving force behind the categories should be if your customers can find the videos they want logically and quickly. </p>
-    <h3>Types of categories</h3>
-    <p>You have two types of categories from which to choose, they are:</p>
+    <p> Dans la feuille de calcul, vous allez enregistrer les réponses aux questions de ce document. </p>
+    <p> À la fin de ce processus, vous partagerez votre feuille Google Sheet complétée avec le représentant de Brightcove pour vous aider à configurer votre expérience. </p>  </section><section class="bcls-section">
+    <h2 id="How_to_organize_your_content"> Comment organiser votre contenu </h2>
+    <p> Pour une présentation efficace de vos ressources vidéo, vous devez prendre en compte les catégories de ces ressources. Les catégories sont des groupes de vidéos dans lesquels vous définissez les règles de regroupement pour chaque catégorie. Ces catégories seront mises en œuvre en tant que listes de lecteur, dont l'utilisation a été montrée dans la section suivante. La force motrice derrière les catégories devrait être que vos clients puissent trouver les vidéos qu'ils souhaitent de manière logique et rapide. </p>
+    <h3>Types de catégories</h3>
+    <p>Vous avez le choix entre deux types de catégories:</p>
     <ul>
-      <li> <strong>Manually Built</strong> : These are categories that you choose, and to which videos are assigned via Video Cloud Studio playlists. </li>
-      <li> <strong>Brightcove Beacon Automated</strong> : These are categories that Brightcove Beacon automatically creates. The three are: <em>Recently Watched</em> , <em>Most Watched</em> and <em>Favorites</em>. Further details on these types of categories are provided in the next section of this document. </li>
+      <li> <strong>Construit manuellement</strong>: Il s'agit de catégories que vous choisissez et auxquelles les vidéos sont attribuées via les listes de lecteur Video Cloud Studio. </li>
+      <li> <strong>Brightcove Beacon Automated</strong>: Il s'agit de catégories que Brightcove Beacon crée automatiquement. Les trois sont les suivants: <em>Récemment regardés</em>,<em> les plus regardés</em> et les<em> favoris</em>. De plus amples détails sur ces types de catégories sont fournis dans la section suivante de ce document. </li>
     </ul>
-    <h3>Examples</h3>
-    <p> Some examples are shown here to help focus on what it means to choose categories. </p>
-    <p><strong>First example</strong></p>
-    <p>Here is a reminder of how the example at the top of the page appears:</p>
-    <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/getting-started/creating-app-design/top-level-example.png" alt="" /> </figure>
-    <p>You see the categories are:</p>
+    <h3>Exemples</h3>
+    <p> Quelques exemples sont présentés ici pour vous aider à mieux comprendre ce que signifie le choix des catégories. </p>
+    <p><strong>Premier exemple</strong></p>
+    <p>Voici un rappel de la façon dont l'exemple en haut de la page s'affiche:</p>   <figure class="bcls-figure"><img class="bcls-image" src="/assets/images/getting-started/creating-app-design/top-level-example.png" alt="" /></figure>
+    <p>Vous voyez que les catégories sont les suivantes:</p>
     <ul>
-      <li>Scenic Florida Coast</li>
-      <li>Scenic Oregon Coast</li>
-      <li>Travel Show</li>
-      <li>VC Cooking Show</li>
-    </ul>
-    <aside class="bcls-aside bcls-aside--information"> The categories will always appear in uppercase in the actual UI. </aside>
-    <p><strong>Movie Categories</strong></p>
-    <p> Below are some of the categories, or genres, for movies taken from Wikipedia: </p>
+      <li>Côte pittoresque de la Floride</li>
+      <li>Côte pittoresque de l'Oregon</li>
+      <li>Spectacle de voyage</li>
+      <li>Spectacle de cuisine VC</li>
+    </ul> <aside class="bcls-aside bcls-aside--information"> Les catégories apparaîtront toujours en majuscules dans l'interface utilisateur actuelle. </aside>
+    <p><strong>Catégories de films</strong></p>
+    <p> Voici quelques catégories, ou genres, pour les films tirés de Wikipédia: </p>
     <ul>
       <li>Action</li>
-      <li>Adventure</li>
-      <li>Comedy</li>
+      <li>Aventure</li>
+      <li>Comédie</li>
       <li>Crime</li>
-      <li>Drama</li>
-      <li>Fantasy</li>
+      <li>Drame</li>
+      <li>Fantastique</li>
     </ul>
-    <p> It may be genres work well as categories for your customers. On the other hand, perhaps your customers have special interests, and the following would be more appropriate: </p>
+    <p> Il se peut que les genres fonctionnent bien en tant que catégories pour vos clients. D'un autre côté, vos clients ont peut-être des intérêts particuliers, et ce qui suit serait plus approprié: </p>
     <ul>
-      <li>Animated</li>
+      <li>Animé</li>
       <li>Film Noir</li>
-      <li>Documentary</li>
-      <li>Cult Classics</li>
-      <li>Silent Films</li>
+      <li>Documentaire</li>
+      <li>Classiques cultes</li>
+      <li>Films muets</li>
     </ul>
-    <p><strong>College Athletics</strong></p>
-    <p> It might be that the large quantity of categories at the top level. For instance, there are 347 Division 1 (generally large) schools. You could have the home screen of your app list all 347 schools, but some customers would most likely find that long list too scroll through a poor user experience. You can use sub-categories, or even sub-categories of sub-categories to make the search for a particular set of videos easier.
-      The following displays a partial structure of possible categories for a college athletics site. Here the structure follows the <em>Conference -> School -> Sport</em> organizational pattern: </p>
+    <p><strong>Athlétisme universitaire</strong></p>
+    <p> Il se peut que le grand nombre de catégories au plus haut niveau. Par exemple, il existe 347 écoles de la Division 1 (généralement de grande taille). L'écran d'accueil de votre application pourrait répertorier les 347 écoles, mais certains clients trouveraient probablement que cette longue liste fait défiler une mauvaise expérience utilisateur. Vous pouvez utiliser des sous-catégories, voire des sous-catégories de sous-catégories pour faciliter la recherche d'un ensemble particulier de vidéos. Ce qui suit affiche une structure partielle des catégories possibles pour un site d'athlétisme universitaire. Ici, la structure suit le modèle<em> organisationnel</em> Conférence -&gt; École -&gt; Sport: </p>
     <ul>
-      <li> Southeastern Conference
+      <li> Conférence du Sud-Est
         <ul>
-          <li> Florida
+          <li> Floride
             <ul>
-              <li>Football</li>
-              <li>Basketball</li>
+              <li>Foot</li>
+              <li>Basket</li>
               <li>Volleyball</li>
               <li>...</li>
             </ul>
           </li>
-          <li> Georgia
+          <li> Géorgie
             <ul>
-              <li>Football</li>
-              <li>Basketball</li>
+              <li>Foot</li>
+              <li>Basket</li>
               <li>Volleyball</li>
               <li>...</li>
             </ul>
@@ -161,20 +141,20 @@ parent: Getting Started
           <li>...</li>
         </ul>
       </li>
-      <li> Pac-12 Conference
+      <li> Conférence Pac-12
         <ul>
           <li> Arizona
             <ul>
-              <li>Football</li>
-              <li>Basketball</li>
+              <li>Foot</li>
+              <li>Basket</li>
               <li>Volleyball</li>
               <li>...</li>
             </ul>
           </li>
           <li> Oregon
             <ul>
-              <li>Football</li>
-              <li>Basketball</li>
+              <li>Foot</li>
+              <li>Basket</li>
               <li>Volleyball</li>
               <li>...</li>
             </ul>
@@ -184,48 +164,31 @@ parent: Getting Started
       </li>
       <li>...</li>
     </ul>
-    <p> If you believe the sport, rather than the conference, is most important to your customers you would maybe change the categorization to follow the <em>Sport -> Conference -> School</em> organizational pattern. </p>
-    <h3>Your categories</h3>
-    <p> From the examples you can see deciding on your categories and organization structure might be a straightforward, or very complex, task. You need to consider both your content, as well as your customers, for optimal design.
-      It is imperative that you take time to think through your organizational structure and categories for your videos. </p>
-    <h3>Record your categories</h3>
-    <p> Now that you have determined your categories, you will enter them into the spreadsheet. Enter them IN THE ORDER IN WHICH YOU WANT THEM TO APPEAR in the app. In the spreadsheet, enter your ordered categories starting in cell B1, then B2, etc. A simple example appears as: </p>
-    <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/getting-started/creating-app-design/spreadsheet-categories-entered.png" alt="" /> </figure>
-    <p> You may wish to have some of your playlists grouped, as shown in this screenshot with tabs for <strong>Scenic Oregon Coast</strong> , <strong>Travel Show</strong> and <strong>VC Cooking Show</strong> . </p>
-    <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/getting-started/creating-app-design/tabbed-block.png" alt="" /> </figure>
-    <p> If you want playlists displayed in such a way that only one shows in the app at a time, and the viewer must act to see the others, represent this in your spreadsheet by placing them horizontally, as shown here: </p>
-    <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/getting-started/creating-app-design/spreadsheet-categories-horizontal-group.png" alt="" /> </figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="What_Brightcove_Beacon_built_categories_do_you_want"> What Brightcove Beacon built categories do you want? </h2>
-    <p> Brightcove Beacon can provide three categories you can choose to include or not. They are: </p>
+    <p> Si vous pensez que le sport, plutôt que la conférence, est le plus important pour vos clients, vous devriez peut-être modifier la catégorisation pour suivre le modèle<em> organisationnel</em> Sport -&gt; Conférence -&gt; École. </p>
+    <h3>Vos catégories</h3>
+    <p> À partir des exemples, vous pouvez voir que le choix de vos catégories et de votre structure organisationnelle peut être une tâche simple ou très complexe. Vous devez tenir compte à la fois de votre contenu et de vos clients pour une conception optimale. Il est impératif que vous preniez le temps de réfléchir à la structure organisationnelle et aux catégories de vos vidéos. </p>
+    <h3>Enregistrez vos catégories</h3>
+    <p> Maintenant que vous avez déterminé vos catégories, vous allez les saisir dans la feuille de calcul. Saisissez-les DANS L'ORDRE DANS LEQUEL VOUS SOUHAITEZ QU'ILS APPARAISSENT dans l'application. Dans la feuille de calcul, saisissez les catégories que vous avez ordonnées en commençant par la cellule B1, puis B2, etc. Voici un exemple simple: </p>   <figure class="bcls-figure"><img class="bcls-image" src="/assets/images/getting-started/creating-app-design/spreadsheet-categories-entered.png" alt="" /></figure>
+    <p> Vous pouvez regrouper certaines de vos playlists, comme le montre cette capture d'écran avec des onglets pour<strong> Scenic Oregon Coast</strong>,<strong> Travel Show</strong> et<strong> VC Cooking Show </strong> . </p>   <figure class="bcls-figure"><img class="bcls-image" src="/assets/images/getting-started/creating-app-design/tabbed-block.png" alt="" /></figure>
+    <p> Si vous souhaitez que les listes de lecteur soient affichées de telle sorte qu'une seule s'affiche à la fois dans l'application et que le spectateur doit agir pour voir les autres, indiquez-le dans votre feuille de calcul en les plaçant horizontalement, comme illustré ici: </p>     <figure class="bcls-figure"><img class="bcls-image" src="/assets/images/getting-started/creating-app-design/spreadsheet-categories-horizontal-group.png" alt="" /></figure></section><section class="bcls-section">
+    <h2 id="What_Brightcove_Beacon_built_categories_do_you_want"> Quelles catégories de Brightcove Beacon souhaitez-vous&nbsp;? </h2>
+    <p> Brightcove Beacon peut proposer trois catégories que vous pouvez choisir d'inclure ou non. Ils sont les suivants: </p>
     <ul>
-      <li> Recently Watched - The top 20 videos with the most recent bookmarks </li>
-      <li> Most Watched - The top 20 videos based on bookmarks </li>
-      <li> Favorites - This category is dynamically built as customers mark video assets as a favorite </li>
+      <li> Recent Watched - Les 20 meilleures vidéos avec les signets les plus récents </li>
+      <li> Most Watched - Les 20 vidéos les plus regardées selon les signets </li>
+      <li> Favoris - Cette catégorie est créée de manière dynamique lorsque les clients marquent les actifs vidéo comme favoris </li>
     </ul>
-    <p> Now add your desired Brightcove Beacon categories to your list, in the position in which you want to see them. Note that you may have to use the menu commands <strong>Insert > Row above</strong> and/or <strong>Insert > Row below</strong> to make room for your additions. The altered example could appear as: </p>
-    <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/getting-started/creating-app-design/spreadsheet-prebuilt-added.png" alt="" /> </figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Do_you_want_to_feature_a_video_or_videos"> Do you want to feature a video or videos? </h2>
-    <p> You can feature a video or a set of videos. The featured video(s) appear at the top of your app and the thumbnail for the video(s) is larger. Here you see an app with a set of six videos featured (you can tell the number of videos by the dots below the carousel): </p>
-    <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/getting-started/creating-app-design/featured-videos.png" alt="featured videos" /> </figure>
-    <p> In the spreadsheet, locate the <strong>What do you want featured, if anything?</strong> cell. In the cell to the right of that question detail what you would like featured, if anything. </p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Moving_forward">Moving forward</h2>
-    <p> You've now completed this task. Be sure to save the spreadsheet you have been working on for later submission to Brightcove personnel when your Brightcove Beacon Experience is built. </p>
-    <p> If you have not done so, you need to complete the other part of defining your application design by working through the <a href="/get-started/creating-your-app-design-layout-options.html"> Creating Your Application Design - Layout Options </a> to select your choices for specific app screen layouts. </p>
-    <h3>Page design</h3>
-    <p>You also should start thinking of how you would like individual pages to look. For instance, here is an example home page:</p>
-    <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/getting-started/home-page-example.png" alt="home page example"> </figure>
+    <p> Ajoutez maintenant les catégories de balises Brightcove souhaitées à votre liste, à l'endroit où vous souhaitez les voir. Notez que vous devrez peut-être utiliser les commandes de menu<strong> Insérer &gt; Ligne au-dessus</strong> et/ou<strong> Insérer &gt; Ligne ci-dessous pour</strong> faire de la place pour vos ajouts. L'exemple modifié pourrait se présenter comme suit: </p>     <figure class="bcls-figure"><img class="bcls-image" src="/assets/images/getting-started/creating-app-design/spreadsheet-prebuilt-added.png" alt="" /></figure></section><section class="bcls-section">
+    <h2 id="Do_you_want_to_feature_a_video_or_videos"> Souhaitez-vous présenter une ou plusieurs vidéos&nbsp;? </h2>
+    <p> Vous pouvez présenter une vidéo ou un ensemble de vidéos. La ou les vidéos mises en avant apparaissent en haut de votre application et la miniature de la ou des vidéos est plus grande. Vous voyez ici une application avec un ensemble de six vidéos présentées (vous pouvez connaître le nombre de vidéos par les points sous le carrousel): </p> <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/getting-started/creating-app-design/featured-videos.png" alt="vidéos en vedette" /> </figure>
+    <p> Dans la feuille de calcul, recherchez la<strong> fonctionnalité Que voulez-vous, le cas échéant&nbsp;? </strong>cellule. Dans la cellule à droite de cette question, détaillez ce que vous aimeriez voir figurer, le cas échéant. </p>  </section><section class="bcls-section">
+    <h2 id="Moving_forward">Aller de l'avant</h2>
+    <p> Vous avez maintenant terminé cette tâche. Veillez à enregistrer la feuille de calcul sur laquelle vous avez travaillé pour la soumettre ultérieurement au personnel de Brightcove lors de la création de votre Brightcove Beacon Experience. </p>
+    <p> Si vous ne l'avez pas encore fait, vous devez compléter l'autre partie de la définition de la conception de votre application en passant par la section<a href="/get-started/creating-your-app-design-layout-options.html"> Création de votre conception d'application - Options de mise en page</a> pour sélectionner vos choix pour des dispositions d'écran d'application spécifiques. </p>
+    <h3>Conception de la page</h3>
+    <p>Vous devriez également commencer à réfléchir à l'aspect que vous souhaitez donner à chaque page. Par exemple, voici un exemple de page d'accueil:</p> <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/getting-started/home-page-example.png" alt="exemple de page d'accueil"> </figure>
 
-    <p>For details on page layout options see the <a href="/layout/using-page-layouts.html">Using Page Layouts</a> document. Here the different page types you can use are detailed, along with layout of video content on those pages.</p>
-  </section>
-</article>
-<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@1.2.5/dist/js/splide.min.js"></script>
-<script translate="no">
+    <p>Pour plus de détails sur les options de mise en page, consultez le<a href="/layout/using-page-layouts.html"> document</a> Utilisation des mises en page. Ici, les différents types de pages que vous pouvez utiliser sont détaillés, ainsi que la disposition du contenu vidéo sur ces pages.</p>    </section></article><script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@1.2.5/dist/js/splide.min.js"></script><script translate="no">
   var mySplide = new Splide('.splide', {
     width: '60%',
     perPage: 2,

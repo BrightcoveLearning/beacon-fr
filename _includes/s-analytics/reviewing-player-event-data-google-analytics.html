@@ -1,0 +1,39 @@
+<article class="bcls-article">
+  <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section">
+    <p>Les lecteurs Brightcove configurés avec l'intégration de Google Analytics enverront des événements et des données personnalisées à un compte Google Analytics spécifique. Cette rubrique explique comment accéder aux données dans Google Analytics. Pour plus d'informations sur la façon d'activer l'intégration de Google Analytics pour un lecteur, consultez<a href="/players/configuring-google-analytics-event-tracking.html"> Configuration du suivi des événements Google Analytics</a>.</p>  </section><section class="bcls-section">
+    <h2 id="reported">Comment les données sont communiquées à Google Analytics</h2>
+    <p>Les données Brightcove Player envoyées à Google Analytics apparaîtront dans l'interface Google Analytics avec les caractéristiques suivantes:</p>
+    <ul>
+      <li>La catégorie<strong> d'événement</strong> est toujours<strong> Vidéo</strong></li>
+      <li>L'action d'<strong>événement</strong> sera identique aux noms d'événements sélectionnés lors de la configuration de l'intégration. Ils incluent:
+        <ul>
+          <li>Impression vidéo</li>
+          <li>Demande de jeu</li>
+          <li>Engagement vidéo</li>
+          <li>Début de l'annonce</li>
+          <li>Fin de l'annonce</li>
+          <li>Charge du lecteur
+</li>
+          <li>Erreur</li>
+        </ul>
+      </li>
+      <li>L'étiquette de l'<strong>événement</strong> sera au format<strong> Video ID Video Name</strong></li>
+      <li>La valeur de l'<strong>événement</strong> sera vide pour tous les événements autres que<strong> Video Engagement</strong>. Pour<strong> Video Engagement</strong>, la valeur représente le pourcentage de visionnage</li>
+    </ul>  </section><section class="bcls-section">
+    <h2 id="events">Affichage des données d'événements</h2>
+    <p>Il existe de nombreuses manières d'afficher et de générer des rapports sur les données Google Analytics. Cette rubrique présente une façon de visualiser les données dans un format utile.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Connectez-vous à votre compte Google Analytics.</li>
+      <li>Utilisez le sélecteur en haut de la page pour sélectionner le bon compte et la propriété. Cela doit correspondre au compte sélectionné lors de la configuration de l'intégration dans le module Players. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-analytics-img/node18836-select-account.png" /></figure>
+      </li>
+      <li>Sélectionnez une plage de dates à l'aide du sélecteur de dates en haut de la page.</li>
+      <li>Dans le volet de navigation de gauche, cliquez sur<strong> Comportement &gt; Événements &gt; Présentation</strong>. Une liste des catégories d'événements s'affiche.</li>
+      <li>Cliquez sur la catégorie<strong> d'événements</strong> vidéo. Les événements envoyés à Google Analytics par Brightcove Players auront la catégorie<strong> Vidéo</strong> comme catégorie d'événement. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-analytics-img/node18836-video-event-category.png" /></figure>
+      </li>
+      <li>Pour la dimension<strong> principale</strong>, cliquez sur Action de<strong> l'événement</strong>. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-analytics-img/node18836-event-action.png" /></figure>
+      </li>
+      <li>Tous les événements transmis par les lecteurs Brightcove seront répertoriés. Dans cet exemple, trois événements ont été passés. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-analytics-img/node18836-event-action-list.png" /></figure>
+      </li>
+      <li>Cliquez sur une action d'<strong>événement</strong> pour afficher les détails. Dans cet exemple, cliquez sur<strong> Play Request pour</strong> afficher les vidéos avec une demande de lecteur. L'étiquette de l'événement contient l'ID et le nom de la vidéo. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-analytics-img/node18836-play-request-list.png" /></figure>
+      </li>
+    </ol>   </section></article>

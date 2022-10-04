@@ -1,0 +1,185 @@
+<article class="bcls-article">
+  <h1>Champs pour les profils Live Ingest personnalisés</h1> <summary>Cette rubrique fournit une référence pour les champs utilisés dans les profils d'acquisition Live.</summary> <section class="bcls-section">
+    <h2 id="primaryFields">Champs du profil</h2>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Propriété</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Par défaut</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr id="account_id">
+          <td><code translate="No">account_id</code></td>
+          <td>entier</td>
+          <td>L'identifiant du<span translate="No"> compte</span> Video Cloud</td>
+          <td>aucune</td>
+        </tr>
+        <tr id="name">
+          <td><code translate="No">nom</code></td>
+          <td>chaîne</td>
+          <td>Le nom du profil - doit être unique dans le compte</td>
+          <td>aucune</td>
+        </tr>
+        <tr id="name">
+          <td><code translate="No">nom_affichage</code></td>
+          <td>chaîne</td>
+          <td>Le nom d'affichage du profil à afficher sur la page d'administration de Studio - peut être identique au<code translate="No"> nom</code>, mais doit être descriptif pour aider les utilisateurs à comprendre l'utilisation prévue pour le profil</td>
+          <td>aucune</td>
+        </tr>
+        <tr id="description">
+          <td><code translate="No">description</code></td>
+          <td>chaîne</td>
+          <td>La description du profil</td>
+          <td>aucune</td>
+        </tr>
+        <tr id="description">
+          <td><code translate="No">modèle_version</code></td>
+          <td>entier</td>
+          <td>Réglez cette valeur<code translate="No"> sur</code> 1 pour que le profil apparaisse dans le module Live.</td>
+          <td>aucune</td>
+        </tr>
+        <tr id="renditions">
+          <td><a href="#rendition_fields"><code translate="No">restitutions</code></a></td>
+          <td>gamme</td>
+          <td>Tableau d'objets de rendu</td>
+          <td>[]</td>
+        </tr>
+        <tr id="packages">
+          <td><code translate="No">paquets</code></td>
+          <td>gamme</td>
+          <td>Tableau de packages DRM - actuellement, DRM n'est pas pris en charge, il doit donc toujours s'agir d'un tableau vide</td>
+          <td>[]</td>
+        </tr>
+      </tbody>
+    </table>  </section><section class="bcls-section">
+    <h2 id="rendition_fields">Champs de format associé</h2>
+    <p>Les tableaux ci-dessous présentent les champs qui peuvent être utilisés dans le corps de la demande pour la mise à jour des profils d'ingestion en direct.</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Propriété</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Par défaut</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr id="audio_bitrate">
+          <td><code translate="No">audio_bitrate</code></td>
+          <td>entier</td>
+          <td>débit audio en kbit/s (min: 16, max: 1024)</td>
+          <td>source de correspondance</td>
+        </tr>
+        <tr id="audio_codec">
+          <td><code translate="No">codec audio</code></td>
+          <td>chaîne</td>
+          <td>Codec audio -<code translate="No"> AAC</code> |<code translate="No"> MP3</code></td>
+          <td>Déterminé par le format ou le profil, dans la plupart des cas,<code translate="No"> AAC</code> sera le meilleur</td>
+        </tr>
+        <tr id="decoder_bitrate_cap">
+          <td><code translate="No">decoder_bitrate_cap</code></td>
+          <td>entier</td>
+          <td>en kbps, le débit binaire maximal transmis au décodeur via un tampon</td>
+          <td>aucune</td>
+        </tr>
+        <tr id="decoder_buffer_size">
+          <td><code translate="No">decoder_buffer_size</code></td>
+          <td>entier</td>
+          <td>en kbps, la taille du tampon envoyé au décodeur lors de l'utilisation d'un<code translate="No"> bitrate_cap</code></td>
+          <td>aucune</td>
+        </tr>
+        <tr id="format">
+          <td><code translate="No">forcéd_keyframe_rate</code></td>
+          <td>nombre</td>
+          <td>Force une image-clé toutes les X images, mais autorise toujours des images-clés supplémentaires pour la découpe de scène, etc.</td>
+          <td>aucune</td>
+        </tr>
+        <tr id="format">
+          <td><code translate="No">format</code></td>
+          <td>chaîne</td>
+          <td>Format vidéo -<code translate="No"> TS</code>,<code translate="No"> MP4</code>,<code translate="No"> FLV</code></td>
+          <td>aucune</td>
+        </tr>
+        <tr id="h264_profile">
+          <td><code translate="No">h264_profile</code></td>
+          <td>chaîne</td>
+          <td>H.264 possède trois profils couramment utilisés: <code translate="No">Niveau de référence</code> (le plus bas)<code translate="No">,</code> principal et<code translate="No"> élevé</code>.</td>
+          <td><code translate="No">de base</code></td>
+        </tr>
+        <tr id="hls_optimized_ts">
+          <td><code translate="No">hls_optimized_ts</code></td>
+          <td>booléen</td>
+          <td>Segments temporels optimisés pour HLS - s'applique uniquement à la sortie HLS</td>
+          <td>aucune</td>
+        </tr>
+        <tr id="keyframe_interval">
+          <td><code translate="No">keyframe_interval</code></td>
+          <td>entier</td>
+          <td>Nombre maximal d'images entre les images-clés</td>
+          <td><code translate="No">250</code></td>
+        </tr>
+        <tr id="keyframe_rate">
+          <td><code translate="No">keyframe_rate</code></td>
+          <td>flotte</td>
+          <td>Nombre maximal d'images-clés par seconde</td>
+          <td><code translate="No">keyframe_interval</code> de 250</td>
+        </tr>
+        <tr id="label">
+          <td><code translate="No">étiquette</code></td>
+          <td>chaîne</td>
+          <td>Type d'image pour les rendus d'image -<code translate="No"> affiche</code> ou<code translate="No"> miniature</code></td>
+          <td>aucune</td>
+        </tr>
+        <tr id="live_stream">
+          <td><code translate="No">live_stream</code></td>
+          <td>booléen</td>
+          <td>s'il s'agit d'un flux vidéo en direct</td>
+          <td>aucune</td>
+        </tr>
+        <tr id="live_dvr_sliding_window_duration">
+          <td><code translate="No">live_dvr_sliding_window_duration</code></td>
+          <td>entier</td>
+          <td>Durée du flux pour rester disponible pour la diffusion LiveDVR en quelques secondes</td>
+          <td><code translate="No">300</code></td>
+        </tr>
+        <tr id="max_video_bitrate">
+          <td><code translate="No">max_video_bitrate</code></td>
+          <td>entier</td>
+          <td>en Kbits/s, 123 = 123 kbps - h264 uniquement</td>
+          <td>aucune</td>
+        </tr>
+        <tr id="media_type">
+          <td><code translate="No">type_média</code></td>
+          <td>chaîne</td>
+          <td><code translate="No">vidéo</code> ou<code translate="No"> audio</code></td>
+          <td>aucune</td>
+        </tr>
+        <tr id="video_bitrate">
+          <td><code translate="No">video_bitrate</code></td>
+          <td>entier</td>
+          <td>en kbits/s, 123 = 123 kbps (min: 64, max: 10 000)</td>
+          <td>aucune</td>
+        </tr>
+        <tr id="video_codec">
+          <td><code translate="No">code_vidéo</code></td>
+          <td>chaîne</td>
+          <td>par exemple, h264, ts</td>
+          <td>Déterminé par le format ou le profil</td>
+        </tr>
+        <tr id="width">
+          <td><code translate="No">largeur</code></td>
+          <td>entier</td>
+          <td>largeur du cadre en pixels</td>
+          <td>aucune</td>
+        </tr>
+        <tr id="height">
+          <td><code translate="No">la taille</code></td>
+          <td>entier</td>
+          <td>hauteur d'image en pixels</td>
+          <td>aucune</td>
+        </tr>
+      </tbody>
+    </table>   </section></article>

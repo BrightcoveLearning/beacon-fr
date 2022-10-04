@@ -1,0 +1,50 @@
+<article class="bcls-article">
+  <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section">
+    <p>La plateforme d'analyse {{site.product_short}} est une plateforme d'analyse de pointe proche du temps réel, conçue à partir de zéro par Brightcove en utilisant les dernières innovations en matière de technologie Big Data et conçue pour une grande échelle. La plateforme d'analyse offre un accès rapide et quasiment en temps réel aux données d'analyse et inclut une puissante API ouverte qui permet aux développeurs de créer des solutions et des rapports d'analyse personnalisés en plus de ceux inclus dans {{site.product_short}} Studio.</p>
+    {% if site.product_short == Cloud vidéo-fr/ %}
+    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="2346841845001">&nbsp;</div> <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script> {% endif %}
+    <p>Quels que soient vos objectifs spécifiques en matière de vidéo en ligne, comprendre votre public est essentiel pour développer une stratégie vidéo réussie. Mieux vous comprenez vos spectateurs, plus il est facile de créer du contenu qui les intéressera dans des formats qu'ils peuvent facilement consommer. Le module Analytics fournit différents rapports qui peuvent être utilisés pour obtenir des analyses sur vos vidéos et vos lecteurs:</p>
+    <ul>
+      <li><a href="/analytics/performance-report-reference.html">Rapport de performance</a>: fournit des détails sur le nombre de visionnages vidéo, les sources de trafic, les types d'appareils et les systèmes d'exploitation des appareils</li>
+      <li><a href="/analytics/engagement-report-reference.html">Rapport d'engagement</a> - Fournit des détails sur la manière dont les utilisateurs interagissent avec vos vidéos&nbsp;; quel pourcentage de spectateurs regardent une vidéo</li>
+      <li><a href="/analytics/trending-now-report-reference.html">Tendance actuelle</a>: fournit le nombre de visionneuses simultanées au cours de la dernière heure</li>
+      <li><a href="/analytics/creating-custom-analytics-reports.html">Personnalisé</a>: permet de créer des rapports d'analyse personnalisés</li>
+    </ul>
+    <p>À l'aide de ces rapports, vous pouvez générer des rapports à jour sur le nombre de spectateurs que vous avez, la quantité de contenu que vos spectateurs regardent, le moment où ils arrêtent de regarder des vidéos et même les sources de trafic de votre contenu.</p>
+    <p>Cette rubrique comprend les sections suivantes qui décrivent comment utiliser le module Analytics:</p>
+    <ul>
+      <li><a href="#launch">Lancement du module Analytics</a></li>
+      <li><a href="#timespan">Sélection d'une période</a></li>
+      <li><a href="#search">Recherche d'une vidéo</a></li>
+      <li><a href="#limitations">Limitations</a></li>
+    </ul>
+    <p>Notez que toutes les données affichées dans le module Analytics sont également disponibles via l'API Analytics. Pour plus d'informations, consultez la<a href="https://apis.support.brightcove.com/analytics/"> documentation de l'API</a> Analytics.</p>  </section><section class="bcls-section">
+    <h2 id="launch" class="BCL_conceptTitle">Lancement du module Analytics</h2>
+    <p>Pour lancer le module Analytics:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Connectez-vous à {{site.product_short}} Studio.</li>
+      <li>Ouvrez le<strong> module</strong> Analytics.</li>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="timespan" class="BCL_conceptTitle">Sélection d'une période</h2>
+    <p>Utilisez le sélecteur de date pour spécifier la période du rapport, vous pouvez sélectionner une plage de dates fixe ou sélectionner une plage de dates personnalisée. Notez que lorsqu'un seul jour est sélectionné, les graphiques s'affichent par heure.</p> <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="sélecteur de date" src="/assets/images/s-analytics-img/node10119-date-picker.png" /></figure>
+    <div class="BCL-subsection">
+      <h3>Fuseau horaire de</h3>
+      <p>Les données du module Analytics sont affichées en utilisant le fuseau horaire de reporting du compte. Le fuseau horaire s'affiche sous le contrôle du calendrier.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="fuseau horaire" src="/assets/images/s-analytics-img/node10119-timezone.png" /></figure>
+      <p>Le fuseau horaire de reporting est utilisé pour calculer les limites des jours pour les données de reporting. La modification du paramètre de fuseau horaire des rapports n'affecte que les données à venir, et les modifications ne sont pas appliquées rétroactivement. Si vous modifiez ce paramètre, vous pouvez voir un point plat ou un pic dans vos données lorsque vous examinez les limites des jours où la modification a été appliquée. Les mises à jour de ce paramètre peuvent ne pas prendre effet immédiatement et les données d'analyse peuvent continuer à faire référence à l'ancien paramètre jusqu'à ce que le système traite les modifications.</p>
+      <p>Le fuseau horaire des rapports peut être configuré dans le cadre des paramètres du compte. Pour plus d'informations sur la modification du fuseau horaire des rapports, consultez<a href="/admin/managing-account-settings.html"> la section Gestion des paramètres du compte</a>.</p>
+    </div>  </section><section class="bcls-section">
+    <h2 id="search" class="BCL_conceptTitle">Recherche d'une vidéo</h2>
+    <p>La fonction de recherche peut être utilisée pour rechercher une vidéo spécifique.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="champ de recherche" src="/assets/images/s-analytics-img/node10119-search.png" /></figure>
+    <p>Les propriétés vidéo suivantes seront recherchées:</p>
+    <ul>
+      <li>Nom</li>
+      <li>Brève description</li>
+      <li>Description longue</li>
+      <li>Balises</li>
+      <li>ID de la vidéo</li>
+      <li>ID de référence</li>
+      <li>Tous les champs personnalisés</li>
+    </ul>
+    <p>Une liste des correspondances s'affichera sous le champ de recherche.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="résultats de recherche" src="/assets/images/s-analytics-img/node10119-search-results.png" /></figure>
+    <p>Cliquez sur un lien vidéo pour ouvrir le rapport en contexte-fr/. Par exemple, si vous examinez l'engagement de votre compte, puis que vous utilisez la fonction de recherche pour localiser une vidéo spécifique, cliquez sur le lien de la vidéo pour ouvrir le rapport d'engagement. Si vous consultez le rapport de performance, le fait de rechercher et de cliquer sur un lien permet d'ouvrir le rapport de performance.</p>
+    <p>Pour obtenir la liste complète des options disponibles lors de la recherche de vidéos dans le module Analytics, consultez<a href="/analytics/how-search-videos-analytics-module.html"> Comment rechercher des vidéos dans le module Analytics</a>.</p> <aside class="bcls-aside bcls-aside--information">Remarque: Les rapports Analytics incluent des analyses pour les vidéos supprimées de votre compte. Vous ne pouvez pas rechercher de vidéos supprimées dans le module Analytics. Pour obtenir un rapport sur une vidéo supprimée, vous devez connaître l'ID de la vidéo supprimée et utiliser l'API<a href="https://apis.support.brightcove.com/analytics/"> Analytics</a> pour générer le rapport.</aside> </section> </article> 

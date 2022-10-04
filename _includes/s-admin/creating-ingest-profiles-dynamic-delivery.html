@@ -1,0 +1,92 @@
+<article class="bcls-article">
+  <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section">
+    <p>Les profils d'acquisition contiennent les paramètres de transcodage qui seront utilisés lors du transcodage des vidéos. L'éditeur de profil d'acquisition qui s'affiche change en fonction des options de transcodage configurées pour le compte.</p> <aside class="bcls-aside bcls-aside--information"> Remarques:
+			<ul>
+				<li>La possibilité de créer et de modifier des profils d'acquisition n'est disponible que pour les éditeurs disposant de comptes Enterprise et Professional.</li>
+				<li>Si vous souhaitez pouvoir retranscoder les vidéos ingérées avec un profil personnalisé, vous<strong> devez archiver le master numérique</strong> (comme le font tous les profils standard). Consultez<a href="https://apis.support.brightcove.com/ingest-profiles/guides/archiving-masters.html"> Archiving Masters</a> pour plus de détails sur la procédure à suivre.</li>
+			</ul> </aside>
+    <p>Pour accéder à la page d'administration des profils d'ingestion, cliquez sur le<strong> lien</strong> Admin, puis sur<strong> Ingest Profiles</strong>. Une liste des profils d'acquisition s'affiche.</p> <aside class="bcls-aside bcls-aside--information">Remarque: Pour accéder à la page Profils d'acquisition, vous devez être un utilisateur {{site.product}} avec le rôle d'administrateur.</aside> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node16840-profile-list.png" /></figure>
+    <p>Votre compte Brightcove sera configuré avec un ou plusieurs profils d'acquisition. Tous les comptes Brightcove sont configurés avec un ensemble par défaut de profils d'acquisition qui ne peuvent être ni modifiés ni supprimés. Ceux-ci sont marqués d'un<strong> type</strong> de VOD<strong> standard</strong> dans le studio. La version du<strong> profil</strong> affiche le type de transcodage utilisé avec le profil. Pour plus de détails sur les rendus fournis avec les profils d'acquisition fournis par Brightcove, voir Profils d'<a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">acquisition standard pour la diffusion dynamique et l'encodage sensible au contexte</a>.</p>  </section><section class="bcls-section">
+    <h2 id="create">Création d'un nouveau profil de diffusion dynamique</h2>
+    <p>La page d'administration des profils d'ingestion peut être utilisée pour créer de nouveaux profils d'ingestion. Les profils d'ingestion sont définis à l'aide de JSON.</p>
+    <p>Pour créer un nouveau profil d'ingestion de diffusion dynamique:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Ouvrez le<strong> module</strong> Admin.</li>
+      <li>Cliquez sur<strong> Ingest Profiles</strong>.</li>
+      <li>Cliquez sur<strong> Nouveau profil &gt; Diffusion dynamique</strong>. L'éditeur de profil s'ouvre.</li>
+      <li>Entrez un<strong> nom</strong> et une<strong> description</strong> pour le profil.</li>
+      <li>Décidez si vous souhaitez<strong> stocker les fichiers maîtres</strong>. Le stockage du fichier maître conserve une copie du fichier principal et permet de retranscoder la vidéo à l'avenir sans qu'il soit nécessaire de la télécharger à nouveau. Pour plus d'informations sur les fichiers maîtres d'<a href="https://apis.support.brightcove.com/ingest-profiles/guides/archiving-masters.html">archivage, consultez le</a> document Masters d'archivage.</li>
+      <li>Saisissez la<strong> largeur</strong> et la<strong> hauteur</strong> des images de l'<strong>affiche</strong> et<strong> des</strong> vignettes.</li>
+      <li>Sélectionnez un paramètre pour les images:
+        <ul>
+          <li><strong>Capturez les images automatiquement au moment du chargement</strong>: Brightcove capture les affiches et les vignettes lorsque la vidéo est téléchargée. Les images sont capturées à 50&nbsp;% dans la vidéo.</li>
+          <li><strong>Ne capturez pas d'images&nbsp;; je téléchargerai ou capturerai mes propres images</strong> - Les affiches et les vignettes seront<a href="/media/capturing-poster-and-thumbnail-images.html"> capturées</a> ou<a href="/media/uploading-poster-and-thumbnail-images.html"> téléchargées</a> à l'aide du module Médias.</li>
+        </ul>
+      </li>
+      <li>Ajoutez les formats associés dont vous avez besoin pour le profil. Veillez à sélectionner les rendus vidéo et audio pour garantir la lecteur audio de vos vidéos. Ajoutez également des rendus progressifs (MP4) si vous souhaitez que des rendus téléchargeables soient disponibles pour la vidéo. Cliquez sur<strong> Ajouter un format associé</strong>. <aside class="bcls-aside bcls-aside--information">Remarques:
+          <ul>
+            <li>Pour afficher l'audio et les rendus disponibles, cliquez sur le<strong> lien</strong> Afficher la liste des formats associés.</li>
+            <li>
+              Si vous souhaitez qu'un rendu 1080p soit disponible au téléchargement, vous devez<a href="/admin/creating-ingest-profiles-dynamic-delivery.html"> créer un profil d'acquisition personnalisé</a> et vous assurer qu'il inclut au moins l'un des formats associés suivants:
+              <ul>
+                <li>Progressif 3500</li>
+                <li>progressif 4000</li>
+              </ul>
+            </li>
+            <li>Bien qu'il soit possible de créer un profil qui<strong> ne générera que des rendus</strong> progressifs, si vous chargez des vidéos à l'aide de ce profil, les images des vignettes et des affiches<strong> ne</strong> seront pas capturées lors du transcodage.</li>
+          </ul> </aside>
+      </li>
+      <li>Continuez à cliquer sur<strong> Ajouter un format associé</strong> pour ajouter des formats associés supplémentaires.</li>
+      <li>Utilisez les listes<strong> déroulantes</strong> Codec<strong> et</strong> Rendition pour sélectionner un rendu audio, vidéo (H264, HEVC) ou progressif (MP4) à inclure. Les détails du format associé s'affichent dans le tableau. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node16840-rendition-list.png" /></figure>
+      </li>
+      <li>Cliquez sur<span class="button-blue"> Enregistrer</span> pour enregistrer le nouveau profil.</li>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="social">Création de profils personnalisés pour Social Clipping</h2>
+    <p>Les profils d'acquisition personnalisés peuvent également être utilisés pour le découpage social. En règle générale, les rendus de qualité inférieure inclus dans les profils d'acquisition par défaut de Brightcove ne sont pas nécessaires pour les cas d'utilisation de la distribution sociale. Par conséquent, les profils d'acquisition d'écrêtage personnalisés peuvent généralement être limités à un petit nombre de rendus de qualité moyenne à élevée. Par exemple, un profil d'acquisition d'écrêtage personnalisé qui inclut les rendus vidéo video3500, video2000 et video1700 convient parfaitement à la plupart des cas d'utilisation de la distribution sociale. L'utilisation d'un profil personnalisé pour le découpage social vous permet d'appliquer des transformations supplémentaires aux clips, telles que l'ajout d'images en filigrane. Pour créer un profil personnalisé avec un filigrane, contactez le support<a href="https://supportportal.brightcove.comlanguage=en_US/create"> Brightcove</a>.</p>  </section><section class="bcls-section">
+    <h2 id="duplicate">Duplication des profils d'ingestion</h2>
+    <p>Si vous devez créer un profil similaire à un profil existant, vous pouvez dupliquer un profil existant, puis le modifier pour apporter les modifications nécessaires.</p>
+    <p>Pour dupliquer un profil d'acquisition:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Ouvrez le<strong> module</strong> Admin.</li>
+      <li>Cliquez sur<strong> Ingest Profiles</strong>.</li>
+      <li>Cliquez sur le profil d'acquisition pour le dupliquer.</li>
+      <li>Cliquez sur <strong></strong>Dupliquer</li>
+      <li>Utilisez l'éditeur de profil pour modifier le nom et la définition du profil. Les formats associés peuvent être supprimés en cliquant sur l'icône de suppression (<img alt="" src="/assets/images/admin/node16840-remove-icon.png" />) en regard d'un format associé.</li>
+      <li>Cliquez sur<span class="button-blue"> Enregistrer</span>.</li>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="drm">Prise en charge DRM dans les profils</h2>
+    <p>Contactez le support Brightcove pour définir les paramètres par défaut pour l'empaquetage DRM de vos vidéos. Il n'est pas nécessaire de spécifier un package DRM dans vos profils d'acquisition. Si votre compte est activé pour les DRM et que vous souhaitez diffuser certains titres sans DRM, modifiez les propriétés de la vidéo dans le module Médias et définissez l'indicateur DRM pour la vidéo sur<strong> Pas de DRM</strong>.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node16840-drm-switch.png" /></figure> <aside class="bcls-aside bcls-aside--information">Remarque: Pour plus d'informations sur la création d'un lecteur Brightcove compatible DRM, consultez la<a href="https://player.support.brightcove.com/plugins/configuring-brightcove-player-drm.html"> rubrique Plug-in</a> DRM.</aside> </section> <section class="bcls-section">
+    <h2 id="edit">Modification des profils d'ingestion</h2>
+    <p>La page d'administration des profils d'ingestion peut être utilisée pour modifier les profils d'ingestion. Notez que l'ensemble de profils d'acquisition par défaut (marqué<strong> Standard VOD</strong>) ne peut pas être modifié.</p>
+    <p>Pour modifier un profil d'acquisition:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Ouvrez le<strong> module</strong> Admin.</li>
+      <li>Cliquez sur<strong> Ingest Profiles</strong>.</li>
+      <li>Cliquez sur le profil d'acquisition pour le modifier.</li>
+      <li>Utilisez l'éditeur de profil pour modifier la définition du profil. Les formats associés peuvent être supprimés en cliquant sur l'icône de suppression (<img alt="" src="/assets/images/admin/node16840-remove-icon.png" />) en regard d'un format associé.</li>
+      <li>Cliquez sur<span class="button-blue"> Enregistrer</span>.</li>
+    </ol> <aside class="bcls-aside bcls-aside--information">Remarque: vous pouvez ajouter des formats associés standard à un profil à l'aide de l'éditeur de base, mais des formats associés<strong> personnalisés</strong> doivent être ajoutés à l'aide de l'éditeur<a href="#using_the_advanced_editor"> avancé</a>.</aside> </section> <section class="bcls-section">
+    <h2 id="delete">Suppression des profils d'acquisition</h2>
+    <p>La page d'administration des profils d'ingestion peut être utilisée pour supprimer les profils d'acquisition qui ne sont plus nécessaires. Notez que l'ensemble de profils d'acquisition par défaut (marqué<strong> Standard VOD</strong>) ne peut pas être supprimé, mais<a href="#hide"> ils peuvent être masqués</a> s'ils ne sont pas nécessaires.</p>
+    <p>Pour supprimer un profil d'acquisition:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Ouvrez le<strong> module</strong> Admin.</li>
+      <li>Cliquez sur<strong> Ingest Profiles</strong>. La page d'administration des profils d'ingestion s'ouvre et affiche les profils d'acquisition qui ont été créés pour votre compte.</li>
+      <li>Cliquez sur l'icône de suppression (<img alt="" src="/assets/images/s-admin-img/node16840-delete-icon.png" />) en regard du profil d'acquisition ou cliquez sur le nom du profil, puis sur le<strong> bouton</strong> Supprimer.</li>
+      <li>Confirmez la suppression en cliquant sur<span class="button-red"> Supprimer le profil</span>.</li>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="default">Sélection d'un profil d'acquisition par défaut</h2>
+    <p>Un profil d'acquisition par défaut peut être configuré lorsque les<a href="/media/uploading-videos-using-upload-module.html"> vidéos sont téléchargées</a> et lors de la<a href="/social/creating-video-clip-using-brightcove-social.html"> création de clips à l'aide du module Social</a>. Le profil par défaut de chargement est indiqué en<img alt="" src="/assets/images/s-admin-img/node16840-upload-default-button.png" /> regard du nom du profil. Le profil par défaut de l'extrait social est indiqué en<img alt="" src="/assets/images/s-admin-img/node16840-social-clip-button.png" /> regard du nom du profil.</p>
+    <p>Pour sélectionner un profil d'acquisition par défaut pour le téléchargement/découpage:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Ouvrez le<strong> module</strong> Admin.</li>
+      <li>Cliquez sur<strong> Ingest Profiles</strong>. La page d'administration des profils d'ingestion s'ouvre et affiche les profils d'acquisition qui ont été créés pour le compte.</li>
+      <li>Cliquez sur le nom du profil d'acquisition du profil que vous souhaitez définir comme profil par défaut.</li>
+      <li>Cliquez sur le<strong> lien </strong><strong>Uploading or</strong> Social Clipping en haut de la page pour définir le profil actuel comme profil par défaut. </li>
+    </ol> <aside class="bcls-aside bcls-aside--information">Remarque: Seuls les profils de diffusion dynamique peuvent être définis comme profil par défaut de découpage social. Les profils CAE ne sont pas pris en charge.</aside> </section> <section class="bcls-section">
+    <h2 id="hide">Masquer et afficher les profils d'ingestion</h2>
+    <p>Les profils d'acquisition peuvent être masqués en cliquant sur le curseur associé au profil sur la<strong> position</strong> Masquer. Cela est utile pour masquer les profils par défaut qui ne sont peut-être pas nécessaires.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node16840-hide-profile.png" /></figure>
+    <p>Les profils d'ingestion masqués n'apparaîtront pas dans la liste Profil d'acquisition du module Upload.</p>  </section><section class="bcls-section">
+    <h2 id="using_the_advanced_editor">Utilisation de l'éditeur avancé</h2>
+    <p>Les profils d'ingestion sont définis à l'aide de JSON. Pour afficher la syntaxe JSON d'un profil, modifiez un profil, puis cliquez sur l'<strong>onglet Éditeur</strong> avancé. La représentation JSON du profil s'affiche.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node16840-json.png" /></figure>
+    <p>Bien que le JSON puisse être modifié ici, Brightcove recommande de modifier les profils à l'aide de Simple Editor afin de réduire le risque d'erreurs. Pour plus d'informations sur les attributs disponibles, consultez la rubrique<a href="https://apis.support.brightcove.com/ingest-profiles/references/ingest-profiles-api-fields-reference-dynamic-delivery-and-context-aware-encoding.html"> Ingest Profiles API Fields Reference for Dynamic Delivery and Context Aware Encoding</a>.</p>  </section></article>

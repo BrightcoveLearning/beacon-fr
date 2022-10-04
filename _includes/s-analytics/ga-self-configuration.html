@@ -1,0 +1,594 @@
+<h1>{{page.title}}</h1> <article class="bcls-article"> <summary>{{page.description}}</summary> <section class="bcls-section">
+    <h2 id="Introduction">Présentation</h2>
+    <p>Le processus de configuration comprend les tâches suivantes:</p>
+    <ul>
+      <li>Créez quatre propriétés Google Analytics.</li>
+      <li>Créez un ensemble de dimensions personnalisées et une mesure personnalisée pour chaque propriété.</li>
+      <li>Créez quatre conteneurs Google Tag Manager.</li>
+      <li>Configurez Google Tag Manger pour chaque conteneur.</li>
+      <li>Configurez Firebase pour faciliter la collecte d'analyses avec iOS et Android.</li>
+      <li>Installez des modèles dans Google Data Studio pour afficher vos données d'analyse.</li>
+    </ul>  </section><section class="bcls-section">
+    <h2 id="Required_tools">Outils nécessaires</h2>
+    <p>Brightcove utilise divers outils pour mettre en œuvre la collecte, la manipulation et l'affichage des données d'analyse à l'aide de Google Analytics. Ces outils sont les suivants:</p>
+    <ul>
+      <li><strong>Google Analytics</strong> - Une plateforme d'analyse Web proposée par Google dans le cadre de sa marque Google Marketing Platform.</li>
+      <li><strong>Google Tag Manager</strong> - Tout d'abord, comprenez que les balises sont des extraits de code qui sont ajoutés à un site pour collecter des informations et les envoyer à des tiers. Les étiquettes sont utilisées pour de nombreuses raisons, notamment le suivi du défilement, le suivi des soumissions de formulaires, la réalisation d'enquêtes, etc. Avec Google Tag Manager, vous pouvez gérer et mettre à jour les balises rapidement et prendre des décisions plus éclairées plus rapidement. Tag Manager s'intègre à tous les tags Google et tiers, et vous donne un contrôle total sur le moment et la manière dont vos tags sont déclenchés. «</li>
+      <li><strong>Firebase</strong> - Firebase est une plate-forme développée par Google pour créer des applications mobiles et Web. Firebase inclut la base de données<strong> Firebase Realtime</strong>, qui est une base de données hébergée dans le cloud.</li>
+      <li><strong>Google Data Studio</strong> - Google Data Studio est un outil gratuit qui transforme vos données en tableaux de bord et rapports informatifs, faciles à lire, faciles à partager et entièrement personnalisables. «</li>
+    </ul>
+    <p>Le diagramme suivant détaille l'interaction/le flux de ces outils lors de la collecte d'analyses pour Brightcove {{site.product_short}}:</p>     <figure class="bcls-figure"><img class="bcls-image" src="/assets/images/s-analytics-img/self-config-ga/tool-diagram.png" alt=""></figure></section><section class="bcls-section">
+    <h2 id="Obtain_the_templates_and_configuration_files">Obtenir des modèles et des fichiers de configuration</h2>
+    <p>Il existe un certain nombre de fichiers/URL dont vous avez besoin pour terminer avec succès la configuration des analyses pour Brightcove {{site.product_short}}. Les fichiers/URL sont détaillés dans les puces suivantes. Vous devez contacter votre responsable d'intégration Brightcove pour obtenir ces fichiers/URL. Vous recevrez: </p>
+    <ul>
+      <li>URL vers trois configurations prédéfinies du tableau de bord Google Analytics, une pour les appareils mobiles, le Web et la télévision connectée.</li>
+      <li>Quatre fichiers JSON qui configurent chacun des quatre conteneurs créés dans Google Tag Manager.</li>
+      <li>URL vers trois modèles Google Data Studio prédéfinis, un pour les appareils mobiles, le Web et la télévision connectée.</li>
+    </ul>
+    <p>Les instructions d'installation/utilisation de chacun des fichiers/URL figurent dans les sections appropriées plus loin dans ce document.</p> <aside class="bcls-aside bcls-aside--tip">Vous devrez obtenir ces fichiers/URL AVANT de commencer le processus de configuration.</aside> </section> <section class="bcls-section">
+    <h2 id="Create_Google_Analytics_properties">Configuration de Google Analytics</h2>
+    <p>Dans cette section du document, vous allez configurer Google Analytics, qui inclut les tâches suivantes:</p>
+    <ul>
+      <li>Créez quatre propriétés Google Analytics.</li>
+      <li>Créer une vue mobile pour les propriétés iOS et Android</li>
+      <li>Créez un ensemble de dimensions personnalisées pour chaque propriété.</li>
+      <li>Créez une seule mesure personnalisée pour chaque propriété.</li>
+      <li>Importez trois configurations de tableau de bord créées par Brightcove, une pour les applications mobiles, Web et Smart TV.</li>
+    </ul>
+    <h3>Créez quatre propriétés</h3>
+    <p>Vous devez créer ces quatre propriétés:</p>
+    <ul>
+      <li>Beacon Android</li>
+      <li>Beacon iOS</li>
+      <li>Beacon STV (Smart TV)</li>
+      <li>Beacon Web</li>
+    </ul>
+    <p>Les étapes suivantes vous guident tout au long de la création de la<strong> propriété Android</strong> Beacon. Vous devrez créer les autres en suivant le même processus.</p>
+    <ol class="bcls-tasklist">
+      <li>Connectez-vous à votre compte Google Analytics.</li>
+      <li>Cliquez sur l'<strong>icône</strong> Admin (roue dentée) en bas à gauche de l'écran.</li>
+      <li>En haut de la colonne du milieu, cliquez sur<strong> Créer une propriété</strong>.</li>
+      <li>Dans la configuration de la<strong> propriété</strong>, indiquez le nom de la<strong> propriété</strong>, pour la première propriété, utilisez<samp> Beacon Android</samp>.</li>
+      <li>Indiquez le fuseau horaire des<strong> rapports</strong>.</li>
+      <li>Fournissez la<strong> devise</strong>.</li>
+      <li>Cliquez sur le<strong> lien</strong> Afficher les options avancées.</li>
+      <li>Activez l'<strong>option Créer une propriété Universal Analytics.</strong></li>
+      <li>Saisissez l'URL de votre site Web.</li>
+      <li>Cliquez sur le bouton<strong> radio</strong> Créer une propriété Universal Analytics uniquement.</li>
+      <li>Assurez-vous que les informations de votre propriété sont remplies de la manière suivante: <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/self-config-ga/property1-setup.png" alt="créer une propriété"> </figure>
+      </li>
+      <li>Cliquez sur<strong> Suivant</strong>.</li>
+      <li>Remplissez le<strong> formulaire</strong> d'information commerciale avec vos données.</li>
+      <li>Cliquez sur<strong> Créer</strong>.</li>
+      <li>Lisez tous les détails que vous souhaitez concernant votre nouvelle propriété.</li>
+      <li>Cliquez sur la flèche retour, mise en surbrillance dans la capture d'écran suivante: <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/self-config-ga/property3-back.png" alt="bouton retour"> </figure>
+      </li>
+      <li>Juste en dessous de la<strong> fenêtre Créer une propriété sur laquelle</strong> vous avez cliqué précédemment, cliquez sur la flèche vers le bas pour vous assurer que votre propriété a été correctement créée. <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/self-config-ga/property-view.png" alt="sélecteur de propriétés"> </figure>
+      </li>
+      <li>Effectuez les étapes suivantes pour créer les trois autres propriétés requises:
+        <ol>
+          <li>Beacon iOS</li>
+          <li>Beacon STV</li>
+          <li>Balise WEB</li>
+        </ol>
+      </li>
+    </ol>
+    <h3>Créer une vue mobile pour iOS et Android</h3>
+    <p>Pour les plateformes mobiles, iOS et Android, vous devez créer une vue mobile dans chacune de ces propriétés. Il n'est pas nécessaire de suivre les étapes de cette section si vous ne disposez pas d'applications mobiles.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Cliquez sur le menu déroulant (surligné en jaune sur la capture d'écran) pour voir tous vos comptes, propriétés et vues Google Analytics. <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/self-config-ga/choose-property.png" alt="choisir une propriété"> </figure>
+      </li>
+      <li>Dans la liste déroulante à trois panneaux, sélectionnez:
+        <ul type="a">
+          <li>Votre compte Brightcove {{site.product_short}}</li>
+          <li>La<strong> propriété</strong> Beacon Android</li>
+          <li>La<strong> vue Données de</strong> tous les sites Web</li>
+        </ul> <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/self-config-ga/choose-property-3-column.png" alt="Sélectionnez la propriété"> </figure>
+      </li>
+      <li>Cliquez sur l'<strong>icône</strong> Admin (roue dentée) en bas à gauche de l'écran.</li>
+      <li>En haut de la troisième colonne, cliquez sur<strong> Créer une vue</strong>. <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/self-config-ga/ga-create-view.png" alt="créer une vue"> </figure>
+      </li>
+      <li>Remplissez le formulaire suivant ces étapes:
+        <ol>
+          <li>Cliquez sur le<strong> bouton de l'application</strong> mobile pour connaître le type de données à suivre.</li>
+          <li>Donnez un nom à votre vue. Un nom logique serait<samp> All Mobile Data</samp>.</li>
+          <li>Cliquez sur<strong> Créer une vue</strong>.</li>
+        </ol> <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/self-config-ga/ga-mobile-view-form.png" alt="créer un formulaire de vue"> </figure>
+      </li>
+      <li>Remplacez la vue par la vue mobile nouvellement créée. <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/self-config-ga/ga-change-view.png" alt="changer de vue"> </figure>
+      </li>
+      <li>Suivez les mêmes étapes que dans cette section du document pour créer une vue mobile pour la propriété iOS.</li>
+    </ol>
+    <p>Lorsque vous travaillez avec vos comptes, assurez-vous que lorsque vous sélectionnez un compte/propriété/affichez vos propriétés mobiles, utilisez la<strong> vue</strong> Toutes les données mobiles et les comptes Web et STV utilisent la valeur par défaut<strong> Toutes les données du site Web</strong>, comme montré ici:</p> <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-analytics-img/self-config-ga/account-property-view.png" alt="vue des propriétés du compte"> </figure>
+    <p>Notez que les vues iOS et Android comporteront des vues<em> Toutes les données</em> du site Web, car elles sont créées par défaut lors de la création de la propriété.</p>
+
+    <h3>Création de mesures et de dimensions personnalisées</h3>
+    <p>Maintenant, pour chaque propriété, vous devez créer un ensemble de dimensions personnalisées et une métrique personnalisée.</p>
+    <p>Cette section sera organisée de la manière suivante:</p>
+    <ul>
+      <li>Les étapes à suivre pour créer une seule dimension personnalisée seront expliquées.</li>
+      <li>Les étapes à suivre pour créer une seule mesure personnalisée seront expliquées.</li>
+      <li>Un tableau présente les dimensions requises pour les propriétés<strong> Beacon Android</strong> et<strong> Beacon iOS</strong>.</li>
+      <li>Un tableau présente les dimensions requises pour les propriétés<strong> Beacon STV</strong> et<strong> Beacon WEB</strong>.</li>
+      <li>Un tableau montre la seule mesure que doivent posséder<strong> les quatre</strong> propriétés.</li>
+    </ul>
+    <p>Vous devrez ensuite créer les dimensions et la métrique pour chacune des quatre propriétés.</p>
+    <h4>Création d'une dimension personnalisée</h4>
+    <ol class="bcls-tasklist-restart">
+      <li>Sélectionnez l'une de vos propriétés dans le sélecteur de compte/propriété/vue pour laquelle vous souhaitez créer les dimensions personnalisées. <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/self-config-ga/account-property-view-selelctor.png" alt="choisir une propriété"> </figure>
+      </li>
+      <li>Cliquez sur l'<strong>icône</strong> Admin (roue dentée) en bas à gauche de l'écran.</li>
+      <li>En bas de la colonne du milieu, sous Définitions<strong> personnalisées</strong>, cliquez sur Dimensions<strong> personnalisées</strong> <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/self-config-ga/click-custom-demensions.png" alt="cliquez sur dimensions personnalisées"> </figure>
+      </li>
+      <li>Cliquez sur<strong> NOUVELLE DIMENSION PERSONNALISÉE</strong>.</li>
+      <li>Pour le<strong> nom,</strong> saisissez le numéro de l'<samp>épisode</samp>.</li>
+      <li>Dans la<strong> liste déroulante</strong> Scope, sélectionnez<samp> Hit</samp>.</li>
+      <li>Laissez la dimension<strong> active</strong>.</li>
+      <li>Cliquez sur<strong> Créer</strong>.</li>
+      <li>Dans l'écran d'exemple de code, cliquez sur<strong> Terminé</strong>.</li>
+      <li>Vous verrez la dimension que vous venez de créer dans une liste, comme illustré ci-dessous: <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/self-config-ga/dimension-list.png" alt="dimensions de la liste"> </figure> <aside class="bcls-aside bcls-aside--warning">Il est essentiel que l'<strong>index</strong> corresponde au nom de la dimension tel qu'indiqué dans les tableaux ci-dessous. Pour ce faire, il suffit de créer les dimensions dans l'ordre indiqué dans les tableaux.</aside>
+      </li>
+      <li>Pour créer une autre dimension, cliquez sur<strong> NOUVELLE DIMENSION PERSONNALISÉE</strong>.</li>
+    </ol>
+    <h4>Création d'une métrique personnalisée</h4>
+    <ol class="bcls-tasklist-restart">
+      <li>Sélectionnez l'une de vos propriétés dans le sélecteur de compte/propriété/vue pour laquelle vous souhaitez créer la mesure personnalisée. <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/self-config-ga/account-property-view-selelctor.png" alt="choisir une propriété"> </figure>
+      </li>
+      <li>Cliquez sur l'<strong>icône</strong> Admin (roue dentée) en bas à gauche de l'écran.</li>
+      <li>En bas de la colonne du milieu, sous Définitions<strong> personnalisées</strong>, cliquez sur Mesures<strong> personnalisées</strong></li>
+      <li>Cliquez sur<strong> NOUVELLE MESURE PERSONNALISÉE</strong>.</li>
+      <li>Pour le<strong> Nom,</strong> saisissez<samp> Time Watched</samp>.</li>
+      <li>Dans la<strong> liste déroulante</strong> Scope, sélectionnez<samp> Hit</samp>.</li>
+      <li>Pour le type de<strong> formatage</strong>, sélectionnez<samp> Heure</samp>.</li>
+      <li>Laissez la dimension<strong> active</strong>.</li>
+      <li>Cliquez sur<strong> Créer</strong>.</li>
+      <li>Dans l'écran d'exemple de code, cliquez sur<strong> Terminé</strong>.</li>
+      <li>Vous verrez la mesure que vous venez de créer dans une liste.</li>
+    </ol> <aside class="bcls-aside bcls-aside--information">Il s'agit de la seule mesure personnalisée que vous devrez créer pour chacune des quatre propriétés.</aside>
+    <h4>Dimensions et métriques Android et iOS</h4>
+    <p>Le tableau suivant présente les dimensions personnalisées qui doivent être ajoutées aux propriétés Beacon Android et Beacon iOS.</p> <aside class="bcls-aside bcls-aside--warning">Il est essentiel que l'<strong>index</strong> corresponde au nom de la dimension tel qu'indiqué dans les tableaux ci-dessous. Pour ce faire, il suffit de créer les dimensions dans l'ordre indiqué dans le tableau.</aside>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Nom de la dimension personnalisée</th>
+          <th>Indice</th>
+          <th>Portée</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>Numéro de l'épisode</td>
+          <td>1</td>
+          <td>Hit</td>
+        </tr>
+        <tr>
+          <td>Genre</td>
+          <td>2</td>
+          <td>Hit</td>
+        </tr>
+        <tr>
+          <td>Année de production</td>
+          <td>3</td>
+          <td>Hit</td>
+        </tr>
+        <tr>
+          <td>Pays d'origine</td>
+          <td>4</td>
+          <td>Hit</td>
+        </tr>
+        <tr>
+          <td>ID de l'actif</td>
+          <td>5</td>
+          <td>Hit</td>
+        </tr>
+        <tr>
+          <td>État de connexion</td>
+          <td>6</td>
+          <td>Séance</td>
+        </tr>
+        <tr>
+          <td>Langue</td>
+          <td>7</td>
+          <td>Séance</td>
+        </tr>
+        <tr>
+          <td>Type d'utilisateur</td>
+          <td>8</td>
+          <td>Séance</td>
+        </tr>
+        <tr>
+          <td>Fournisseur de contenu</td>
+          <td>9</td>
+          <td>Hit</td>
+        </tr>
+        <tr>
+          <td>Titre de la série</td>
+          <td>10</td>
+          <td>Hit</td>
+        </tr>
+        <tr>
+          <td>Titre de l'épisode</td>
+          <td>11</td>
+          <td>Hit</td>
+        </tr>
+        <tr>
+          <td>Numéro de saison</td>
+          <td>12</td>
+          <td>Hit</td>
+        </tr>
+        <tr>
+          <td>Horodatage</td>
+          <td>13</td>
+          <td>Hit</td>
+        </tr>
+        <tr>
+          <td>Temps de diffusion</td>
+          <td>14</td>
+          <td>Hit</td>
+        </tr>
+        <tr>
+          <td>Jeton de compte</td>
+          <td>15</td>
+          <td>Utilisateur</td>
+        </tr>
+        <tr>
+          <td>Jeton de profil</td>
+          <td>16</td>
+          <td>Utilisateur</td>
+        </tr>
+      </tbody>
+    </table>
+    <h4>Dimensions et métriques STV et WEB</h4>
+    <p>Le tableau suivant affiche les dimensions personnalisées qui doivent être ajoutées aux propriétés Beacon STV et Beacon Web.</p> <aside class="bcls-aside bcls-aside--warning">Il est essentiel que l'<strong>index</strong> corresponde au nom de la dimension tel qu'indiqué dans les tableaux ci-dessous. Pour ce faire, il suffit de créer les dimensions dans l'ordre indiqué dans le tableau.</aside>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Nom de la dimension personnalisée</th>
+          <th>Indice</th>
+          <th>Portée</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>ID utilisateur</td>
+          <td>1</td>
+          <td>Utilisateur</td>
+        </tr>
+        <tr>
+          <td>Plateforme</td>
+          <td>2</td>
+          <td>Séance</td>
+        </tr>
+        <tr>
+          <td>Jeton de compte</td>
+          <td>3</td>
+          <td>Utilisateur</td>
+        </tr>
+        <tr>
+          <td>Version de l'application</td>
+          <td>4</td>
+          <td>Séance</td>
+        </tr>
+        <tr>
+          <td>Numéro de l'épisode</td>
+          <td>5</td>
+          <td>Hit</td>
+        </tr>
+        <tr>
+          <td>Numéro de saison</td>
+          <td>6</td>
+          <td>Hit</td>
+        </tr>
+        <tr>
+          <td>Titre de l'épisode</td>
+          <td>7</td>
+          <td>Hit</td>
+        </tr>
+        <tr>
+          <td>Programme</td>
+          <td>8</td>
+          <td>Hit</td>
+        </tr>
+        <tr>
+          <td>Modèle de l'appareil</td>
+          <td>9</td>
+          <td>Séance</td>
+        </tr>
+        <tr>
+          <td>Genre</td>
+          <td>10</td>
+          <td>Hit</td>
+        </tr>
+        <tr>
+          <td>Année de production</td>
+          <td>11</td>
+          <td>Hit</td>
+        </tr>
+        <tr>
+          <td>Pays d'origine</td>
+          <td>12</td>
+          <td>Hit</td>
+        </tr>
+        <tr>
+          <td>Mot-clé</td>
+          <td>13</td>
+          <td>Hit</td>
+        </tr>
+        <tr>
+          <td>Version de l'OS</td>
+          <td>14</td>
+          <td>Séance</td>
+        </tr>
+        <tr>
+          <td>Langue de l'OS</td>
+          <td>15</td>
+          <td>Séance</td>
+        </tr>
+        <tr>
+          <td>Numéro de compte</td>
+          <td>16</td>
+          <td>Séance</td>
+        </tr>
+        <tr>
+          <td>Langue</td>
+          <td>17</td>
+          <td>Séance</td>
+        </tr>
+        <tr>
+          <td>Type d'utilisateur</td>
+          <td>18</td>
+          <td>Séance</td>
+        </tr>
+        <tr>
+          <td>Type de contenu</td>
+          <td>19</td>
+          <td>Hit</td>
+        </tr>
+        <tr>
+          <td>Fournisseur de contenu</td>
+          <td>20</td>
+          <td>Hit</td>
+        </tr>
+      </tbody>
+    </table>
+    <h4>Métrique personnalisée</h4>
+    <p>Le tableau suivant présente la seule mesure personnalisée qui doit être ajoutée aux quatre propriétés.</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Nom de la métrique personnalisée</th>
+          <th>Indice</th>
+          <th>Portée</th>
+          <th>Type de formatage</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>Heure surveillée</td>
+          <td>1</td>
+          <td>Hit</td>
+          <td>Type de formatage</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3>Configuration des tableaux de bord</h3>
+    <p>Dans la<a href="#Obtain_the_templates_and_configuration_files"> section</a> Obtenir des modèles et des fichiers de configuration plus haut dans ce document, vous avez demandé des fichiers/URL à votre gestionnaire d'intégration. Trois des URL sont les suivantes:</p>
+    <ul>
+      <li>Portable: https://analytics.google.com/analytics/web/template?uid=QTJbSdv3Sk6gvpa4Go_CRQ</li>
+      <li>Site Web: https://analytics.google.com/analytics/web/template?uid=pIoBH8hYRSO3JZL4WbFTlA</li>
+      <li>Smart TV: https://analytics.google.com/analytics/web/template?uid=eZhlzo76QtSn5BNi-rXJyQ</li>
+    </ul>
+    <p>Pour utiliser les configurations, effectuez les opérations suivantes:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Notez l'utilisation pour la configuration, mobile, web ou smart tv, puis cliquez sur l'URL.</li>
+      <li>Dans un nouvel onglet du navigateur, assurez-vous de voir ce qui suit: <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/self-config-ga/ga-dashboard-config-import.png" alt="configuration de l'importation"> </figure>
+      </li>
+      <li><strong>Dans le menu</strong> déroulant Sélectionner une vue, choisissez la propriété correspondante, mobile (iOS et Android), Web ou Smart TV.</li>
+      <li>Modifiez le nom de la configuration si vous le souhaitez.</li>
+      <li>Cliquez sur<strong> Créer</strong>.</li>
+      <li>Assurez-vous que la configuration s'ouvre. Un exemple est présenté ici: <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/self-config-ga/ga-example-imported-configuration.png" alt="exemple de configuration"> </figure>
+      </li>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="Configuring_Google_Tag_Manager">Configuration de Google Tag Manager</h2>
+    <p>Dans cette section du document, vous allez effectuer les tâches suivantes:</p>
+    <ul>
+      <li>Créez quatre conteneurs, un pour chaque propriété créée précédemment.</li>
+      <li>Importez les fichiers JSON de configuration qui vous ont été envoyés par e-mail dans la<a href="#Obtain_the_templates_and_configuration_files"> section</a> Obtenir les modèles et les fichiers de configuration ci-dessus.</li>
+      <li>Saisissez votre identifiant de suivi, copié depuis votre compte Google Analytics, dans la<strong> variable du code de</strong> suivi de chaque conteneur.</li>
+      <li>Publiez vos conteneurs.</li>
+    </ul>
+    <h3>Création de conteneurs</h3>
+    <ol class="bcls-tasklist-restart">
+      <li>
+        Consultez la documentation de Google pour<a href="https://support.google.com/tagmanager/answer/6103696?hl=en"> configurer et installer Tag Manager</a>.
+      </li>
+      <li>
+        <p>
+          Dans<a href="https://tagmanager.google.com/#/home"> Tag Manager</a>, créez un compte ou utilisez un compte existant. Pour créer un nouveau compte, cliquez sur le<strong> bouton</strong> Créer un compte.
+        </p>
+        <p>
+          Par défaut, un nouveau conteneur est créé pour un nouveau compte. Vous allez créer des conteneurs supplémentaires dans chaque compte.
+        </p> <figure class="bcls-figure">
+          <img class="bcls-image" alt="Créer un compte" src="/assets/images/s-analytics-img/self-config-ga/tm-click-to-create.png" /> </figure>
+      </li>
+      <li>
+        <p>Entrez des valeurs pour la page de votre nouveau compte:</p>
+        <ul>
+          <li><strong>Nom du compte</strong>: Le nom de votre entreprise ou le nom du service.</li>
+          <li><strong>Pays</strong>: Pays d'origine de votre entreprise.</li>
+          <li><strong>Nom du conteneur</strong>: <samp>Beacon WEB</samp> Vous allez créer un conteneur pour chaque propriété.</li>
+          <li><strong>Plateforme cible</strong>: Web</li>
+        </ul>
+      <li>Assurez-vous que les informations de votre contenant sont remplies de la manière suivante:</li> <figure class="bcls-figure">
+        <img class="bcls-image" alt="Nouvelles informations de compte" src="/assets/images/s-analytics-img/self-config-ga/tm-add-new-account.png" /> </figure>
+      </li>
+      <li>Cliquez sur<strong> Créer</strong>.</li>
+      <li>Cliquez sur<strong> OK</strong> pour fermer la boîte de dialogue qui s'ouvre.</li>
+      <li>Dans l'<strong>espace de travail</strong>, cliquez sur<strong> Admin</strong>. <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/self-config-ga/tm-workspace-click-admin.png" alt="cliquez sur admin"> </figure>
+      </li>
+      <li>Cliquez sur le signe plus pour ajouter un autre conteneur. <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/self-config-ga/tm-plus-to-add-container.png" alt="plus pour ajouter un conteneur"> </figure>
+      </li>
+      <li>Remplissez le formulaire et cliquez sur<strong> Créer</strong> pour créer le<strong> conteneur</strong> iOS. <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/self-config-ga/tm-create-ios.png" alt="créer un conteneur iOS"> </figure>
+      </li>
+      <li>Assurez-vous que les quatre conteneurs suivants sont créés avec la plate-forme<strong> cible appropriée</strong>.
+        <table class="bcls-table">
+          <thead class="bcls-table__head">
+            <tr>
+              <th>Nom du conteneur</th>
+              <th>Plateforme Target</th>
+            </tr>
+          </thead>
+          <tbody class="bcls-table__body">
+            <tr>
+              <td>Beacon Android</td>
+              <td>Android</td>
+            </tr>
+            <tr>
+              <td>Beacon iOS</td>
+              <td>iOS</td>
+            </tr>
+            <tr>
+              <td>Beacon STV</td>
+              <td>Web</td>
+            </tr>
+            <tr>
+              <td>Balise WEB</td>
+              <td>Web</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+      <li>Dans l'<strong>espace de travail</strong>, utilisez le menu déroulant du compte en haut de la page pour vous assurer que tous les conteneurs ont été créés. <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/self-config-ga/tm-all-containers-created.png" alt="liste de tous les conteneurs"> </figure>
+      </li>
+      <li>À ce stade, il est essentiel de prendre une capture d'écran de ce menu déroulant. Les ingénieurs de Brightcove {{site.product_short}} ont besoin de ces données, à savoir les noms des conteneurs et l'<strong>ID</strong> GTM associé. Vous allez envoyer ce fichier à votre gestionnaire d'intégration avec les autres fichiers téléchargés, comme expliqué dans la<a href="#Publish_each_container"> section</a> Publier chaque conteneur qui figure plus loin dans ce document. Assurez-vous que la capture d'écran est claire et lisible: <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/self-config-ga/tm-containers-with-ids.png" alt="conteneurs avec ID"> </figure>
+      </li>
+    </ol>
+    <h3>Fichiers de configuration d'importation</h3>
+    <p>Effectuez les étapes suivantes pour importer les fichiers de configuration de vos conteneurs:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Dans l'<strong>espace de travail</strong>, cliquez sur<strong> Admin</strong>.</li>
+      <li>Vérifiez quel conteneur vous êtes en train de configurer, puis cliquez sur<strong> Importer un conteneur</strong>. <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/self-config-ga/tm-check-container.png" alt="conteneur d'importation"> </figure>
+      </li>
+      <li>Cliquez sur<strong> Choisir un fichier conteneur</strong>, puis sélectionnez le fichier JSON approprié pour ce conteneur.</li>
+      <li>Pour<strong> Choisir un espace de travail</strong>, cliquez sur <strong></strong>Existant, puis dans la boîte de dialogue qui s'ouvre,<strong> sélectionnez Espace de travail</strong></li>
+      <li>Pour<strong> Choisir une option d'importation</strong>, cliquez sur le bouton<strong> radio</strong> Remplacer.</li>
+      <li>Assurez-vous de voir des informations sur les balises, les déclencheurs, les variables et les modèles. <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/self-config-ga/tm-import-info.png" alt="informations d'importation"> </figure>
+      </li>
+      <li>Cliquez sur<strong> Confirmer</strong>, et vous serez redirigé vers l'<strong>espace de travail. </strong>.</li>
+      <li>Dans l'<strong>espace de travail</strong>, cliquez sur<strong> Tags</strong>,<strong> Triggers</strong> and<strong> Variables</strong> pour confirmer que l'importation a été réussi. <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/self-config-ga/tm-check-ttv.png" alt="check import"> </figure>
+      </li>
+      <li>Vous devez maintenant importer le bon fichier JSON pour chaque conteneur.</li>
+    </ol>
+    <h3>Saisissez l'ID de suivi</h3>
+    <p>Vous allez maintenant copier à partir de Google Analytics l'ID de suivi de chaque propriété, puis le coller dans le conteneur correspondant.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Connectez-vous à Google Analytics.</li>
+      <li>Utilisez le sélecteur de compte/propriété en haut de la page pour choisir la<strong> propriété Android</strong> Beacon. <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/self-config-ga/tm-ga-choose-property.png" alt="sélectionnez Android"> </figure>
+      </li>
+      <li>Cliquez sur<strong> Admin</strong>.</li>
+      <li>Dans la<strong> colonne</strong> Propriété, cliquez d'abord sur Informations<strong> de suivi</strong>, puis sur Code<strong> de suivi.</strong> <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/self-config-ga/tm-ga-tracking-info-code.png" alt="code de suivi des clics"> </figure>
+      </li>
+      <li>Copiez le numéro<strong> de suivi</strong>. <figure class=" bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/self-config-ga/tm-ga-copy-tracking-id.png" alt="ID de suivi de copie"> </figure>
+      </li>
+      <li>Revenir à la page Google Tag Manager.</li>
+      <li>Assurez-vous de modifier le<strong> conteneur Android</strong> Beacon.</li>
+      <li>Cliquez sur<strong> Variables dans la barre</strong> de navigation de gauche.</li>
+      <li>Cliquez sur la<strong> variable Code de</strong> suivi.</li>
+      <li>Collez l'ID de suivi copié depuis Google Analytics dans le champ du<strong> formulaire</strong> Valeur. <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/self-config-ga/tm-paste-id-in-tracking-variable.png" alt="identifiant de collage"> </figure>
+      </li>
+      <li>Vous devez maintenant coller l'ID de suivi correspondant dans la<strong> variable Code de</strong> suivi de chaque conteneur.</li>
+    </ol>
+
+    <h3 id="Publish_each_container">Publier chaque conteneur</h3> <aside class="bcls-aside bcls-aside--tip">Plus loin dans ces étapes, vous publierez vos conteneurs. Pour iOS et Android, vous devrez télécharger les fichiers de configuration et demander à votre équipe de développement d'applications d'ajouter ces fichiers à l'application correspondante.</aside>
+    <p>La dernière étape que vous devez effectuer dans Google Tag Manger consiste à soumettre chaque conteneur pour publication. Les étapes suivantes vous guident tout au long de ce processus:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Revenez à votre espace de travail.</li>
+      <li>Notez le conteneur dans lequel vous vous trouvez.</li>
+      <li>En haut à droite de l'interface utilisateur, cliquez sur<strong> Envoyer</strong>.</li>
+      <li>Assurez-vous que le<strong> bouton</strong> Publier et créer une version est sélectionné.</li>
+      <li>Si vous le souhaitez, ajoutez un nom de version et une description de version.</li>
+      <li>Cliquez sur<strong> Publier</strong>.</li>
+      <li>Si vous n'avez pas fourni de nom de version ni de description, on vous le demande à nouveau. Ignorez si vous êtes sûr de ne pas les vouloir.</li>
+      <li>Assurez-vous que les informations renvoyées concernant votre conteneur sont correctes.</li>
+      <li><strong>Pour les conteneurs iOS et Android</strong>: Cliquez sur<strong> Télécharger</strong> en haut à droite de l'interface utilisateur pour télécharger le fichier associé. Ce fichier devra être envoyé à votre responsable de l'intégration. <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/self-config-ga/tm-download-button.png" alt="bouton de téléchargement"> </figure>
+      </li>
+      <li><strong>Pour les conteneurs iOS et Android</strong>: Contactez votre responsable de l'intégration et envoyez-lui ces fichiers téléchargés, accompagnés de la capture d'écran de vos conteneurs et des identifiants correspondants. Les fichiers seront ajoutés à vos applications correspondantes.</li>
+      <li>Assurez-vous que tous les conteneurs sont publiés.</li>
+    </ol> <aside class="bcls-aside bcls-aside--warning">Pour rappel, à ce stade, vous devez envoyer les fichiers téléchargés, ainsi que la capture d'écran montrant le nom de chaque conteneur et l'<strong>ID</strong> GTM associé, à votre gestionnaire d'intégration. Ces fichiers seront ensuite acheminés vers le personnel d'ingénierie de Brightcove {{site.product_short}} pour configurer vos applications.</aside> </section> <section class="bcls-section">
+    <h2 id="section-name">Configuration de Firebase</h2> <aside class="bcls-aside bcls-aside--tip">Les étapes de cette section ne sont nécessaires que si vous disposez d'applications Android et/ou iOS. De plus, si vous ne connaissez pas du tout Google Firebase, une vidéo marketing de présentation de deux minutes et demie est disponible sur la page d'accueil de<a href="https://firebase.google.com/"> Firebase</a>.</aside>
+    <p></p>
+    <ol class="bcls-tasklist-restart">
+      <li>Accédez à la page<a href="https://console.firebase.google.com/?pli=1"> de démarrage de Firebase</a>.</li>
+      <li>Cliquez sur<strong> Créer un projet</strong>.</li>
+      <li>Saisissez un nom de projet.</li>
+      <li>Acceptez les conditions et cliquez sur<strong> Continuer</strong>.</li>
+      <li>Acceptez l'activation par défaut de Google Analytics pour le projet, puis cliquez sur<strong> Continuer</strong>.</li>
+      <li>Choisissez ou fournissez un compte Google Analytics.</li>
+      <li>Cliquez sur<strong> Créer un projet</strong>.</li>
+      <li>Assurez-vous de revenir à la<strong> page Aperçu du</strong> projet. Notez également les boutons de création d'applications iOS et Android (les flèches rouges indiquent leur position). <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/self-config-ga/fb-project-overview.png" alt="aperçu du projet"> </figure>
+      </li>
+      <li>Si vous utilisez une application iOS, cliquez sur le bouton de l'application iOS et suivez les cinq étapes pour ajouter Firebase à votre application iOS. Pour effectuer les étapes, vous aurez besoin de l'assistance d'un développeur iOS. Le document Google suivant fournit des détails sur les étapes à suivre:
+        <ul>
+          <li><a href="https://firebase.google.com/docs/ios/setup">Ajoutez Firebase à votre projet iOS</a>.</li>
+        </ul> <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/self-config-ga/fb-add-ios-app.png" alt="ajouter iOS"> </figure>
+      </li>
+      <li>Si vous utilisez une application Android, cliquez sur le bouton de l'application Android et suivez les quatre étapes pour ajouter Firebase à votre application Android. Pour effectuer les étapes, vous aurez besoin de l'assistance d'un développeur Android. Le document Google suivant fournit des détails sur les étapes à suivre:
+        <ul>
+          <li><a href="https://firebase.google.com/docs/android/setup">Ajoutez Firebase à votre projet Android</a>.</li>
+        </ul> <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/self-config-ga/fb-add-android-app.png" alt="ajouter Android"> </figure>
+      </li>
+    </ol>
+    <p>Après avoir ajouté les fichiers Goggle Tag Manager et Firebase, comme indiqué dans les deux dernières sections de ce document, vous devriez être en mesure de vérifier les événements dans Firebase lui-même. En outre, les visites auront été envoyées à Google Analytics. Notez que Google Tag Manager agit ici en tant qu'intermédiaire, envoyant ces informations à Google Analytics sur la base des données transmises à Firebase.</p> <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-analytics-img/self-config-ga/fb-test-install.png" alt="résultats firebase">   </figure></section><section class="bcls-section">
+    <h2 id="Install_templates_into_Google_Data_Studio">Installer des modèles dans Google Data Studio</h2>
+    <p>Brightcove fournit des modèles de rapports prédéfinis Google Data Studio, un pour le Web, les appareils mobiles et les téléviseurs intelligents. Dans la<a href="#Obtain_the_templates_and_configuration_files"> section</a> Obtenir des modèles et des fichiers de configuration plus haut dans ce document, vous avez demandé des fichiers/URL à votre gestionnaire d'intégration. Trois des URL sont les suivantes:</p>
+    <ul>
+      <li>SITE WEB: https://datastudio.google.com/reporting/43b8362b-785a-487d-b681-39dde640f029</li>
+      <li>Portable: https://datastudio.google.com/reporting/2ca9572d-e50e-4931-858a-e67dc99f62f9</li>
+      <li>STV: https://datastudio.google.com/reporting/bfa8fad2-b4f6-4bfc-aee2-33742bf600a5</li>
+    </ul>
+    <p>Pour utiliser les modèles, effectuez les tâches suivantes:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Notez l'utilisation pour le rapport, mobile, Web ou Smart TV, puis cliquez sur l'URL.</li>
+      <li>Dans un nouvel onglet du navigateur, assurez-vous de voir ce qui suit: <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/self-config-ga/ga-dashboard-config-import.png" alt="configuration de l'importation"> </figure>
+      </li>
+      <li><strong>Dans le menu</strong> déroulant Sélectionner une vue, choisissez la propriété correspondante, mobile (iOS et Android), Web ou Smart TV.</li>
+      <li>Modifiez le nom de la configuration si vous le souhaitez.</li>
+      <li>Cliquez sur<strong> Créer</strong>.</li>
+      <li>La configuration importée s'ouvre. Examinez les données pour vous assurer qu'elles semblent valides. Un exemple est présenté ici: <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-analytics-img/self-config-ga/ds-sample-report.png" alt="exemple de rapport"> </figure>
+      </li>
+    </ol>
+    <p>C'est ça&nbsp;! Félicitations, vous avez configuré Google Analytics pour Brightcove {{site.product_short}}.</p>  </section></article>

@@ -1,272 +1,151 @@
 ---
-title: Sending Push Notifications to Beacon App Viewers
-description: In this topic, you will learn how to create and send push notifications to the viewers of your Brightcove Beacon apps.
-parent: Registered Users
----
+title: Envoi de notifications push aux utilisateurs de l'application Beacon 
+description: Dans cette rubrique, vous allez apprendre comment créer et envoyer des notifications push aux utilisateurs de vos applications Brightcove Beacon. 
+parent: Utilisateurs enregistrés ---
 
-<h1>{{ page.title }}</h1>
-<article class="bcls-article">
-  <summary>{{ page.description }}</summary>
-
-  <section class="bcls-section">
-    <h2 id="Introduction">Introduction</h2>
-    <p>Brightcove allows you to send text or rich media push notifications to the viewers of your Brightcove Beacon apps. This gives you the ability to communicate and engage directly with your viewers that use iOS and Android mobile devices.</p>
-    <p>In Beacon Studio's <strong>Registered Users</strong> module, you can create, schedule, or send push notifications right away.</p>
-    <figure class="bcls-figure">
-      <img
-        class="bcls-image--no-border"
-        alt="App Notifications"
-        src="/assets/images/registered-users/notifications/app-notifications.png"
-      /> 
-    </figure>
-   
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Creating_a_notification">Creating a notification</h2>
-    <p>Create a push notification to send now or to schedule it for a later time.</p>
+<h1>{{page.title}}</h1> <article class="bcls-article"> <summary>{{page.description}}</summary> <section class="bcls-section">
+    <h2 id="Introduction">Présentation</h2>
+    <p>Brightcove vous permet d'envoyer des notifications push par SMS ou rich media aux utilisateurs de vos applications Brightcove Beacon. Cela vous donne la possibilité de communiquer et d'interagir directement avec vos spectateurs qui utilisent des appareils mobiles iOS et Android.</p>
+    <p>Dans le<strong> module Utilisateurs</strong> enregistrés de Beacon Studio, vous pouvez créer, programmer ou envoyer des notifications push immédiatement.</p> <figure class="bcls-figure">
+      <img         class="bcls-image--no-border"         alt="Notifications sur"         src="/assets/images/registered-users/notifications/app-notifications.png"       />   </figure></section><section class="bcls-section">
+    <h2 id="Creating_a_notification">Création d'une notification</h2>
+    <p>Créez une notification push à envoyer maintenant ou à planifier pour une date ultérieure.</p>
     <ol class="bcls-tasklist">
-      <li>In Beacon Studio, in the primary navigation, click <strong>Registered Users</strong>.</li>
-      <li>Click <strong>App Notifications</strong>.</li>
+      <li>Dans Beacon Studio, dans la navigation principale, cliquez sur Utilisateurs<strong> enregistrés</strong>.</li>
+      <li>Cliquez sur Notifications<strong> d'</strong>applications</li>
       <li>
-        <p>Add values for each input field.</p>
-        <figure class="bcls-figure">
-          <img
-            class="bcls-image--no-border"
-            alt="Create messnotification"
-            src="/assets/images/registered-users/notifications/create-message.png"
-          />
-        </figure> 
+        <p>Ajoutez des valeurs pour chaque champ de saisie.</p> <figure class="bcls-figure">
+          <img             class="bcls-image--no-border"             alt="Créer une notification de message"             src="/assets/images/registered-users/notifications/create-message.png"           /> </figure> 
       </li>
     </ol>
-    <h3>Input fields</h3>
-      <p>Enter values for the following fields:</p>
+    <h3>Champs de saisie</h3>
+      <p>Entrez des valeurs pour les champs suivants:</p>
       <ul>
-        <li><strong>Notification name</strong> - Internal name for the notification</li>
-        <li><strong>Title</strong> - Display name for the notification</li>
-        <li><strong>Text</strong> - Your notification text</li>
-        <li><strong>Delivery options</strong> - 
-          <p>For details, see the <a href="#Sending_a_notification">Sending a notification</a> section.</p>
+        <li><strong>Nom de la notification</strong>: nom interne de la notification</li>
+        <li><strong>Title</strong>: nom d'affichage de la notification</li>
+        <li><strong>Texte</strong>: le texte de votre notification</li>
+        <li><strong>Options de livraison</strong> - 
+          <p>Pour plus de détails, consultez la<a href="#Sending_a_notification"> section</a> Envoi d'une notification.</p>
           <ul>
-            <li>
-              <strong>Send test now</strong> - Send a test notification now
+            <li> <strong>Envoyer un test maintenant</strong> - Envoyer une notification de test maintenant
+            </li>
+            <li> <strong>Envoyer maintenant</strong> - Envoyer la notification push maintenant
             </li>
             <li>
-              <strong>Send now</strong> - Send the push notification now
-            </li>
-            <li>
-              <p><strong>Send later</strong> - Send later, by scheduling a date and time for notification delivery</p>
+              <p><strong>Envoyer plus tard</strong> - Envoyer plus tard, en programmant une date et une heure pour l'envoi des notifications</p>
             </li>
           </ul>
         </li>
         <li>
-          <p><strong>Notification type</strong> - Specifies the action when the user clicks on the notification</p>
-          <figure class="bcls-figure">
-            <img
-              class="bcls-image--no-border"
-              alt="Notification type"
-              src="/assets/images/registered-users/notifications/notification-type.png"
-            />
-          </figure>
+          <p><strong>Type de notification</strong> - Spécifie l'action lorsque l'utilisateur clique sur la notification</p> <figure class="bcls-figure">
+            <img               class="bcls-image--no-border"               alt="Type de notification"               src="/assets/images/registered-users/notifications/notification-type.png"             /> </figure>
         </li>
       </ul>
 
-    <h3>Additional input fields</h3>
-      <p>When you select a <strong>Notification type</strong> of either:</p>
+    <h3>Champs de saisie supplémentaires</h3>
+      <p>Lorsque vous sélectionnez un type de<strong> notification de l'un</strong> des types suivants:</p>
       <ul>
-        <li><strong>Open asset details</strong></li>
-        <li><strong>Open asset in player</strong></li>
-      </ul>
-      <figure class="bcls-figure">
-        <img
-          class="bcls-image--no-border"
-          alt="Select open asset"
-          src="/assets/images/registered-users/notifications/select-asset.png"
-        />
-      </figure>
-      <p>you will see the following additional input fields:</p>
-      <figure class="bcls-figure">
-        <img
-          class="bcls-image--no-border"
-          alt="Additional input fields"
-          src="/assets/images/registered-users/notifications/asset-fields.png"
-        />
-      </figure>
-      <p>To fill in these additional fields, do the following:</p>
+        <li><strong>Détails de l'actif ouvert</strong></li>
+        <li><strong>Ouvrir un actif dans le lecteur</strong></li>
+      </ul> <figure class="bcls-figure">
+        <img           class="bcls-image--no-border"           alt="Sélectionnez un actif ouvert"           src="/assets/images/registered-users/notifications/select-asset.png"         /> </figure>
+      <p>les champs de saisie supplémentaires suivants s'affichent:</p> <figure class="bcls-figure">
+        <img           class="bcls-image--no-border"           alt="Champs de saisie supplémentaires"           src="/assets/images/registered-users/notifications/asset-fields.png"         /> </figure>
+      <p>Pour remplir ces champs supplémentaires, procédez comme suit:</p>
       <ol class="bcls-tasklist-restart">
         <li>
-          <p>First, select an <strong>Asset type</strong>.</p>
-          <figure class="bcls-figure">
-            <img
-              class="bcls-image--no-border"
-              alt="Select asset type"
-              src="/assets/images/registered-users/notifications/select-asset-type.png"
-            />
-          </figure>
+          <p>Sélectionnez d'abord un type<strong> d'actif</strong>.</p> <figure class="bcls-figure">
+            <img               class="bcls-image--no-border"               alt="Sélectionnez le type d'actif"               src="/assets/images/registered-users/notifications/select-asset-type.png"             /> </figure>
         </li>
         <li>
-          <p>Then, select an <strong>Asset</strong> from your Beacon library.</p>
-          <figure class="bcls-figure">
-            <img
-              class="bcls-image--no-border"
-              alt="Select asset"
-              src="/assets/images/registered-users/notifications/select-asset-image.png"
-            />
-          </figure>
+          <p>Ensuite, sélectionnez un<strong> actif</strong> dans votre bibliothèque Beacon.</p> <figure class="bcls-figure">
+            <img               class="bcls-image--no-border"               alt="Sélectionnez un actif"               src="/assets/images/registered-users/notifications/select-asset-image.png"             /> </figure>
         </li>
         <li>
-         <p> The landscape or poster image associated with your asset will be automatically populated here. In the notification, the image will be cropped into a square.</p>
-          <figure class="bcls-figure">
-            <img
-              class="bcls-image--no-border"
-              alt="Asset image"
-              src="/assets/images/registered-users/notifications/asset-image.png"
-            />
-          </figure>
+         <p> L'image du paysage ou de l'affiche associée à votre actif sera automatiquement renseignée ici. Dans la notification, l'image sera recadrée en carré.</p> <figure class="bcls-figure">
+            <img               class="bcls-image--no-border"               alt="Image de l'actif"               src="/assets/images/registered-users/notifications/asset-image.png"             /> </figure>
         </li>
         <li>
-          <p>Select values for the following input fields:</p>
+          <p>Sélectionnez des valeurs pour les champs de saisie suivants:</p>
           <ul>
-            <li><strong>Display image in notification</strong> - Toggle to display the image in your notification</li>
-            <li><strong>Image orientation</strong> - Choose either the landscape or portrait image</li>
+            <li><strong>Afficher l'image dans la notification</strong> - Activez cette option pour afficher l'image dans votre notification</li>
+            <li><strong>Orientation de l'image</strong> - Choisissez l'image paysage ou portrait</li>
           </ul>
-          <p>You will see a preview of the image in your notification.</p>
-          <figure class="bcls-figure">
-            <img
-              class="bcls-image--no-border"
-              alt="Notification preview"
-              src="/assets/images/registered-users/notifications/notification-preview.png"
-            />
-          </figure>
-          <aside class="bcls-aside bcls-aside--information">The image is cropped into a square in the notification.</aside>
+          <p>Vous verrez un aperçu de l'image dans votre notification.</p> <figure class="bcls-figure">
+            <img               class="bcls-image--no-border"               alt="Aperçu des notifications"               src="/assets/images/registered-users/notifications/notification-preview.png"             /> </figure> <aside class="bcls-aside bcls-aside--information">L'image est recadrée dans un carré dans la notification.</aside>
         </li>
-      </ol>
-  </section>
+      </ol>  </section><section class="bcls-section">
+    <h2 id="Sending_a_notification">Envoi d'une notification</h2>
+    <p>Vous pouvez soit envoyer une notification de test maintenant, soit envoyer une notification push maintenant ou la programmer pour une date ultérieure.</p>
 
-  <section class="bcls-section">
-    <h2 id="Sending_a_notification">Sending a notification</h2>
-    <p>You can either send a test notification now, or you can send a push notification now or schedule it for a later time.</p>
-
-    <h3>Send test notification</h3>
-    <p>Send a test notification to your Beacon app now.</p>
-    <aside class="bcls-aside bcls-aside--tip">To enable testing mode on your device, navigate to the <strong>About this app</strong> view and tap the logo 5 times. Testing mode allows test notifications to be sent to this device. Restart the app to remove testing mode.</aside>
+    <h3>Envoyer une notification de test</h3>
+    <p>Envoyez une notification de test à votre application Beacon dès maintenant.</p> <aside class="bcls-aside bcls-aside--tip">Pour activer le mode test sur votre appareil, accédez à la<strong> vue</strong> À propos de cette application et appuyez 5 fois sur le logo. Le mode Test permet d'envoyer des notifications de test à cet appareil. Redémarrez l'application pour supprimer le mode de test.</aside>
     <ol class="bcls-tasklist-restart">
       <li>
-        <p>In the notifications screen, set the <strong>Delivery options</strong> field to <strong>Send test now</strong>.</p>
-        <figure class="bcls-figure">
-          <img
-            class="bcls-image--no-border"
-            alt="Send test notification"
-            src="/assets/images/registered-users/notifications/send-test.png"
-          />
-        </figure> 
+        <p>Dans l'écran des notifications, définissez le<strong> champ Options de</strong> livraison sur<strong> Envoyer le test maintenant</strong>.</p> <figure class="bcls-figure">
+          <img             class="bcls-image--no-border"             alt="Envoyer une notification de test"             src="/assets/images/registered-users/notifications/send-test.png"           /> </figure> 
       </li>
       <li>
-        <p> Click <strong>Send now</strong>.</p>
-         <figure class="bcls-figure">
-           <img
-             class="bcls-image--no-border"
-             alt="Send test now"
-             src="/assets/images/registered-users/notifications/send-test-screen.png"
-           />
-         </figure>
+        <p> Cliquez sur<strong> Envoyer maintenant</strong>.</p> <figure class="bcls-figure">
+           <img              class="bcls-image--no-border"              alt="Envoyer le test maintenant"              src="/assets/images/registered-users/notifications/send-test-screen.png"            /> </figure>
        </li>
     </ol>
 
-    <h3>Send notification now</h3>
-    <p>Send a push notification to your Beacon app now.</p>
+    <h3>Envoyer une notification maintenant</h3>
+    <p>Envoyez une notification push à votre application Beacon dès maintenant.</p>
     <ol class="bcls-tasklist-restart">
       <li>
-        <p>In the notifications screen, set the <strong>Delivery options</strong> field to <strong>Send now</strong>.</p>
-        <figure class="bcls-figure">
-          <img
-            class="bcls-image--no-border"
-            alt="Send now"
-            src="/assets/images/registered-users/notifications/send-now.png"
-          />
-        </figure>
+        <p>Dans l'écran des notifications, définissez le<strong> champ Options de</strong> livraison sur<strong> Envoyer maintenant</strong>.</p> <figure class="bcls-figure">
+          <img             class="bcls-image--no-border"             alt="Envoyez maintenant"             src="/assets/images/registered-users/notifications/send-now.png"           /> </figure>
       </li>
       <li>
-       <p> Click <strong>Send now</strong>.</p>
-        <figure class="bcls-figure">
-          <img
-            class="bcls-image--no-border"
-            alt="Send now"
-            src="/assets/images/registered-users/notifications/send-now-screen.png"
-          />
-        </figure>
+       <p> Cliquez sur<strong> Envoyer maintenant</strong>.</p> <figure class="bcls-figure">
+          <img             class="bcls-image--no-border"             alt="Envoyez maintenant"             src="/assets/images/registered-users/notifications/send-now-screen.png"           /> </figure>
       </li>
     </ol>
-    <h3>Send notification later</h3>
-    <p>Schedule a date and time to send your push notification later.</p>
+    <h3>Envoyer une notification ultérieurement</h3>
+    <p>Planifiez une date et une heure pour envoyer votre notification push ultérieurement.</p>
     <ol class="bcls-tasklist-restart">
       <li>
-        <p>In the notifications screen, set the <strong>Delivery options</strong> field to <strong>Send later</strong>.</p>
-        <figure class="bcls-figure">
-          <img
-            class="bcls-image--no-border"
-            alt="Schedule time to send"
-            src="/assets/images/registered-users/notifications/send-later.png"
-          />
-        </figure>
+        <p>Dans l'écran des notifications, définissez le<strong> champ Options de</strong> livraison sur<strong> Envoyer plus tard</strong>.</p> <figure class="bcls-figure">
+          <img             class="bcls-image--no-border"             alt="Planifier l'heure d'envoi"             src="/assets/images/registered-users/notifications/send-later.png"           /> </figure>
       </li>
-      <li><p>Set the date and time for your notification delivery.</p></li>
+      <li><p>Définissez la date et l'heure d'envoi de vos notifications.</p></li>
       <li>
-        <p>Click <strong>Schedule</strong>.</p>
-        <figure class="bcls-figure">
-          <img
-            class="bcls-image--no-border"
-            alt="Schedule notification"
-            src="/assets/images/registered-users/notifications/schedule-screen.png"
-          />
-        </figure>
+        <p>Cliquez sur<strong> Planifier</strong>.</p> <figure class="bcls-figure">
+          <img             class="bcls-image--no-border"             alt="Notification de planification"             src="/assets/images/registered-users/notifications/schedule-screen.png"           /> </figure>
       </li>
       
-    </ol>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Managing_notifications">Managing notifications</h2>
-    <p>Once your notification has been scheduled, it will appear in the notification list.</p>
-    <figure class="bcls-figure">
-      <img
-        class="bcls-image--no-border"
-        alt="Notification list"
-        src="/assets/images/registered-users/notifications/notification-list.png"
-      />
-    </figure>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="Managing_notifications">Gérer les notifications</h2>
+    <p>Une fois votre notification programmée, elle apparaîtra dans la liste des notifications.</p> <figure class="bcls-figure">
+      <img         class="bcls-image--no-border"         alt="Liste des notifications"         src="/assets/images/registered-users/notifications/notification-list.png"       /> </figure>
 
     <h3>Actions</h3>
     <ul>
-      <li>Click <strong>Create notification</strong> to send or schedule a push notification.</li>
-      <li>Enter text in <strong>Search notifications</strong> to search the notifications list.</li>
+      <li>Cliquez sur<strong> Créer une notification</strong> pour envoyer ou planifier une notification push.</li>
+      <li>Saisissez du texte dans<strong> Rechercher des notifications</strong> pour effectuer une recherche dans la liste des notifications.</li>
     </ul>
 
-    <h4>Columns</h4>
+    <h4>Colonnes</h4>
     <ul>
-      <li><strong>Notification</strong> - Click the notification name to edit the notification</li>
+      <li><strong>Notification</strong>: cliquez sur le nom de la notification pour modifier la notification</li>
       <li>
-        <p><strong>Status</strong> - The current status of the notification</p>
+        <p><strong>Status</strong>: état actuel de la notification</p>
         <ul>
-          <li><img class="bcls-image-no-border" alt="status scheduled" src="/assets/images/registered-users/notifications/status-scheduled.png"/> - Scheduled</li>
-          <li><img class="bcls-image-no-border" alt="status sent" src="/assets/images/registered-users/notifications/status-sent.png"/> - Sent</li>
-          <li><p><img class="bcls-image-no-border" alt="status failed" src="/assets/images/registered-users/notifications/status-failed.png"/> - Failed</p></li>
+          <li><img class="bcls-image-no-border" alt="statut programmé" src="/assets/images/registered-users/notifications/status-scheduled.png"/> - Programmé</li>
+          <li><img class="bcls-image-no-border" alt="statut envoyé" src="/assets/images/registered-users/notifications/status-sent.png"/> - Envoyé</li>
+          <li><p><img class="bcls-image-no-border" alt="échec de l'état" src="/assets/images/registered-users/notifications/status-failed.png"/> - Échoué</p></li>
 
         </ul>
       </li>
-      <li><strong>Send date</strong> - The date that the notification is scheduled to be sent</li>
+      <li><strong>Date d'envoi</strong>: date à laquelle la notification doit être envoyée</li>
       <li>
-       <p><strong>Type</strong> - Notification type</p>
+       <p><strong>Type</strong>: type de notification</p>
        <ul>
-        <li><strong>Actual</strong> - Real notification sent to app users</li>
-        <li><p><strong>Test</strong> - Test notification sent to app, viewable in test mode only</p></li>
+        <li><strong>Réel</strong> - Notification réelle envoyée aux utilisateurs de l'application</li>
+        <li><p><strong>Test</strong> - Notification de test envoyée à l'application, visible uniquement en mode test</p></li>
        </ul>
       </li>
-      <li><strong>Delete</strong> - Click <img class="bcls-image-no-border" alt="delete icon" src="/assets/images/registered-users/notifications/delete.png"/> to delete the notification</li> 
-    </ul>
-
-    
-  </section>
-  
-
-</article>
+      <li><strong>Supprimer</strong> - Cliquez sur <img class="bcls-image-no-border" alt="icône de suppression" src="/assets/images/registered-users/notifications/delete.png"/> pour supprimer la notification</li> 
+    </ul>   </section></article>

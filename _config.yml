@@ -26,7 +26,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 # baseurl: "" # the subpath of your site, e.g. /blog
 site_url: 'https://fr.beacon-help.support.brightcove.com'
 site_domain: 'fr.beacon-help.support.brightcove.com'
-
+language: 'fr'
 # local server (for "jekyll serve") will be localhost:{PORT number below}
 port: 4002
 

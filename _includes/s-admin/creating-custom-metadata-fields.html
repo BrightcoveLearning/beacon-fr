@@ -1,0 +1,117 @@
+<article class="bcls-article">
+  <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section"> {% if site.product == Video Cloud Studio-fr/ %}
+    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="731140813001">&nbsp;</div> <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script> {% endif %}
+    <p>Les métadonnées personnalisées peuvent être utilisées pour ajouter des champs de métadonnées supplémentaires à vos vidéos. Des champs personnalisés sont ajoutés dans les paramètres de votre compte. Une fois les champs personnalisés ajoutés, des valeurs peuvent être attribuées aux champs à l'aide du module Médias.</p>  </section><section class="bcls-section">
+    <h2 id="newUI">Création de champs personnalisés</h2>
+    <p>Pour créer des champs personnalisés, procédez comme suit.</p> <aside class="bcls-aside bcls-aside--information">Remarque: Après avoir apporté des modifications aux champs personnalisés, vous devrez peut-être vider le cache de votre navigateur et recharger la page pour voir les modifications.</aside>
+    <ol class="bcls-tasklist-restart">
+      <li>Connectez-vous à {{site.product}}.</li>
+      <li>Ouvrez le<strong> module</strong> Admin, puis<strong> Video Fields</strong>. Notez que vous devez être administrateur de compte pour accéder au menu Admin.</li>
+      <li>La page Video Fields (Champs vidéo) affiche vos champs personnalisés et tous les champs de métadonnées vidéo standard. Passez en revue les champs standard avant de créer de nouveaux champs personnalisés. Cela vous évitera de créer des champs personnalisés lorsqu'un champ standard capable de faire le travail existe déjà. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Page Champs vidéo" src="/assets/images/s-admin-img/node1050-custom-fields-overview.png" /></figure>
+      </li>
+      <li>Cliquez sur<span class="button-blue"> Ajouter un champ personnalisé</span>. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Ajout d'un champ" src="/assets/images/s-admin-img/node1050-new-custom-field.png" /></figure>
+      </li> <aside class="bcls-aside bcls-aside--information">Remarque: Il n'est pas possible de définir une valeur par défaut pour un champ personnalisé.</aside>
+      <li>Saisissez un<strong> nom complet</strong>. Cela apparaîtra comme étiquette pour le champ dans les modules Upload et Media. Un nom<strong> interne</strong> sera automatiquement créé pour le champ en fonction du nom complet. Le nom interne est utilisé lors de l'accès au champ par programme à l'aide de l'une des API Brightcove. Le nom interne peut être modifié, mais le nom interne ne peut pas inclure d'espaces, de caractères codés sur deux octets ou de ponctuation.
+        <p>Notez que les noms internes ne comportent jamais d'espaces et qu'ils sont tous en minuscules. Ils sont généralement formés en mettant le nom complet en minuscules et en remplaçant les espaces par des caractères de soulignement.</p>
+        <p>Par exemple, si vous entrez<code translate="No"> Mon champ</code> comme nom d'affichage, le nom interne sera<code translate="No"> my_field</code>.</p> <aside class="bcls-aside bcls-aside--information">Remarque: Certains mots réservés ne<strong> doivent pas</strong> être utilisés comme noms internes de champs personnalisés (le nom d'affichage n'a pas d'importance). Consultez la<a href="#reserved"> section Noms</a> réservés pour plus d'informations.</aside>
+      </li>
+      <li>Sélectionnez un<strong> type</strong> pour le champ.
+        <ul>
+          <li><strong>Texte</strong> - L'utilisateur peut saisir n'importe quoi dans le champ jusqu'à 1 024 caractères codés sur un octet (ou 512 caractères codés sur deux octets).</li>
+          <li><strong>Liste</strong>: l'utilisateur sélectionnera dans une liste de valeurs. Les listes ne peuvent pas comporter plus de 300 valeurs possibles et chaque valeur de la liste ne peut pas comporter plus de 100 caractères.</li>
+        </ul>
+      </li>
+      <li>Saisissez une<strong> description</strong>. Le champ de description apparaît comme un indice dans l'interface Studio.</li>
+      <li>Si le champ personnalisé est obligatoire, cochez la case<strong> Make this Field Required</strong>.</li>
+      <li>Si votre type de champ est<strong> Liste</strong>, entrez une liste de valeurs séparées par des virgules, puis cliquez sur<span class="button-blue"> Ajouter à la liste</span>. <aside class="bcls-aside bcls-aside--information">Remarques:
+          <ol>
+            <li>Les valeurs ne doivent pas contenir de guillemets (exemple: Animaux, oiseaux, poissons).</li>
+            <li>Aucune valeur ne peut contenir de virgule&nbsp;; toutes les virgules seront traitées comme des séparateurs de valeurs différentes.</li>
+          </ol>  </aside><figure class="bcls-figure"><img class="bcls-image--no-border" alt="Ajout d'un champ" src="/assets/images/s-admin-img/node1050-new-custom-field-added.png" /></figure> <aside class="bcls-aside bcls-aside--information">Remarque: Si les valeurs des champs personnalisés comportent moins de trois caractères, vous<strong> ne</strong> pourrez pas rechercher de vidéos basées sur cette valeur, que ce soit dans Studio ou à l'aide de l'API CMS. Par exemple, si vous souhaitez créer un champ personnalisé de type booléen,<code translate="No"> isfeatureitem</code>, définissez la liste de valeurs<code translate="No"> true</code> et<code translate="No"> false</code>, et non <code translate="No"> oui</code> et<code translate="No"> non</code>&nbsp;; si vous utilisez ces dernières valeurs, vous<strong> ne</strong> pourrez pas trouver de vidéos à l'aide de la recherche<code translate="No"> isfeatureitem:no</code> .</aside>
+      </li>
+      <li>Cliquez sur<span class="button-blue"> Enregistrer le champ</span> pour enregistrer les modifications. Cliquez sur<span class="button-blue"> Enregistrer et en ajouter un autre</span> pour enregistrer le champ et commencer à en créer un autre.</li>
+    </ol>
+    <p>Les champs personnalisés que vous créez sont disponibles immédiatement et seront visibles dans le module Médias.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-admin-img/node1050-media-module.png" /></figure>
+    <p>Il est possible de créer jusqu'à 10 champs personnalisés. Si vous avez besoin de plus de 10 champs, cliquez sur le lien Vous<strong> avez besoin de plus de champs&nbsp;? </strong>dans la page Video Fields (Champs vidéo) pour contacter le support client de Brightcove pour toute demande d'informations supplémentaires. Les éditeurs sont limités à 50 champs personnalisés.</p>  </section><section class="bcls-section">
+    <h2 id="edit">Modification des valeurs de liste</h2>
+    <p>Vous pouvez ajouter des valeurs supplémentaires à un champ personnalisé de type Liste. Cliquez sur le lien du nom du champ personnalisé, ajoutez les valeurs, puis cliquez sur<strong> Ajouter à la liste</strong>. Lorsque vous avez terminé, cliquez sur<strong> Enregistrer le champ</strong>.</p>  </section><section class="bcls-section">
+    <h2 id="delete">Supprimer des valeurs de liste</h2>
+    <p>Vous pouvez ajouter supprimer des valeurs existantes d'un champ personnalisé de type Liste. Cliquez sur le lien du nom du champ personnalisé, cliquez sur l'icône de suppression (<img alt="" src="/assets/images/s-admin-img/node1050-delete-icon.png" />) associée à la valeur, puis cliquez sur<strong> Enregistrer le champ</strong>.</p>
+    <p>Lorsqu'une valeur de liste est supprimée, toutes les vidéos auxquelles cette valeur a été précédemment attribuée la conservent. Toutefois, si une vidéo avec la valeur supprimée est éditée, la valeur sera effacée et une nouvelle valeur devra être sélectionnée.</p>  </section><section class="bcls-section">
+    <h2 id="remove">Suppression des champs personnalisés d'un compte</h2>
+    <p>Pour supprimer un champ personnalisé d'un compte, cliquez sur l'icône de suppression (<img alt="" src="/assets/images/s-admin-img/node1050-delete-icon.png" />) associée au nom du champ personnalisé.</p>  </section><section class="bcls-section">
+    <h2 id="reserved">Noms réservés</h2>
+    <p>Certains mots réservés ne<strong> doivent pas</strong> être utilisés comme noms internes de champs personnalisés (le nom d'affichage n'a pas d'importance). Un nom courant est<em> catégorie</em>. Si vous utilisez un nom réservé comme nom interne pour un champ personnalisé, les recherches effectuées sur ce champ ne donneront aucun résultat. Si vous disposez déjà d'un champ personnalisé nommé qui utilise un nom réservé, vous devez le<a href="#remove"> supprimer</a> et le remplacer par un autre nom ou contacter le support de Brightcove pour obtenir des conseils.</p>
+    <p>Les éléments suivants ne doivent pas être utilisés comme noms de champs personnalisés internes.</p>
+    <table class="bcls-table">
+      <tbody class="bcls-table__body">
+        <tr>
+          <td style="text-align:center;width:215px;" translate="No">catégorie</td>
+          <td style="text-align:center;width:215px;" translate="No">achevée</td>
+          <td style="text-align:center;width:215px;" translate="No">created_at</td>
+        </tr>
+        <tr>
+          <td style="text-align:center;" translate="No">date de création</td>
+          <td style="text-align:center;" translate="No">custom_fields</td>
+          <td style="text-align:center;" translate="No">importation de données</td>
+        </tr>
+        <tr>
+          <td style="text-align:center;" translate="No">discriminateur</td>
+          <td style="text-align:center;" translate="No">nomaffichage</td>
+          <td style="text-align:center;" translate="No">displayname_analyzed</td>
+        </tr>
+        <tr>
+          <td style="text-align:center;" translate="No">displayname_tokenized</td>
+          <td style="text-align:center;" translate="No">date de fin</td>
+          <td style="text-align:center;" translate="No">état de l'article</td>
+        </tr>
+        <tr>
+          <td style="text-align:center;" translate="No">date de dernière modification</td>
+          <td style="text-align:center;" translate="No">mediaid</td>
+          <td style="text-align:center;" translate="No">nom</td>
+        </tr>
+        <tr>
+          <td style="text-align:center;" translate="No">playable_now</td>
+          <td style="text-align:center;" translate="No">joue au total</td>
+          <td style="text-align:center;" translate="No">joue la semaine de fin</td>
+        </tr>
+        <tr>
+          <td style="text-align:center;" translate="No">published_at</td>
+          <td style="text-align:center;" translate="No">date de publication</td>
+          <td style="text-align:center;" translate="No">ID de l'éditeur</td>
+        </tr>
+        <tr>
+          <td style="text-align:center;" translate="No">ID de référence</td>
+          <td style="text-align:center;" translate="No">referenceid_analyzed</td>
+          <td style="text-align:center;" translate="No">prévu</td>
+        </tr>
+        <tr>
+          <td style="text-align:center;" translate="No">referenceid_analyzed</td>
+          <td style="text-align:center;" translate="No">schedule.ends_at</td>
+          <td style="text-align:center;" translate="No">schedule.starts_at</td>
+        </tr>
+        <tr>
+          <td style="text-align:center;" translate="No">prévu</td>
+          <td style="text-align:center;" translate="No">texte de recherche</td>
+          <td style="text-align:center;" translate="No">searchtext_analyzed</td>
+        </tr>
+        <tr>
+          <td style="text-align:center;" translate="No">date de début</td>
+          <td style="text-align:center;" translate="No">étiquette</td>
+          <td style="text-align:center;" translate="No">balises</td>
+        </tr>
+        <tr>
+          <td style="text-align:center;" translate="No">texte</td>
+          <td style="text-align:center;" translate="No">état</td>
+          <td style="text-align:center;" translate="No">type_vidéo</td>
+        </tr>
+      </tbody>
+    </table>  </section><section class="bcls-section">
+    <h2 id="code">Accès par programme aux champs personnalisés</h2>
+    <p>Les champs personnalisés sont accessibles par programmation à l'aide de l'une des API Brightcove. Les documents destinés aux développeurs suivants fournissent plus d'informations.</p>
+    <ul>
+      <li><a href="https://player.support.brightcove.com/references/video-metadata-mediainfo.html#displaytagsfields">Obtenir des champs personnalisés pour une vidéo dans un lecteur</a></li>
+      <li><a href="https://apis.support.brightcove.com/cms/references/reference.html#api-videoGroup-Get_Custom_Fields">Obtenir la liste des champs personnalisés pour un compte</a></li>
+      <li><a href="https://apis.support.brightcove.com/cms/references/reference.html#api-videoGroup-Get_Video_by_ID_or_Reference_ID">Utilisation de l'API CMS</a></li>
+      <li><a href="https://apis.support.brightcove.com/playback/references/reference_v1.html">Utilisation de l'API Playback</a></li>
+    </ul>   </section></article>

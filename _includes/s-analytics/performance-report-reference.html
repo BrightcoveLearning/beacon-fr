@@ -1,0 +1,220 @@
+<article class="bcls-article">
+  <h1>{{page.title}}</h1> <summary>{{page.description}}</summary> <section class="bcls-section"> {% if site.product_short == Video Cloud-fr/ %}
+    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="2350861666001">&nbsp;</div> <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script> {% endif %}
+    <p>Les données d'analyse sont envoyées automatiquement par les lecteurs Brightcove, y compris celles fournies par les SDK Native Player. Si vous<strong> n'</strong>utilisez pas de lecteur Brightcove pour diffuser {{site.product_short}} vidéos, vous devez instrumenter le lecteur que vous utilisez pour envoyer les données au collecteur de données. Voir la<a href="https://apis.support.brightcove.com/data-collection/overview-data-collection-api-v2.html"> vue d'ensemble: </a>Rubrique API de collecte de données pour plus de détails.</p>
+    <p>Pour afficher le rapport Performance, ouvrez le module Analytics et sélectionnez<span class="BCL_command"><strong> Performances dans le</strong></span> menu de navigation de gauche. Le rapport affichera un graphique montrant le nombre total de visionnages de vidéos par jour pour la période sélectionnée. La liste déroulante peut être utilisée pour sélectionner une autre mesure:</p>
+    <ul>
+      <li><strong>Vues de la vidéo</strong>: nombre de fois qu'une vidéo a commencé à être lue, enregistré au démarrage du flux (n'inclut pas le retour en arrière ou la rediffusion)&nbsp;; il ne s'agit pas d'une mesure des spectateurs individuels&nbsp;; pour les vidéos comportant des publicités pre-roll, une vue n'est pas enregistrée tant que la vidéo n'a pas commencé à être lue</li>
+      <li><strong>Impressions vidéo</strong>: nombre de fois qu'une vidéo a été chargée et prête à être utilisée</li>
+      <li> <strong>Demandes de lecteur</strong>: nombre de fois où la lecteur a été demandée. Les demandes de lecteur sont générées par:
+        <ul>
+          <li>le spectateur clique initialement sur le bouton de lecteur</li>
+          <li>le spectateur interrompt la vidéo et clique sur Play pour reprendre la lecteur</li>
+          <li>un événement de lecteur automatique</li>
+          <li>le spectateur frotte ou clique sur la chronologie de lecteur (ce qui interrompt et redémarre automatiquement la vidéo)</li>
+        </ul>
+      </li>
+      <li><strong>Taux de lecteur</strong>: pourcentage de vidéos qui ont été chargées et qui ont été réellement lues (visionnages/impressions vidéo)</li>
+      <li><strong>Viewed Minutes</strong>: nombre de minutes pendant lesquelles la vidéo a été visionnée</li>
+      <li><strong></strong>Score d'engagement: pourcentage moyen regardé par vidéo vue (calculé en additionnant tout le pourcentage regardé divisé par le nombre de vues de la vidéo)</li>
+      <li><strong>Visionneuses uniques quotidiennes</strong> - Calculé en utilisant l'adresse IP et l'agent utilisateur des spectateurs. Brightcove a décidé de ne pas utiliser de cookie tiers car les cookies sont de plus en plus bloqués par les navigateurs. Daily Unique Viewers est disponible au niveau du compte ou de la vidéo&nbsp;; cette mesure n'est pas disponible lors du filtrage par vidéo (ou autre). Brightcove permet également de baser les utilisateurs uniques sur la valeur que vous offrez au lieu de leur adresse IP. Pour plus d'informations, consultez le document destiné aux<a href="https://apis.support.brightcove.com/data-collection/overview-data-collection-api-v2.html#uniqueuser"> développeurs</a> Analytics Event Tracking.</li>
+      <li><strong>Bande passante vidéo</strong>: inclut la bande passante pour les vidéos uniquement. Notez que les données de bande passante sont retardées de 3 à 5 jours.</li>
+      <li><strong>Bande passante totale</strong>: inclut la bande passante pour les vidéos, les images et les charges de lecteur. Notez que les données de bande passante sont retardées de 3 à 5 jours.</li>
+    </ul>
+    <p>Par défaut, le rapport affiche les données de performance pour tous les types de flux. Si votre compte est activé pour Brightcove Live, vous pouvez choisir d'afficher les données de performance de toutes les vidéos, ressources VOD ou ressources en direct. Cliquez sur la <strong></strong>pastille Stream type pour faire une sélection.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="commutateur de rapports" src="/assets/images/s-analytics-img/node10104-select-all-vod-live.png" /></figure> <aside class="bcls-aside bcls-aside--information">Remarques:
+      <ul>
+        <li>Les rapports Analytics incluent des analyses pour les vidéos supprimées de votre compte. Vous ne pouvez pas rechercher de vidéos supprimées dans le module Analytics pour voir un rapport sur une vidéo supprimée en particulier. Pour obtenir un tel rapport, vous devez connaître l'ID de la vidéo supprimée et utiliser l'API<a href="https://docs.brightcove.com/analytics-api/v1/doc/index.html"> Analytics</a> pour générer le rapport.</li>
+        <li>Il faut jusqu'à 3 jours pour que les données sur les spectateurs uniques quotidiens et les données de bande passante vidéo soient disponibles.</li>
+        <li>Le visionnage d'une vidéo n'est pas le même que le nombre de vues à x% indiqué dans le rapport d'engagement. Une vue vidéo est prise en compte lorsqu'une vidéo commence à être lue pour la première fois. Les vues à 1&nbsp;% sont enregistrées lorsque le premier pourcentage est regardé. La différence ici est que si le premier pourcentage est regardé plusieurs fois (si la vidéo est configurée pour être rejouée automatiquement, par exemple), le nombre augmente, tandis qu'une vidéo vue est comptée lorsque la vidéo commence à être lue pour la première fois, mais n'est pas compté sur une rediffusion (sauf si l'utilisateur recharge la page ou regarde une autre vidéo dans la liste de lecteur, etc.).</li>
+        <li>Les demandes de rapport simultanées au sein d'un même compte seront exécutées en série. Si les rapports comportent de grandes plages de dates et que de nombreux champs sont sélectionnés, il peut y avoir un délai avant que tous les résultats ne soient renvoyés. Une bonne alternative consiste à planifier des rapports volumineux.</li>
+        <li>Avec les expériences<a href="https://gallery.support.brightcove.com/experiences/inpage/overview-creating-editing-and-publishing-page-experiences.html"> In-Page</a>, même si la ou les vidéos semblent être chargées dans un lecteur, les vidéos ne sont chargées que lorsque le spectateur clique sur le bouton de lecteur superposé. Par conséquent, les impressions vidéo ne seront pas enregistrées par le module Analytics tant qu'un spectateur n'aura pas lu une vidéo.</li>
+      </ul> </aside>
+    <p>Le sélecteur de rapports situé sous le graphique peut être utilisé pour passer rapidement à un autre rapport.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="commutateur de rapports" src="/assets/images/s-analytics-img/node10104-report-switcher.png" /></figure>
+    <p>La liste déroulante à droite du sélecteur de rapports peut être utilisée pour sélectionner une dimension de rapport. Les dimensions suivantes sont disponibles avec le rapport de performance:</p>
+    <ul>
+      <li><a href="#video">Vidéo</a></li>
+      <li><a href="#player">Joueur</a></li>
+      <li><a href="#traffic">Source du trafic</a></li>
+      <li><a href="#domain">Afficher le domaine</a></li>
+      <li><a href="#country">Pays</a></li>
+      <li><a href="#device">Appareil</a></li>
+      <li><a href="#devicetype">Type d'appareil</a></li>
+      <li><a href="#deviceos">OS de l'appareil</a></li>
+      <li><a href="#deviceman">Fabricant de l'appareil</a></li>
+      <li><a href="#browser">Type de navigateur</a></li>
+      <li><a href="#day">Journée</a></li>
+    </ul>
+    <p>Notez que les dimensions disponibles changeront en fonction du rapport sélectionné. Le bas du rapport comporte des commandes qui vous permettent de sélectionner le nombre de lignes à afficher et de naviguer vers d'autres pages.</p>  </section><section class="bcls-section">
+    <h2 id="compare">Comparaison avec la période précédente</h2>
+    <p>Activez la case à<strong> cocher</strong> Comparer à la période précédente pour ajouter un graphique en pointillés superposé représentant les données de la période précédente.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Comparaison de la période précédente" src="/assets/images/s-analytics-img/node10104-compare-previous.png" /></figure>
+    <p>La période précédente est basée sur ce qui est actuellement sélectionné pour la plage de dates du rapport. Par exemple, si vous sélectionnez une plage de dates des 7 derniers jours, la période précédente sera celle d'il y a 2 semaines. Lorsque vous comparez les tendances sur plusieurs semaines, il est préférable de sélectionner des plages de dates qui couvrent des semaines complètes. Par exemple, si vous sélectionnez une date commençant un lundi, définissez la date de fin sur un dimanche. Si la date de début est un vendredi, définissez la date de fin sur un jeudi. Vous pouvez également passer la souris sur les barres et la ligne pointillée pour voir la date et les valeurs correspondantes.</p>  </section><section class="bcls-section">
+    <h2 id="details">Détails du rapport de performance</h2>
+    <p>La première colonne qui apparaît dans le corps du rapport varie en fonction de la dimension de rapport sélectionnée (nom de la vidéo, nom du lecteur
+, pays, type d'appareil, etc.). Tous les rapports affichent les données suivantes:</p>
+    <ul>
+      <li><strong>Vues vidéo</strong>: nombre de fois qu'une vidéo a commencé à être lue, enregistré au démarrage du flux (n'inclut pas le retour en arrière ou la rediffusion)&nbsp;; il ne s'agit pas d'une mesure des spectateurs individuels</li>
+      <li><strong>Impressions vidéo</strong>: nombre de fois où la vidéo a été chargée dans un lecteur et prête à être utilisée</li>
+      <li><strong>Demandes de lecteur</strong>: nombre de fois où la lecteur a été demandée par un utilisateur qui a appuyé sur le bouton de lecteur ou par un événement de lecteur automatique</li>
+      <li><strong>Taux de lecteur</strong>: pourcentage d'utilisateurs qui ont lu la vidéo après son chargement (nombre de vues de la vidéo divisé par le nombre d'impressions vidéo)</li>
+      <li><strong>Viewed Minutes</strong>: nombre total de minutes pendant lesquelles la vidéo a été visionnée</li>
+      <li><strong></strong>Score d'engagement: pourcentage moyen regardé par vidéo visionnée (calculé en additionnant tout le pourcentage regardé divisé par le nombre de vues de vidéos)</li>
+    </ul>
+    <p>Les<strong> dimensions</strong> Vidéo<strong> et</strong> Jour affichent également les spectateurs uniques<strong> quotidiens,</strong> qui sont la moyenne des spectateurs uniques quotidiens pour la période sélectionnée. Ceci est calculé à l'aide de l'adresse IP et de l'agent utilisateur des visionneuses.</p>
+    <h3 id="traffic_sources">Sources de trafic</h3>
+    <p>Lors de l'affichage des performances par source de trafic, les sources de trafic possibles sont les suivantes:</p>
+    <ul>
+      <li><strong>Parrainage</strong> - L'utilisateur a suivi un lien vers la vidéo</li>
+      <li><strong>Direct</strong> - L'utilisateur a tapé le lien directement ou le référent n'a pas pu être déterminé</li>
+      <li><strong>Recherche sécurisée</strong> - L'utilisateur s'est connecté avec un compte Google, a effectué une recherche et a cliqué sur un résultat (payant ou organique&nbsp;; les informations de recherche ne sont pas incluses dans ce cas)</li>
+      <li><strong>Recherche organique</strong> - L'utilisateur a effectué une recherche et a cliqué sur un résultat pour accéder à la vidéo</li>
+      <li><strong>Recherche payante</strong> - L'utilisateur a effectué une recherche et a cliqué sur un résultat payant pour accéder à la vidéo</li>
+    </ul>
+    <h3 id="device_types">Types d'appareils</h3>
+    <p>Plusieurs rapports de performance permettent de les visualiser par type d'appareil. Les types d'appareils possibles sont:</p>
+    <ul>
+      <li><strong>Ordinateur de bureau</strong> - Comprend les ordinateurs de bureau et portables</li>
+      <li><strong>Tablette</strong> - Comprend les iPads, les tablettes Android, etc.</li>
+      <li><strong>Mobile</strong> - Téléphones portables</li>
+      <li><strong>Téléviseur connecté/console de jeux/appareil compagnon</strong> - Comprend les téléviseurs intelligents, les décodeurs et les consoles de jeux</li>
+      <li><strong>Autre</strong> - Pour les agents utilisateurs qui ne sont mappés à aucun des éléments ci-dessus</li>
+    </ul>
+    <h3 id="device_os">Systèmes d'exploitation des appareils</h3>
+    <p>Plusieurs rapports de performance permettent de les visualiser par système d'exploitation de l'appareil. Les systèmes d'exploitation possibles sont:</p>
+    <ul>
+      <li>Android</li>
+      <li>Bada</li>
+      <li>iOS</li>
+      <li>Linux</li>
+      <li>OS X</li>
+      <li>JANTE</li>
+      <li>Symbian</li>
+      <li>Système d'exploitation Web</li>
+      <li>Windows</li>
+      <li>Autre - pour les agents utilisateurs qui ne sont mappés à aucun des éléments ci-dessus</li>
+    </ul>
+    <h3 id="device_manufacturer">Fabricants d'appareils</h3>
+    <p>Plusieurs rapports de performance permettent de les visualiser par système d'exploitation de l'appareil. Les fabricants d'appareils possibles sont:</p>
+    <ul>
+      <li>Apple</li>
+      <li>Amazon</li>
+      <li>ASUS</li>
+      <li>Blackberry</li>
+      <li>Fujitsu</li>
+      <li>Google</li>
+      <li>Huawei</li>
+      <li>HTC</li>
+      <li>Kyocera</li>
+      <li>Lenovo</li>
+      <li>LG</li>
+      <li>Micromax</li>
+      <li>Microsoft</li>
+      <li>Nintendo</li>
+      <li>Panasonic</li>
+      <li>Roku</li>
+      <li>Samsung</li>
+      <li>Sharp</li>
+      <li>Sony</li>
+      <li>Vizio</li>
+      <li>ZTE</li>
+      <li>Autre: lorsque le fabricant de l'appareil ne peut pas être déterminé. Parmi les cas courants d'autres cas signalés, mentionnons:
+        <ul>
+          <li>Les agents utilisateurs du navigateur de bureau n'indiquent pas le fabricant</li>
+          <li>La solution tierce utilisée par Brightcove pour identifier l'appareil ne contient pas de détails sur l'appareil</li>
+        </ul>
+      </li>
+    </ul>
+    <h3 id="browser_type">Types de navigateurs</h3>
+    <p>Plusieurs rapports sur les performances permettent de les afficher par type de navigateur. Les types de navigateurs possibles sont:</p>
+    <ul>
+      <li>Chrome</li>
+      <li>Edge</li>
+      <li>Firefox</li>
+      <li>Internet Explorer</li>
+      <li>Opéra</li>
+      <li>Safari</li>
+      <li>Tous les autres - pour les agents utilisateurs qui ne sont mappés à aucun des éléments ci-dessus</li>
+    </ul> <aside class="bcls-aside bcls-aside--information">Remarque: Pour obtenir la liste complète de tous les termes et définitions d'Analytics, consultez le Glossaire<a href="/analytics/analytics-module-ui-glossary.html"> Analytics</a>.</aside> </section> <section class="bcls-section">
+    <h2 id="video">Visualisation des analyses vidéo</h2>
+    <p>Lorsque la<strong> dimension</strong> Vidéo est sélectionnée, un graphique affiche le nombre de visionnages de vidéos par jour pendant la période sélectionnée. Le corps du rapport répertorie le nom de la vidéo, l'ID de la vidéo, sa durée et les détails de performance de chaque vidéo.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Rapport de performance du compte" src="/assets/images/s-analytics-img/node10104-account-performance.png" /></figure>
+    <p>Cliquez sur le lien de l'une des vidéos pour afficher les performances de cette vidéo.</p> <aside class="bcls-aside bcls-aside--information">Remarque: Si une vidéo qui ne se trouve pas dans votre bibliothèque {{site.product_short}} est lue dans un lecteur {{site.product_short}} (par exemple, une ressource distante ou la vidéo d'espace réservé que vous voyez dans le lecteur d'aperçu du module Players),<strong> Autre/Tiers</strong> sera affiché sans ID vidéo associé.</aside> </section> <section class="bcls-section">
+    <h2 id="player">Affichage des analyses des lecteur
+s</h2>
+    <p>Lorsque la<strong> dimension</strong> Lecteur est sélectionnée, un graphique affiche le nombre de visionnages de vidéos par jour pour la période sélectionnée. Le corps du rapport répertorie les détails des performances de chaque lecteur
+.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Performance des lecteur
+s" src="/assets/images/s-analytics-img/node10104-player-performance.png" /></figure>
+    <p>Cliquer sur le lien de l'un des lecteur
+s affichera la performance de ce lecteur
+.</p> <aside class="bcls-aside bcls-aside--information">Remarque: Avant février 2016, les lecteurs utilisés dans les applications créées à l'aide du SDK de lecteur Brightcove pour iOS ou Android s'affichaient avec un nom de lecteur Lecture<em><strong> personnalisée-fr/ ou Lecture native-fr/</strong></em>. À partir de février 2016, ces lecteur
+s peuvent désormais être identifiés à l'aide des valeurs de source et de destination spécifiées dans l'application. Pour plus d'informations, consultez la documentation du<a href="https://sdks.support.brightcove.com/ios/analytics/sending-brightcove-analytics-native-sdk-ios.html"> SDK</a> iOS<a href="https://sdks.support.brightcove.com/android/analytics/sending-brightcove-analytics-native-sdk-android.html"> ou</a> Android.</aside> </section> <section class="bcls-section">
+    <h2 id="traffic">Affichage de la source d'analyse du trafic</h2>
+    <p>Lorsque la<strong> dimension</strong> Source du trafic est sélectionnée, un graphique affiche le nombre de visionnages de vidéos par jour pour la période sélectionnée. Le corps du rapport affiche les données de performance pour chaque source de<a href="#traffic_sources"> trafic</a>. Seules les catégories contenant des données comprises dans la période sélectionnée seront affichées.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Rapport de performance du trafic" src="/assets/images/s-analytics-img/node10104-traffic-performance.png" /></figure>
+    <p>Cliquez sur le lien de l'une des sources de trafic pour afficher les performances de la source de trafic sélectionnée.</p>  </section><section class="bcls-section">
+    <h2 id="domain">Affichage des analyses du domaine d'affichage</h2>
+    <p>Lorsque la<strong> dimension Domaine</strong> d'affichage est sélectionnée, un graphique affiche le nombre de visionnages de vidéos par jour pour la période sélectionnée. Le corps du rapport affiche les données de performance pour les domaines d'affichage. Le domaine d'affichage est le domaine sur lequel se trouvait le spectateur lorsqu'il a regardé une vidéo.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Rapport de performance du trafic" src="/assets/images/s-analytics-img/node10104-display-domain-performance.png" /></figure>
+    <p>Cliquez sur le lien de l'un des domaines d'affichage pour afficher les URL d'affichage du domaine d'affichage sélectionné.</p> <aside class="bcls-aside bcls-aside--information">Remarque: Si le lecteur se trouve dans une iframe, le domaine d'affichage sera enregistré en tant qu'URL de la page dans l'iframe.</aside> </section> <section class="bcls-section">
+    <h2 id="country">Affichage des analyses par pays</h2>
+    <p>Lorsque la<strong> dimension</strong> Pays est sélectionnée, un graphique affiche le nombre de visionnages de vidéos par jour pour la période sélectionnée. Le corps du rapport affichera les données de performance pour chaque pays où les vidéos ont été visionnées. Seuls les pays dont les données sont comprises dans la période sélectionnée seront affichés.</p> <aside class="bcls-aside bcls-aside--information">Remarque: Brightcove utilise un service tiers pour nous fournir l'adresse IP et les informations de localisation. S'il n'y a pas d'entrée pour l'adresse IP en question, nous ne serons pas en mesure d'obtenir les informations sur le pays et<strong> Unknown</strong> apparaîtra.</aside> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Rapport de performance par pays" src="/assets/images/s-analytics-img/node10104-country-performance.png" /></figure>
+    <p>Cliquez sur le lien correspondant à l'un des pays pour afficher les performances par région ou par ville pour le pays sélectionné, si vous consultez les statistiques du<strong> compte</strong>, et non une vidéo individuelle.</p>  </section><section class="bcls-section">
+    <h2 id="device">Affichage des analyses des appareils</h2>
+    <p>Lorsque la<strong> dimension</strong> Appareil est sélectionnée, un graphique affiche le nombre de visionnages de vidéos par jour pour la période sélectionnée. Le corps du rapport affiche les données de performance pour chaque<strong> combinaison</strong> Device Type - Device Operating System qui a été utilisée pour visionner une vidéo. Seuls les appareils disposant de données pendant la période sélectionnée seront affichés.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Rapport de performance des appareils" src="/assets/images/s-analytics-img/node10104-device-performance.png" /></figure>
+    <p>Cliquez sur le lien correspondant à l'un des types d'appareils pour afficher les performances par système d'exploitation de l'appareil.</p> <aside class="bcls-aside bcls-aside--information">Remarque: Le module Analytics détermine l'appareil à l'aide de l'en-tête user-agent. Si quelqu'un utilise un appareil avec des en-têtes usurpés, les données seront prises en compte dans l'en-tête déclaré. Le module Analytics ne fait aucun effort pour empêcher l'altération de l'agent utilisateur.</aside> </section> <section class="bcls-section">
+    <h2 id="devicetype">Affichage des analyses des types d'appareils</h2>
+    <p>Lorsque la<strong> dimension Type d'</strong>appareil est sélectionnée, un graphique affiche le nombre de visionnages de vidéos par jour pour la période sélectionnée. Le corps du rapport affiche les détails des performances par type d'<a href="#device_types">appareil</a>. Seules les catégories contenant des données comprises dans la période sélectionnée seront affichées.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Performance du type d'appareil" src="/assets/images/s-analytics-img/node10104-device-type-performance.png" /></figure>
+    <p>Cliquez sur le lien correspondant à l'un des types d'appareils pour afficher les performances par système d'exploitation de l'appareil.</p>  </section><section class="bcls-section">
+    <h2 id="deviceos">Affichage des analyses du système d'exploitation</h2>
+    <p>Lorsque la<strong> dimension OS de l'</strong>appareil est sélectionnée, un graphique affiche le nombre de visionnages de vidéos par jour pendant la période sélectionnée. Le corps du rapport affiche les données de performance pour chaque système d'exploitation de l'<a href="#device_os">appareil</a>. Seules les catégories contenant des données comprises dans la période sélectionnée seront affichées.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Performance du système d'exploitation" src="/assets/images/s-analytics-img/node10104-device-os-performance.png" /></figure>  </section><section class="bcls-section">
+    <h2 id="deviceman">Affichage des analyses des fabricants d'appareils</h2>
+    <p>Lorsque la<strong> dimension</strong> Device Manufacturer (Fabricant de l'appareil) est sélectionnée, un graphique affiche le nombre de visionnages de vidéos par jour pour la période sélectionnée. Le corps du rapport affiche les données de performance de chaque fabricant<a href="#device_manufacturer"> d'appareils</a>. Seuls les appareils disposant de données pendant la période sélectionnée seront affichés.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Performance du fabricant d'appareils" src="/assets/images/s-analytics-img/node10104-device-man-performance.png" /></figure>  </section><section class="bcls-section">
+    <h2 id="browser">Affichage des analyses du type de navigateur</h2>
+    <p>Lorsque la<strong> dimension Type de</strong> navigateur est sélectionnée, un graphique affiche le nombre de visionnages de vidéos par jour pour la période sélectionnée. Le corps du rapport affiche les données de performance pour chaque type de<a href="#browser_type"> navigateur</a>. Seuls les navigateurs dont les données sont disponibles pendant la période sélectionnée seront affichés.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Performance du type de navigateur" src="/assets/images/s-analytics-img/node10104-browser-type-performance.png" /></figure>  </section><section class="bcls-section">
+    <h2 id="day">Analyse du jour d'affichage</h2>
+    <p>Lorsque la<strong> dimension</strong> Jour est sélectionnée, un graphique affiche le nombre de visionnages de vidéos par jour pour la période sélectionnée. Le corps du rapport affichera les données de performance pour chaque jour. Seuls les jours pour lesquels des données se situent dans la période sélectionnée seront affichés.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Performance de jour" src="/assets/images/s-analytics-img/node10104-day-performance.png" /></figure>  </section><section class="bcls-section">
+    <h2 id="filter">Utiliser des filtres</h2>
+    <p>Les filtres peuvent être utilisés pour limiter les données qui apparaissent dans le rapport. Pour ajouter un filtre, procédez comme suit.</p>
+    <ol class="bcls-tasklist">
+      <li>Cliquez sur la<strong> pilule</strong> + Ajouter des filtres en haut du rapport. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="ajouter un filtre" src="/assets/images/s-analytics-img/node10104-add-filter.png" /></figure>
+      </li>
+      <li>Les données peuvent être filtrées par<strong> balises</strong>, champs<strong> personnalisés</strong>,<strong> pays</strong> et types d'<strong>appareils</strong>. Configurez les critères de filtre à l'aide du panneau de filtres L'exemple suivant applique le filtre:
+        <ul>
+          <li>Tag = formation<strong> à la demande</strong> ET</li>
+          <li>Champ personnalisé<strong> Produit</strong> =<strong> Video Cloud</strong> ET</li>
+          <li>Pays =<strong> États-Unis</strong></li>
+        </ul> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="filtre de rapport" src="/assets/images/s-analytics-img/node10104-filter-panel.png" /></figure>
+      </li>
+      <li>Cliquez sur<span class="button-blue"> Appliquer les filtres</span>.</li>
+    </ol>
+    <p>Les filtres appliqués apparaîtront sous forme de comprimés en haut du rapport. Chaque pilule affichera un type de filtre et jusqu'à deux valeurs. Jusqu'à trois comprimés seront affichés.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Performance de jour" src="/assets/images/s-analytics-img/node10104-filter-pills.png" /></figure>
+    <p>Les pilules supplémentaires sont regroupées en une pilule de débordement et sont affichées dans une infobulle lors du survol.</p>
+    <p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Performance de jour" src="/assets/images/s-analytics-img/node10104-pill-hover.png" /></figure>
+    </p>
+    <p>Pour supprimer un filtre, cliquez sur un comprimé et effacez le filtre du panneau des filtres.</p>
+    <h3>Remarques sur l'utilisation des filtres</h3>
+    <ul>
+      <li>Le type de flux n'est disponible que si Brightcove Live est activé sur le compte</li>
+      <li>La section des champs personnalisés sera désactivée si le compte n'est pas activé pour les champs personnalisés</li>
+      <li>Les filtres peuvent être ajoutés/supprimés à l'aide des boutons plus/moins situés à droite du type de filtre</li>
+      <li>Bien que les filtres semblent être appliqués, ils ne s'appliquent pas à toutes les sections du module Analytics
+        <ul>
+          <li>Les balises et les filtres de champs personnalisés ne sont pas appliqués lorsque vous cliquez sur une vidéo ou un lecteur spécifique pour afficher les détails de performance de la vidéo ou du lecteur (la seule exception étant les dimensions Lecteur par vidéo ou Jour)</li>
+          <li>Graphique d'engagement (graphique en haut de la page du rapport Engagement) </li>
+        </ul>
+      </li>
+      <li>Le chargement des données Analytics peut prendre un peu plus de temps lors de l'application de filtres</li>
+      <li>Type de filtre
+        <ul>
+          <li><strong>Tout</strong> - Doit inclure<strong> toutes</strong> les valeurs</li>
+          <li><strong>Tout</strong> - peut inclure n'<strong>importe</strong> quelle valeur</li>
+          <li><strong>Aucune</strong> - Ne doit inclure <strong></strong>aucune des valeurs choisies</li>
+        </ul>
+      </li>
+    </ul>  </section><section class="bcls-section">
+    <h2 id="export" class="BCL_conceptTitle">Exportation des données de</h2>
+    <p>Les données du rapport peuvent être téléchargées sous forme de valeurs séparées par des virgules et de formats Excel. Notez que la fonctionnalité d'exportation enregistre les données directement à partir d'un<span translate="No"> appel d'API</span> Analytics. Les données exportées ne sont pas manipulées de la même manière que les données de l'interface utilisateur et contiennent actuellement toutes les données sous-jacentes du rapport, et pas seulement le sous-ensemble de champs affiché par l'interface utilisateur. Certaines des différences entre ce qui est affiché dans l'interface utilisateur et les données exportées:</p>
+    <ul>
+      <li>Différentes unités (minutes contre secondes)</li>
+      <li>Arrondi des nombres</li>
+      <li>L'exportation des données contient à la fois les mesures de performance et d'engagement, quel que soit votre emplacement dans l'interface utilisateur.</li>
+      <li>L'<strong>entrée</strong> Autre/Tiers sera exportée sans identifiant vidéo ni nom de vidéo associé</li>
+    </ul>
+    <p>Le fait de disposer de toutes les données dans le format d'origine de l'API vous permet de manipuler les données d'une manière autre que celle fournie dans l'interface utilisateur.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Exporter des données" src="/assets/images/s-analytics-img/node10104-export.png" /></figure>
+    <p>Les boutons d'exportation situés au-dessus du graphique permettent d'exporter les données du graphique. Les boutons d'exportation situés au-dessus du tableau permettent d'exporter les données de la table. Notez que les rapports prennent en charge les feuilles de style imprimables. Par conséquent, l'impression d'un rapport ou l'enregistrement au format PDF générera une page imprimable.</p>   </section></article>

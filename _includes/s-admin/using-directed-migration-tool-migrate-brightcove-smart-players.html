@@ -1,0 +1,90 @@
+<h1>{{page.title}}</h1> <article class="bcls-article"> <summary>{{page.description}}</summary> <section class="bcls-section">
+    <p>L'outil de migration dirigée permet de spécifier qu'un lecteur Brightcove doit être chargé au lieu d'un lecteur intelligent. L'outil fournit un moyen simple de publier des vidéos dans les lecteurs Brightcove au lieu d'utiliser les anciens lecteurs intelligents. Aucune modification de votre code de publication existant n'est requise.</p>
+    <p>Cette rubrique contient les sections suivantes:</p>
+    <ul>
+      <li> <a href="#req">Exigences de migration dirigée</a> </li>
+      <li> <a href="#create">Création d'un mappage</a> </li>
+      <li> <a href="#test">Tester les mappages des lecteur
+s</a> </li>
+      <li> <a href="#edit">Modification des mappages de lecteurs</a> </li>
+      <li> <a href="#delete">Suppression des mappages de lecteur
+s</a> </li>
+    </ul> <aside class="bcls-aside bcls-aside--information">Remarque: Les mappages entre Smart Player et Brightcove Player continueront de fonctionner après la fin de vie de Smart Player fin 2017.</aside> </section> <section class="bcls-section">
+    <h2 id="req">Exigences de la migration dirigée</h2>
+    <p>Les exigences suivantes s'appliquent lors de l'utilisation de l'outil de migration dirigée:</p>
+    <ul>
+      <li>L'interface utilisateur de migration dirigée ne s'affiche que lorsque vous avez 3 lecteurs intelligents ou plus sur votre compte</li>
+      <li>Vous devez créer un nouveau lecteur Brightcove doté du style, des personnalisations et des plug-ins compatibles avec le lecteur Brightcove</li>
+      <li>L'outil de migration dirigée n'est pas pris en charge pour les lecteur
+s disposant de listes de lecteur.</li>
+      <li>Tout code API Smart Player de votre page existante ne fonctionnera plus une fois le lecteur remplacé.</li>
+    </ul>  </section><section class="bcls-section">
+    <h2 id="limitations">Limitations</h2>
+    <p>Notez les limites suivantes de l'outil de migration dirigée:</p>
+    <ul>
+      <li>La migration dirigée fonctionne lors de l'utilisation du code de publication intégré de Smart Player ou avec des URL raccourcies ou personnalisées (bcove.me ou link.brightcove.com).</li>
+      <li>La migration dirigée ne fonctionnera pas avec le code intégré Flash uniquement issu de Legacy Studio.</li>
+    </ul>  </section><section class="bcls-section">
+    <h2 id="create">Création d'un mappage</h2>
+    <p>Les mappages sont utilisés pour spécifier qu'un lecteur intelligent doit être remplacé par un lecteur Brightcove. Pour créer un nouveau mappage, procédez comme suit:</p>
+    <ol class="bcls-tasklist">
+      <li> Ouvrez le<strong> module</strong> Admin. </li>
+      <li> Cliquez sur Paramètres du<strong> lecteur</strong>. </li>
+      <li> Cliquez sur<strong> Create Mapping</strong>. Une liste des Smart Players du compte s'affiche.
+        <div> <img class="bcls-image--no-border" alt="Créer un mappage" src="/assets/images/s-admin-img/node16627-create-mapping.png" /> </div>
+      </li>
+      <li> Sélectionnez un ou plusieurs lecteurs intelligents à remplacer par un lecteur Brightcove. Cliquez sur<strong> Suivant</strong>. </li>
+      <li> Sélectionnez un lecteur Brightcove à utiliser à la place du ou des lecteurs intelligents. Lorsqu'un lecteur Brightcove est sélectionné, un aperçu du lecteur s'affiche.
+        <div> <img class="bcls-image--no-border" alt="Sélectionnez le lecteur Brightcove" src="/assets/images/s-admin-img/node16627-select-bc-player.png" /> </div>
+      </li>
+      <li> Cliquez sur<strong> Suivant</strong>. Les instructions pour<a href="#test"> tester les mappages des lecteur
+s</a> seront affichées.
+        <p class="BCL-aside">Remarque: Les mappages de lecteur
+s peuvent prendre jusqu'à 5 minutes pour prendre effet.</p>
+      </li>
+      <li> Cliquez sur<span class="button-blue"> Enregistrer</span>. Une liste des mappages actuels s'affiche.
+        <div> <img class="bcls-image--no-border" alt="Mappings de lecteur
+s" src="/assets/images/s-admin-img/node16627-mappings-list.png" /> </div>
+      </li>
+    </ol>
+    <p> Après avoir créé un mappage, le statut sera<strong> Testing</strong>. Une fois le<a href="#test"> mappage testé</a> et validé, le statut sera<strong> Committed</strong>. Les mappages dont le statut est Committed (<strong>Committed)</strong> afficheront un lecteur Brightcove au lieu du lecteur intelligent. </p>  </section><section class="bcls-section">
+    <h2 id="test">Tester les mappages des lecteur
+s</h2>
+    <p>Vous devez tester tous les mappages de lecteur
+s créés avant qu'ils ne soient validés. Pour tester le mappage d'un lecteur, procédez comme suit:</p>
+    <ol class="bcls-tasklist-restart">
+      <li> Trouvez une page qui affiche votre ancien lecteur Smart Player.
+        <div> <img class="bcls-image--no-border" alt="Exemple de lecteur intelligent" src="/assets/images/s-admin-img/node16627-smart-player.png" /> </div>
+      </li>
+      <li> Ajoutez le<code translate="No"> paramètre</code> EnableMapping=True à l'URL de la page.
+        <ul>
+          <li> Si l'URL de la page ne comporte pas de paramètres d'URL, ajoutez<code translate="No">&nbsp;? EnableMapping=True</code> à la fin de l'URL. Par exemple: <br /> <code translate="No">http://www.mysite.com/videos.html?enableMapping=true</code> </li>
+          <li> Si l'URL de la page contient des paramètres d'URL, ajoutez<code translate="No"> &amp;EnableMapping=true</code> à la fin de l'URL. Par exemple: <br /> <code translate="No">http://www.mysite.com/videos.html?myparams=true&amp;enableMapping=true</code> </li>
+        </ul>
+        <p>Le lecteur Brightcove nouvellement mappé devrait s'afficher et la vidéo devrait être lue.</p>
+        <div> <img class="bcls-image--no-border" alt="Exemple de lecteur Brightcove" src="/assets/images/s-admin-img/node16627-brightcove-player.png" /> </div>
+        <p>Lorsque vous êtes satisfait du fonctionnement du lecteur, revenez sur {{site.product}}.</p>
+      </li>
+      <li> Cochez la case en regard du mappage du lecteur et cliquez sur<strong> Commit Mapping</strong> pour rendre le nouveau lecteur Brightcove visible par tous les visiteurs du site. </li>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="edit">Modification des mappages de lecteurs</h2>
+    <p>Pour modifier le mappage d'un lecteur, procédez comme suit:</p>
+    <ol class="bcls-tasklist-restart">
+      <li> Ouvrez le<strong> module</strong> Admin. </li>
+      <li> Cliquez sur Paramètres du<strong> lecteur</strong>. Une liste des mappages de lecteur
+s s'affiche. </li>
+      <li> Cochez la case en regard du mappage du lecteur à modifier. Cliquez sur<strong> Modifier le mappage</strong>. </li>
+      <li> Sélectionnez un nouveau lecteur Brightcove vers lequel mapper. Cliquez sur<strong> Suivant,</strong> puis sur<span class="button-blue"> Enregistrer</span> pour enregistrer les modifications. </li>
+    </ol>
+    <p> Assurez-vous de<a href="#test"> tester toutes les modifications apportées aux mappages des lecteur
+s</a>. </p>  </section><section class="bcls-section">
+    <h2 id="delete">Suppression des mappages de lecteur
+s</h2>
+    <p>Pour supprimer un mappage de lecteur, procédez comme suit:</p>
+    <ol class="bcls-tasklist-restart">
+      <li> Ouvrez le<strong> module</strong> Admin. </li>
+      <li> Cliquez sur Paramètres du<strong> lecteur</strong>. Une liste des mappages de lecteur
+s s'affiche. </li>
+      <li> Cochez la case en regard du mappage du lecteur à supprimer. Cliquez sur<strong> Supprimer le mappage</strong>. </li>
+      <li> Confirmez la suppression en cliquant sur<span class="button-red-text"> Supprimer</span>. </li>
+    </ol>  </section></article>
